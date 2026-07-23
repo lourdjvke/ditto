@@ -1,0 +1,164 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "./";
+
+/* Tailwind theme: color tokens (so bg-primary/text-foreground resolve to our vars) +
+   breakpoints. @theme inline keeps the var() reference (theme-swappable at runtime). */
+@theme inline {
+  --breakpoint-vp375: 375px;
+  --breakpoint-vp768: 768px;
+  --breakpoint-vp1280: 1280px;
+  --breakpoint-vp1920: 1920px;
+  --breakpoint-md: 572px;
+  --breakpoint-lg: 1025px;
+  --breakpoint-2xl: 1601px;
+  --color-foreground: var(--foreground);
+  --color-clr-0: var(--clr-0);
+  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-clr-1: var(--clr-1);
+  --color-clr-2: var(--clr-2);
+  --color-color-001: var(--color-001);
+  --color-background: var(--background);
+  --color-clr-3: var(--clr-3);
+}
+
+/* Design tokens (values). */
+:root {
+  --background: rgb(255, 255, 255);
+  --foreground: rgb(0, 0, 0);
+  --border: rgb(25, 24, 23);
+  --muted-foreground: rgb(140, 140, 140);
+  --color-001: rgb(188, 188, 188);
+}
+
+:root {
+  /* fonts */
+  --font-body: BeoSupreme;
+  --font-001: "Times New Roman";
+  /* fontSizes */
+  --font-size-001: 12px;
+  --font-size-002: 14px;
+  --font-size-003: 15px;
+  --font-size-004: 16px;
+  /* fontWeights */
+  --font-weight-001: 400;
+  /* lineHeights */
+  --line-height-001: 20px;
+  --line-height-002: 18px;
+  --line-height-003: 26px;
+  --line-height-004: 15px;
+  --line-height-005: 17px;
+  --line-height-006: 18.4px;
+  --line-height-007: 19.92px;
+  /* spacing */
+  --space-001: 8px;
+  --space-002: 16px;
+  --space-003: 24px;
+  --space-004: 32px;
+  --space-005: 35.52px;
+  /* radii */
+  --radius-001: 10px;
+  /* breakpoints */
+  --bp-375: 375px;
+  --bp-768: 768px;
+  --bp-1280: 1280px;
+  --bp-1920: 1920px;
+}
+
+:root {
+  --clr-0: rgb(250, 250, 250);
+  --clr-1: rgb(229, 229, 229);
+  --clr-2: rgba(0, 0, 0, 0.1);
+  --clr-3: rgb(85, 85, 85);
+}
+
+@layer base {
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid currentColor; }
+html { -webkit-text-size-adjust: 100%; line-height: normal; }
+body { margin: 0; }
+ul, ol, menu { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea, optgroup { font: inherit; color: inherit; background: transparent; border: 0; padding: 0; margin: 0; text-align: inherit; letter-spacing: inherit; }
+button { cursor: pointer; }
+table { border-collapse: separate; border-spacing: 0; }
+img, picture, video, canvas, svg { display: inline-block; }
+/* Lottie runtime fit: the player re-mounts its svg/canvas into an absolute overlay that fills
+   the host's captured (per-viewport, definite) box. Force that runtime media to fit the box so
+   an aspect-mismatched viewBox (e.g. a portrait animation in a shorter, letterboxed source box)
+   can't inflate past the pinned height. Scoped to the runtime-marked host only. */
+[data-ditto-lottie] > div > svg, [data-ditto-lottie] > div > canvas { width: 100%; height: 100%; display: block; }
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd { margin: 0; }
+/* Neutralize UA text defaults to inherit so the generator's default-skipping is
+   correct: a property equal to its inherited value is simply not emitted. */
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+b, strong, th { font-weight: inherit; }
+em, i, cite, var, dfn, address, q { font-style: inherit; }
+small, big, sub, sup { font-size: inherit; }
+sub, sup { vertical-align: inherit; }
+code, kbd, samp, pre, tt, var { font-family: inherit; font-size: inherit; }
+mark { background-color: transparent; color: inherit; }
+abbr[title] { text-decoration: none; }
+fieldset, legend { min-width: 0; }
+
+/* fonts */
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/25f69ba420c4.woff2") format("woff2"), url("/assets/cloned/fonts/7192671ee4e5.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/2c6067c1f352.woff2") format("woff2"), url("/assets/cloned/fonts/6b42e9dc548b.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/228edecf23e9.woff2") format("woff2"), url("/assets/cloned/fonts/92854f890fc2.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/7a3354d42540.woff2") format("woff2"), url("/assets/cloned/fonts/7fe46c403e43.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/af827a9ddebe.woff2") format("woff2"), url("/assets/cloned/fonts/1f6ad8881818.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/24c8a46c373d.woff2") format("woff2"), url("/assets/cloned/fonts/73bd90244f8a.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/80d19e8c3e3f.woff2") format("woff2"), url("/assets/cloned/fonts/361f544b2e13.woff") format("woff");
+}
+html { background: #ffffff; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+html, body { overflow-x: clip; }
+}
