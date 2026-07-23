@@ -26,5 +26,10 @@ export const viewport = {
 
 
 export default function Layout({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <style>{`body { height: auto !important; min-height: unset !important; }`}</style>
+      {children}
+    </>
+  );
 }
