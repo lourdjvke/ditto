@@ -56,7 +56,7 @@ export default function Page() {
             <main className="block relative flex-1 bg-background" data-cid="n42" id="main-layout">
               <div className="block" data-cid="n43">
                 <div className="block" data-cid="n44">
-                  <div className="block bg-background" data-cid="n45" id="story-header">
+                  <div className="block bg-background overflow-hidden" data-cid="n45" id="story-header">
                     <div className="block max-w-378 pt-[141.1px] pb-30 px-9 mx-auto max-lg:pt-34.5 max-lg:pb-8 max-lg:px-4" data-cid="n46">
                       <div className="flex flex-col items-center max-lg:[align-items:initial]" data-cid="n47">
                         <h2 className="block mb-2 text-border text-sm leading-6 tracking-[1.7px] text-center uppercase max-lg:text-xs max-lg:leading-5 max-md:tracking-[1.5px] max-lg:text-left" data-cid="n48" data-component="heading">
