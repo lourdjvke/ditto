@@ -14,7 +14,7 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="w-320 h-[36.1875rem] flex flex-col justify-center max-md:w-full max-md:h-auto md:max-lg:w-192 md:max-lg:h-[47.45rem] 2xl:w-480 2xl:h-270 2xl:min-h-162.5 2xl:relative 2xl:overflow-hidden" data-cid="n45">
+    <div className="w-full h-[36.1875rem] flex flex-col justify-center max-md:w-full max-md:h-auto md:max-lg:h-[47.45rem] 2xl:w-full 2xl:h-270 2xl:min-h-162.5 2xl:relative 2xl:overflow-hidden" data-cid="n45">
       <div className="w-full h-170 flex relative z-1 -mt-[6.3125rem] flex-col justify-center overflow-hidden max-md:h-auto max-md:pb-0 max-md:px-0 max-md:z-[initial] max-md:mt-0 md:max-lg:h-[51.2rem] md:max-lg:-mt-15 2xl:h-270 2xl:min-h-162.5 2xl:block 2xl:bg-border 2xl:z-[initial] 2xl:mt-0 2xl:[flex-direction:initial] 2xl:[justify-content:initial] 2xl:[overflow-x:initial] 2xl:[overflow-y:initial]" data-cid="n46">
         <div className="h-170 block relative bg-clr-0 max-md:h-auto max-md:bg-[initial] max-md:px-4 max-md:pt-4 max-md:pb-4 md:max-lg:h-[51.2rem] 2xl:h-auto 2xl:static 2xl:inset-auto 2xl:bg-[initial]" data-cid="n47">
 
@@ -28,7 +28,7 @@ export default function HeroSection() {
           </figure>
 
           {/* Mobile/tablet video block */}
-          <div className="block 2xl:hidden rounded-2xl overflow-hidden relative" style={{ aspectRatio: "9/16" }} data-cid="n56">
+          <div className="block 2xl:hidden max-md:rounded-2xl overflow-hidden relative" style={{ aspectRatio: "9/16" }} data-cid="n56">
             {/* Video */}
             <video
               ref={videoRef}

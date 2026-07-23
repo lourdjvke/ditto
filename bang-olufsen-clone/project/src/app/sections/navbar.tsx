@@ -98,11 +98,11 @@ export default function Navbar() {
           {/* Main links */}
           <nav className="flex-1">
               {[
-                { label: "Speakers", href: "https://www.bang-olufsen.com/en/int/speakers" },
+                { label: "Speakers", href: "/en/int/composer/product/beolab-8" },
                 { label: "Headphones", href: "/en/int/headphones" },
-                { label: "Soundbars", href: "https://www.bang-olufsen.com/en/int/soundbars" },
-                { label: "Televisions", href: "https://www.bang-olufsen.com/en/int/televisions" },
-                { label: "Accessories", href: "https://www.bang-olufsen.com/en/int/accessories" },
+                { label: "Earphones", href: "/en/int/earphones/beograce" },
+                { label: "Stories", href: "/en/int/stories" },
+                { label: "About", href: "/en/int/story/about-bang-and-olufsen" },
               ].map((item) => (
                 <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
                   className="block py-4 text-[rgb(25,24,23)] text-xl leading-7 border-b border-[rgb(229,229,229)]">

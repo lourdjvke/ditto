@@ -12,7 +12,12 @@ function Section({ title, links }: { title: string; links: AccordionItem[] }) {
         className="w-full flex items-center justify-between py-4 text-left cursor-pointer"
         onClick={() => setOpen(o => !o)}
       >
-        <span className="text-[rgb(252,250,238)] text-sm leading-6 tracking-[0.2px]">{title}</span>
+        <span className="flex items-center gap-1.5 text-[rgb(252,250,238)] text-sm leading-6 tracking-[0.2px]">
+          {title}
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform duration-200 ${open ? "rotate-90" : ""}`}>
+            <path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
       </button>
       <div className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${open ? "max-h-96" : "max-h-0"}`}>
         <ul className="pb-4 space-y-3">
