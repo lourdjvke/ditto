@@ -53,3 +53,52 @@ All bundles share content-hashed asset filenames (`/assets/cloned/images/abc123.
 ### Archived
 
 Nothing archived — all Ditto bundle files are preserved in `/bang-olufsen-clone/bundles/` (one folder per page label). The active merged project is at `/bang-olufsen-clone/project/`.
+
+---
+
+## Session 2 — Assembly Studio Configurator (2026-07-23)
+
+### Target
+- URL: `https://studio.rovoassembly.com/configuration/caps/ada693e3-60f5-41f8-b22e-eef3f6c9c833`
+- Product: Assembly® Studio — Classic Dad Cap configurator
+
+### Job
+- Job ID: `3c389802-1e5c-4146-8f21-90505822fd69`
+- Status: `cached` (instant, pre-existing from prior run)
+- Bundle size: 34MB
+
+### Route in project
+```
+project/src/app/studio/configuration/caps/ada693e3-60f5-41f8-b22e-eef3f6c9c833/
+```
+Preview path: `/studio/configuration/caps/ada693e3-60f5-41f8-b22e-eef3f6c9c833`
+
+### Files in bundle
+- `page.tsx` — main page: Cap Colour accordion, Front/Left/Right/Back/Label view switcher, price + add-to-cart
+- `sections/navbar.tsx` — Assembly Studio top nav
+- `sections/front-left-right-section.tsx` — cap preview image + view angle radio group
+- `sections/hero-section.tsx` — blurred backdrop overlay
+- `ditto/DropdownMenu.tsx` — `"use client"` component, real JS hover/click handlers for dropdown menus
+- `components/text-link.tsx` — view angle tab links
+- `svgs/` — 7 icon SVGs
+- `globals.css` — all Tailwind theme tokens + CSS vars (--clr-0..9, --background, --foreground, etc.) + font-face declarations
+- `ditto.css` — empty (all CSS is in globals.css for this bundle)
+
+### Assets
+- 8 cap images in `public/assets/cloned/images/*.png` (merged into project public/)
+- Sohne font files shared from B&O bundle (already present)
+
+### Fixes applied
+- `layout.tsx`: stripped `<html>/<body>`, removed `SITE_ORIGIN` import, replaced `RootLayout` with minimal `Layout` passthrough
+- Lib imports: fixed 3 files (`../../lib/site` etc → `@/lib/site`)
+
+### Interactivity assessment
+- **Dropdown menus**: ✅ Functional — `DropdownMenu.tsx` is `"use client"` with real AbortController-based click/hover event listeners that inject captured dropdown HTML on demand
+- **Color/material switching**: ❌ Not functional — all interactive elements have `pointer-events-none` (Ditto static capture); cap preview image is a single static PNG per viewport breakpoint
+- **View angle tabs (Front/Left/Right/Back/Label)**: ❌ Not functional — rendered as `role="radiogroup"` with `pointer-events-none`; no JS to swap images
+- **Summary**: Layout, labels, swatches, and pricing are rendered correctly. Real-time cap configuration (changing color/material and seeing the cap update) is not reproduced — Ditto captures a single state snapshot, not the live WebGL/3D configurator logic.
+
+### Git persistence
+- `bang-olufsen-clone/bundles/` → `.gitignore` (regeneratable via `POST /v1/clones` with cached IDs)
+- `bang-olufsen-clone/project/` → fully tracked; 872 files committed
+- `bang-olufsen-clone/project/.next/` → `.gitignore` (build cache)

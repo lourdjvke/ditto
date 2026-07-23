@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Bang & Olufsen Clone"
+version = "1.0.0"
+id = "artifacts/bo-clone"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24149
+
+[services.development]
+run = "cd /home/runner/workspace/bang-olufsen-clone/project && npm run dev -- -H 0.0.0.0 -p $PORT"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/bo-clone", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/bo-clone/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24149"
+BASE_PATH = "/"

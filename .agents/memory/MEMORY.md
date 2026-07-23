@@ -1,0 +1,2 @@
+- [Ditto clone workflow](ditto-workflow.md) — how pages are cloned, fixed, and integrated into the Next.js project
+- [Git persistence rules](git-persistence.md) — what is/isn't committed; bundles/ gitignored, project/ fully tracked

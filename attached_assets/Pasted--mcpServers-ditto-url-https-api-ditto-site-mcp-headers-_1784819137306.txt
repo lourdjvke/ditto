@@ -1,0 +1,32 @@
+{
+
+
+ "mcpServers": { "ditto": { "url": "https://api.ditto.site/mcp", "headers": { "Authorization": "Bearer ${DITTO_API_KEY}" } } } } curl -X POST https://api.ditto.site/v1/clones -H "Authorization: Bearer dtto_live_tx8BU2guhv5ac_jTBbsNMB7-8BZiszP7G3jxveASLOQ" -H "content-type: application/json" -d '{"url":"https://example.com/","options":{"mode":"single","framework":"next","styling":"tailwind"}}' Contained there is my ditto apikey and other creds that may be needed.... Make sure it's a step at a time and giving us live preview that's coherent and also clearing up duplicate components or style files for each ditto runs. And by preview, we don't mean your own internal preview, we mean artifact that will enable user to see preview themselves as you work. We don't need any sort of API bullshit or API redirect. Make sure I get my token's worth. JUST DON'T WING ANYTHING AND STICK TO INSTRUCTIONS. No agent or sub agents should delete shit, especially resetting the environment or any mistake as such. That will be unacceptable to the core, it is a next js project and infact it should only do the home first and then stop just ensuring preview works. You are not to warp the code to fit preview but make preview fit code structure and subsequent single calls should be perfectly structured to match.... Do not ruin this or delete any files unnecessarily. Get to work
+
+Try to use a download method that can download media as well. CDN, so you can do it in one go. I do not want something whereby I'm going to be burning through my tokens by running several jobs. Do it in one go and set it up. It's that easy. It's not supposed to be complicated. You're not to complicate things unnecessarily
+
+When I tried the Replit preview to see what you did in the preview link, I didn't see anything. I saw 404, meaning it doesn't exist. So what's the deal?
+
+
+Okay. So now I need you to, number one, learn how to wait. As we are going to try to get details from Dito, learn how to wait for it to finish with its work without trying to burn through more tokens doing extra work while it is still running the task on Dito. Learn to wait. Now, I need you to simultaneously get the collection, product, and stories page. Now, when it is returned, make sure that you look at the files, look at the existing files, put it in the necessary structure, and add the routes. You do not have to edit other code to make the routes to be there to link the page yet. Just make sure that the route is there and that when your final response, it shows me the route, so I can go there and see and go like, "Oh yes, it actually works." That's what's needed right now, for it to actually work. Okay? So you are to do a Dito request. That's the first thing you're going to do. Do a Dito request, and then wait, give it 10 minutes. Wait, then check again. If it is still running, give it an extra 10 minutes, then check again. If you see that, okay, it is done, or it is cached or whatever, then get the files necessary, and then start properly without hallucinating and without deleting necessary files. Start rearranging the structure so that it works with our preview perfectly. Afterwards, then just give me the rest. You don't need to go into hallucinating or doing other tasks. Just make sure it shows in the preview that the code is rendered and everything. You do not have to also try to make it to fit into the box of React. This is a Next.js website, and it should be treated as such. Do this properly and just make sure it works. At the end of the day, that's all I'm asking for. Make sure it works properly. I want it to literally just work. Okay? Thank you very much, and do this. Very much needed. Carefully, do not go into any hallucination. Do not launch sub-agents, because your sub-agents have been known to delete necessary files, refactor the entire preview to be for a React site instead of Next.js. And after you're done, just simply respond to keep things prompt and to maximize token, make sure you wait properly
+
+
+Now let's go for resource read page and about: https://www.bang-olufsen.com/en/int/story/bang-olufsen-brand-ambassador-john-legend
+
+https://www.bang-olufsen.com/en/int/story/about-bang-and-olufsen
+
+You might find it cached so if that's the case it'll be wise to jump straight to work similarly to how you tackled the previous one and integrated it seamlessly
+
+
+
+https://www.bang-olufsen.com/en/int/story/about-bang-and-olufsen
+
+You might find it cached so if that's the case it'll be wise to jump straight to work similarly to how you tackled the previous one and integrated it seamlesslyl
+
+https://www.bang-olufsen.com/en/int/story/about-bang-and-olufsen
+
+You might find it cached so if that's the case it'll be wise to jump straight to work similarly to how you tackled the previous one and integrated it seamlessly 
+
+https://www.bang-olufsen.com/en/int/story/about-bang-and-olufsen
+
+You might find it cached so if that's the case it'll be wise to jump straight to work similarly to how you tackled the previous one and integrated it seamlessly
