@@ -17,7 +17,7 @@ pnpm run build
 3. Select the repository.
 4. Set **Build settings**:
    - **Framework preset**: `Next.js (Static HTML Export)`
-   - **Build command**: `cd bang-olufsen-clone/project && pnpm install && pnpm run build`
+   - **Build command**: `cd bang-olufsen-clone/project && pnpm run build`
    - **Build output directory**: `bang-olufsen-clone/project/out`
 5. Click **Save and Deploy**.
 
