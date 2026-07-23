@@ -1,0 +1,45 @@
+2026-07-23T21:51:12.225727Z	Cloning repository...
+2026-07-23T21:51:17.137118Z	From https://github.com/lourdjvke/ditto
+2026-07-23T21:51:17.137444Z	 * branch            031b85fb2caded6ea2f33e487568516b9e1c9e98 -> FETCH_HEAD
+2026-07-23T21:51:17.137535Z	
+2026-07-23T21:51:17.750423Z	HEAD is now at 031b85f Clean up product page layouts and update project configurations
+2026-07-23T21:51:17.750726Z	
+2026-07-23T21:51:17.791426Z	
+2026-07-23T21:51:17.791786Z	Using v2 root directory strategy
+2026-07-23T21:51:17.804511Z	Success: Finished cloning repository files
+2026-07-23T21:51:19.476819Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-07-23T21:51:19.477242Z	
+2026-07-23T21:51:19.651262Z	No Wrangler configuration file found. Continuing.
+2026-07-23T21:51:19.90898Z	Detected the following tools from environment: pnpm@10.11.1, nodejs@22.16.0
+2026-07-23T21:51:21.208428Z	Installing project dependencies: pnpm install
+2026-07-23T21:51:21.729597Z	Scope: all 9 workspace projects
+2026-07-23T21:51:21.8068Z	Lockfile is up to date, resolution step is skipped
+2026-07-23T21:51:21.836299Z	Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-07-23T21:51:21.903823Z	Packages: +473
+2026-07-23T21:51:21.904141Z	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-07-23T21:51:22.837879Z	Progress: resolved 473, reused 0, downloaded 189, added 143
+2026-07-23T21:51:23.84398Z	Progress: resolved 473, reused 0, downloaded 294, added 204
+2026-07-23T21:51:24.841003Z	Progress: resolved 473, reused 0, downloaded 411, added 272
+2026-07-23T21:51:25.842189Z	Progress: resolved 473, reused 0, downloaded 472, added 472
+2026-07-23T21:51:26.233609Z	Progress: resolved 473, reused 0, downloaded 473, added 473, done
+2026-07-23T21:51:26.419362Z	.../esbuild@0.27.3/node_modules/esbuild postinstall$ node install.js
+2026-07-23T21:51:26.669727Z	.../esbuild@0.27.3/node_modules/esbuild postinstall: Done
+2026-07-23T21:51:26.995531Z	
+2026-07-23T21:51:26.995968Z	dependencies:
+2026-07-23T21:51:26.99608Z	+ @replit/connectors-sdk 0.4.1
+2026-07-23T21:51:26.996128Z	
+2026-07-23T21:51:26.996233Z	devDependencies:
+2026-07-23T21:51:26.99632Z	+ prettier 3.9.5
+2026-07-23T21:51:26.996392Z	+ typescript 5.9.3
+2026-07-23T21:51:26.996448Z	
+2026-07-23T21:51:27.041481Z	. preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+2026-07-23T21:51:27.061846Z	. preinstall: Done
+2026-07-23T21:51:27.218524Z	Done in 5.8s using pnpm v10.11.1
+2026-07-23T21:51:27.263787Z	Executing user command: cd bang-olufsen-clone/project && npm install && npm run build
+2026-07-23T21:52:38.435217Z	npm error Exit handler never called!
+2026-07-23T21:52:38.435506Z	npm error This is an error with npm itself. Please report this error at:
+2026-07-23T21:52:38.435577Z	npm error   <https://github.com/npm/cli/issues>
+2026-07-23T21:52:38.435622Z	npm error A complete log of this run can be found in: /opt/buildhome/.npm/_logs/2026-07-23T21_51_27_621Z-debug-0.log
+2026-07-23T21:52:38.482431Z	Failed: Error while executing user command. Exited with error code: 1
+2026-07-23T21:52:38.488529Z	Failed: build command exited with code: 1
+2026-07-23T21:52:39.152233Z	Failed: error occurred while running build command

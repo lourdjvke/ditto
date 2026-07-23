@@ -6,7 +6,7 @@
 ## Build once locally (optional sanity check)
 ```bash
 cd bang-olufsen-clone/project
-npm run build
+pnpm run build
 # produces bang-olufsen-clone/project/out/
 ```
 
@@ -17,7 +17,7 @@ npm run build
 3. Select the repository.
 4. Set **Build settings**:
    - **Framework preset**: `Next.js (Static HTML Export)`
-   - **Build command**: `cd bang-olufsen-clone/project && npm install && npm run build`
+   - **Build command**: `cd bang-olufsen-clone/project && pnpm install && pnpm run build`
    - **Build output directory**: `bang-olufsen-clone/project/out`
 5. Click **Save and Deploy**.
 
