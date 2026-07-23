@@ -65,9 +65,9 @@ export default function Page() {
   return (
     <>
       <div className="block" data-cid="n1" id="cookie-information-template-wrapper" />
-      <div className="h-full block" data-cid="n2" id="__next">
-        <div className="h-full block 2xl:opacity-25" data-cid="n3">
-          <div className="h-full block" data-cid="n4">
+      <div className="block" data-cid="n2" id="__next">
+        <div className="block" data-cid="n3">
+          <div className="block" data-cid="n4">
             <main className="block relative pt-29 flex-1 bg-background" data-cid="n42" id="main-layout">
               <div className="block" data-cid="n43">
                 <div className="block" data-cid="n44">
