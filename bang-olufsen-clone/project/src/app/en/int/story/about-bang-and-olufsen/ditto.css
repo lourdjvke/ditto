@@ -1,0 +1,43 @@
+@-webkit-keyframes gDibJC { 
+  0% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  10% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}
+@keyframes gDibJC { 
+  0% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  10% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}
+
+[data-cid="n470"]::after{content:"";display:block;position:relative;top:8px;right:-14.6313px;bottom:-8px;left:14.625px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n470"]::after{right:-13.3313px;left:13.3281px}
+}
+[data-cid="n487"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n487"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n487"]::after{display:none}
+}
+[data-cid="n492"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n492"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n492"]::after{display:none}
+}
+[data-cid="n497"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n497"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n497"]::after{display:none}
+}
+[data-cid="n502"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n502"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n502"]::after{display:none}
+}

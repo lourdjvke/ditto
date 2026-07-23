@@ -1,0 +1,139 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "./";
+
+/* Tailwind theme: color tokens (so bg-primary/text-foreground resolve to our vars) +
+   breakpoints. @theme inline keeps the var() reference (theme-swappable at runtime). */
+@theme inline {
+  --breakpoint-vp375: 375px;
+  --breakpoint-vp768: 768px;
+  --breakpoint-vp1280: 1280px;
+  --breakpoint-vp1920: 1920px;
+  --breakpoint-md: 572px;
+  --breakpoint-lg: 1025px;
+  --breakpoint-2xl: 1601px;
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-color-001: var(--color-001);
+  --color-clr-0: var(--clr-0);
+  --color-clr-1: var(--clr-1);
+  --color-clr-2: var(--clr-2);
+  --color-clr-3: var(--clr-3);
+  --color-clr-4: var(--clr-4);
+  --color-clr-5: var(--clr-5);
+  --color-clr-6: var(--clr-6);
+  --color-clr-7: var(--clr-7);
+  --color-clr-8: var(--clr-8);
+  --color-clr-9: var(--clr-9);
+}
+
+/* Design tokens (values). */
+:root {
+  --background: rgb(255, 255, 255);
+  --foreground: rgb(23, 23, 23);
+  --muted-foreground: rgb(82, 82, 82);
+  --surface: rgb(245, 245, 245);
+  --color-001: rgb(0, 0, 0);
+}
+
+:root {
+  /* fonts */
+  --font-body: Sohne, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* fontSizes */
+  --font-size-001: 11px;
+  --font-size-002: 13px;
+  --font-size-003: 14px;
+  --font-size-004: 16px;
+  --font-size-005: 20px;
+  /* fontWeights */
+  --font-weight-001: 400;
+  --font-weight-002: 500;
+  /* lineHeights */
+  --line-height-001: 24px;
+  --line-height-002: 14px;
+  --line-height-003: 17.5px;
+  --line-height-004: 20px;
+  --line-height-005: 26px;
+  /* spacing */
+  --space-001: 1px;
+  --space-002: 4px;
+  --space-003: 4px 12px;
+  --space-004: 6px;
+  --space-005: 8px;
+  --space-006: 12px;
+  --space-007: 16px;
+  --space-008: 24px;
+  /* radii */
+  --radius-001: 4px;
+  --radius-002: 16px;
+  --radius-003: 9999px;
+  /* breakpoints */
+  --bp-375: 375px;
+  --bp-768: 768px;
+  --bp-1280: 1280px;
+  --bp-1920: 1920px;
+}
+
+:root {
+  --clr-0: rgba(0, 0, 0, 0);
+  --clr-1: rgb(233, 233, 233);
+  --clr-2: rgba(0, 0, 0, 0.05);
+  --clr-3: rgba(0, 0, 0, 0.15);
+  --clr-4: rgb(115, 115, 115);
+  --clr-5: rgba(59, 130, 246, 0.5);
+  --clr-6: rgba(242, 242, 242, 0.75);
+  --clr-7: rgba(0, 0, 0, 0.6);
+  --clr-8: rgba(82, 82, 82, 0.05);
+  --clr-9: rgb(16, 16, 16);
+}
+
+@layer base {
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid currentColor; }
+html { -webkit-text-size-adjust: 100%; line-height: normal; }
+body { margin: 0; }
+ul, ol, menu { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea, optgroup { font: inherit; color: inherit; background: transparent; border: 0; padding: 0; margin: 0; text-align: inherit; letter-spacing: inherit; }
+button { cursor: pointer; }
+table { border-collapse: separate; border-spacing: 0; }
+img, picture, video, canvas, svg { display: inline-block; }
+/* Lottie runtime fit: the player re-mounts its svg/canvas into an absolute overlay that fills
+   the host's captured (per-viewport, definite) box. Force that runtime media to fit the box so
+   an aspect-mismatched viewBox (e.g. a portrait animation in a shorter, letterboxed source box)
+   can't inflate past the pinned height. Scoped to the runtime-marked host only. */
+[data-ditto-lottie] > div > svg, [data-ditto-lottie] > div > canvas { width: 100%; height: 100%; display: block; }
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd { margin: 0; }
+/* Neutralize UA text defaults to inherit so the generator's default-skipping is
+   correct: a property equal to its inherited value is simply not emitted. */
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+b, strong, th { font-weight: inherit; }
+em, i, cite, var, dfn, address, q { font-style: inherit; }
+small, big, sub, sup { font-size: inherit; }
+sub, sup { vertical-align: inherit; }
+code, kbd, samp, pre, tt, var { font-family: inherit; font-size: inherit; }
+mark { background-color: transparent; color: inherit; }
+abbr[title] { text-decoration: none; }
+fieldset, legend { min-width: 0; }
+
+/* fonts */
+@font-face {
+  font-family: "Sohne";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/3db5e0a4a564.woff2") format("woff2"), url("/assets/cloned/fonts/cf3bcb0ed0d3.woff") format("woff"), url("/assets/cloned/fonts/e36dad4f12e6.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Sohne";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/a3239a5e9d06.woff2") format("woff2"), url("/assets/cloned/fonts/f2ed26cafc0a.woff") format("woff"), url("/assets/cloned/fonts/6b2560713447.otf") format("opentype");
+}
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+html, body { overflow-x: clip; }
+}

@@ -1,0 +1,7 @@
+export const dynamic = "force-static";
+
+export function GET() {
+  return new Response("# About Bang & Olufsen - Iconic quality since 1925\n\nWe have created iconic audio and home entertainment products since 1925. Our 'why': to change how we all hear, see and feel the world.\n\nThis is a generated ditto.site clone. It preserves captured page content, metadata, route structure, and static assets where available.\n\n## Routes\n\n- [About Bang & Olufsen - Iconic quality since 1925](https://www.bang-olufsen.com/en/int/story/about-bang-and-olufsen) - We have created iconic audio and home entertainment products since 1925. Our 'why': to change how we all hear, see and feel the world. \n\n## Captured Content\n\n### About Bang & Olufsen - Iconic quality since 1925\nNavigation and Content Skip to main content Skip to main footer Menu Basket Preview Modal is Closed Iconic since 1925 About Bang & Olufsen From a small town in Western Denmark… to the world. For 100 years, we’ve been crafting magical moments. Generations of people, listening and watching in wonder. Experiences so unforgettable, they transcend time. This is our story. pause Since 1925, our iconic audio and home entertainment products have defined entire decades. And we’re nowhere near finished. More than a century of magical moments It all starts with Peter Bang and Svend Olufsen. Two young engineers with big dreams. They met in 1925, just after graduating from school, and connected instantly\n", {
+    headers: { "content-type": "text/plain; charset=utf-8" },
+  });
+}

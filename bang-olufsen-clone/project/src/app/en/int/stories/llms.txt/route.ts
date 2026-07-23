@@ -1,0 +1,7 @@
+export const dynamic = "force-static";
+
+export function GET() {
+  return new Response("# Story Hub | Bang & Olufsen\n\nFeatured stories about design, craft, sound, heritage, and people. Learn more about the Danish sound and design brand Bang & Olufsen.\n\nThis is a generated ditto.site clone. It preserves captured page content, metadata, route structure, and static assets where available.\n\n## Routes\n\n- [Story Hub | Bang & Olufsen](https://www.bang-olufsen.com/en/int/stories) - Featured stories about design, craft, sound, heritage, and people. Learn more about the Danish sound and design brand Bang & Olufsen.\n\n## Captured Content\n\n### Story Hub | Bang & Olufsen\nNavigation and Content Skip to main content Skip to main footer Menu Basket Preview Modal is Closed Explore The World of B&O Living Design Craftsmanship Heritage Atelier Events Collaborations New Global Brand Ambassador A landmark partnership with EGOT-winning artist John Legend When everything works, nothing distracts you. Fernando Alonso on silence, precision, and the moments that stay with you Travel collection Give every journey the soundtrack it deserves Bang & Olufsen’s Residence of Beautiful Sound 3daysofdesign 2026 Explore all stories Living Premium Headphones and Speakers for Travel Beautiful sound for every journey Travel collection Give every journey the soundtrack it deserves The\n", {
+    headers: { "content-type": "text/plain; charset=utf-8" },
+  });
+}

@@ -1,0 +1,225 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "./";
+
+/* Tailwind theme: color tokens (so bg-primary/text-foreground resolve to our vars) +
+   breakpoints. @theme inline keeps the var() reference (theme-swappable at runtime). */
+@theme inline {
+  --breakpoint-vp375: 375px;
+  --breakpoint-vp768: 768px;
+  --breakpoint-vp1280: 1280px;
+  --breakpoint-vp1920: 1920px;
+  --breakpoint-md: 572px;
+  --breakpoint-lg: 1025px;
+  --breakpoint-2xl: 1601px;
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-background: var(--background);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-clr-0: var(--clr-0);
+  --color-clr-1: var(--clr-1);
+  --color-color-001: var(--color-001);
+  --color-surface: var(--surface);
+  --color-clr-2: var(--clr-2);
+  --color-primary: var(--primary);
+  --color-clr-3: var(--clr-3);
+  --color-clr-4: var(--clr-4);
+  --color-clr-5: var(--clr-5);
+  --color-clr-6: var(--clr-6);
+  --color-clr-7: var(--clr-7);
+  --color-clr-8: var(--clr-8);
+  --color-clr-9: var(--clr-9);
+  --color-clr-10: var(--clr-10);
+  --color-clr-11: var(--clr-11);
+  --color-clr-12: var(--clr-12);
+  --color-clr-13: var(--clr-13);
+  --color-clr-14: var(--clr-14);
+  --color-clr-15: var(--clr-15);
+  --color-clr-16: var(--clr-16);
+  --color-clr-17: var(--clr-17);
+  --color-clr-18: var(--clr-18);
+  --color-clr-19: var(--clr-19);
+  --color-clr-20: var(--clr-20);
+}
+
+/* Design tokens (values). */
+:root {
+  --background: rgb(255, 255, 255);
+  --foreground: rgb(0, 0, 0);
+  --primary: rgb(6, 13, 170);
+  --border: rgb(25, 24, 23);
+  --muted-foreground: rgb(85, 85, 85);
+  --surface: rgb(229, 229, 229);
+  --color-001: rgb(252, 250, 238);
+}
+
+:root {
+  /* fonts */
+  --font-body: BeoSupreme, "Lexend Deca", Arial, Helvetica, sans-serif;
+  /* fontSizes */
+  --font-size-001: 12px;
+  --font-size-002: 14px;
+  --font-size-003: 16px;
+  /* fontWeights */
+  --font-weight-001: 400;
+  --font-weight-002: 500;
+  /* lineHeights */
+  --line-height-001: 18.4px;
+  --line-height-002: 20px;
+  --line-height-003: 26px;
+  --line-height-004: 35px;
+  --line-height-005: 24px;
+  --line-height-006: 16px;
+  --line-height-007: 20.02px;
+  --line-height-008: 13.8px;
+  /* spacing */
+  --space-001: 1px;
+  --space-002: 2px;
+  --space-003: 4px;
+  --space-004: 5px;
+  --space-005: 6px;
+  --space-006: 8px;
+  --space-007: 10px;
+  --space-008: 14px;
+  --space-009: 16px;
+  --space-010: 24px;
+  --space-011: 32px;
+  --space-012: 36px;
+  --space-013: 40px;
+  --space-014: 48px;
+  --space-015: 60px;
+  --space-016: 80px;
+  --space-017: 86px;
+  /* radii */
+  --radius-001: 40px;
+  --radius-002: 50%;
+  /* zIndices */
+  --z-001: 1;
+  /* breakpoints */
+  --bp-375: 375px;
+  --bp-768: 768px;
+  --bp-1280: 1280px;
+  --bp-1920: 1920px;
+}
+
+:root {
+  --clr-0: rgb(250, 250, 250);
+  --clr-1: rgba(25, 24, 23, 0.4);
+  --clr-2: rgba(0, 0, 0, 0);
+  --clr-3: rgb(116, 116, 116);
+  --clr-4: rgb(210, 159, 135);
+  --clr-5: rgb(172, 166, 159);
+  --clr-6: rgb(218, 218, 218);
+  --clr-7: rgb(166, 10, 61);
+  --clr-8: rgb(208, 208, 210);
+  --clr-9: rgb(41, 41, 41);
+  --clr-10: rgba(255, 255, 255, 0.894);
+  --clr-11: rgba(255, 255, 255, 0.106);
+  --clr-12: rgb(50, 49, 48);
+  --clr-13: rgba(255, 255, 255, 0.867);
+  --clr-14: rgba(255, 255, 255, 0.133);
+  --clr-15: rgb(56, 55, 54);
+  --clr-16: rgba(25, 24, 23, 0.133);
+  --clr-17: rgba(25, 24, 23, 0.867);
+  --clr-18: rgb(55, 54, 52);
+  --clr-19: rgb(228, 226, 215);
+  --clr-20: rgba(255, 255, 255, 0);
+}
+
+@layer base {
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid currentColor; }
+html { -webkit-text-size-adjust: 100%; line-height: normal; }
+body { margin: 0; }
+ul, ol, menu { list-style: none; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea, optgroup { font: inherit; color: inherit; background: transparent; border: 0; padding: 0; margin: 0; text-align: inherit; letter-spacing: inherit; }
+button { cursor: pointer; }
+table { border-collapse: separate; border-spacing: 0; }
+img, picture, video, canvas, svg { display: inline-block; }
+/* Lottie runtime fit: the player re-mounts its svg/canvas into an absolute overlay that fills
+   the host's captured (per-viewport, definite) box. Force that runtime media to fit the box so
+   an aspect-mismatched viewBox (e.g. a portrait animation in a shorter, letterboxed source box)
+   can't inflate past the pinned height. Scoped to the runtime-marked host only. */
+[data-ditto-lottie] > div > svg, [data-ditto-lottie] > div > canvas { width: 100%; height: 100%; display: block; }
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd { margin: 0; }
+/* Neutralize UA text defaults to inherit so the generator's default-skipping is
+   correct: a property equal to its inherited value is simply not emitted. */
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+b, strong, th { font-weight: inherit; }
+em, i, cite, var, dfn, address, q { font-style: inherit; }
+small, big, sub, sup { font-size: inherit; }
+sub, sup { vertical-align: inherit; }
+code, kbd, samp, pre, tt, var { font-family: inherit; font-size: inherit; }
+mark { background-color: transparent; color: inherit; }
+abbr[title] { text-decoration: none; }
+fieldset, legend { min-width: 0; }
+
+/* fonts */
+@font-face {
+  font-family: "BeoLogue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/bba3d3103167.woff2") format("woff2"), url("/assets/cloned/fonts/c027bc7463f6.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/20877caa6fd0.woff2") format("woff2"), url("/assets/cloned/fonts/bf21350cb387.woff") format("woff"), url("/assets/cloned/fonts/d906fab32de3.ttf") format("truetype"), url("/assets/cloned/fonts/580a8085cd8d.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/1b3d9cd72221.woff2") format("woff2"), url("/assets/cloned/fonts/b5ad74bf1f04.woff") format("woff"), url("/assets/cloned/fonts/a245d474efe5.ttf") format("truetype"), url("/assets/cloned/fonts/81525c3c582c.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "BeoSupreme";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/37285f670490.woff2") format("woff2"), url("/assets/cloned/fonts/941fc3f37257.woff") format("woff"), url("/assets/cloned/fonts/4fa5508ff16c.ttf") format("truetype"), url("/assets/cloned/fonts/9c7c9dc746d8.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Fastpen";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/b04ab64a2825.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/579242fc4aca.woff") format("woff"), url("/assets/cloned/fonts/3b01d7c65ddf.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/29bf1b79b676.woff2") format("woff2"), url("/assets/cloned/fonts/55b03f6504d7.woff") format("woff"), url("/assets/cloned/fonts/691fac227569.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Noto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/cloned/fonts/aa288d200250.woff2") format("woff2"), url("/assets/cloned/fonts/acb91662d7f4.woff") format("woff");
+}
+html { background: #ffffff; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+html, body { overflow-x: clip; }
+}

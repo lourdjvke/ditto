@@ -1,0 +1,12 @@
+{
+  "cloned_via": "ditto_single_page",
+  "all_cached": true,
+  "routes": [
+    { "label": "home",       "url": "https://www.bang-olufsen.com/en/int",                                                               "jobId": "3f35207e-48ff-454c-b9d9-b200d6d04aab", "local_route": "/",                                                                          "status": 200 },
+    { "label": "headphones", "url": "https://www.bang-olufsen.com/en/int/headphones",                                                     "jobId": "7368d184-b3b0-4147-92a0-10467874e001", "local_route": "/en/int/headphones",                                                        "status": 200 },
+    { "label": "product",    "url": "https://www.bang-olufsen.com/en/int/earphones/beograce?variant=beograce-natural-aluminium",          "jobId": "ccac3934-721c-4129-9a34-3a0d21f5454c", "local_route": "/en/int/earphones/beograce",                                                "status": 200 },
+    { "label": "stories",    "url": "https://www.bang-olufsen.com/en/int/stories",                                                        "jobId": "3292d656-df0e-4e6d-a9d1-da87b86533e1", "local_route": "/en/int/stories",                                                          "status": 200 },
+    { "label": "john",       "url": "https://www.bang-olufsen.com/en/int/story/bang-olufsen-brand-ambassador-john-legend",                "jobId": "b433a4b5-fb16-4d33-9595-9848fb51ff0f", "local_route": "/en/int/story/bang-olufsen-brand-ambassador-john-legend",                   "status": 200 },
+    { "label": "about",      "url": "https://www.bang-olufsen.com/en/int/story/about-bang-and-olufsen",                                   "jobId": "50f570c0-2ce0-4848-864d-cafa52789cc8", "local_route": "/en/int/story/about-bang-and-olufsen",                                      "status": 200 }
+  ]
+}

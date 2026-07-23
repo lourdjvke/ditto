@@ -1,0 +1,147 @@
+@-webkit-keyframes gDibJC { 
+  0% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  10% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}
+@keyframes gDibJC { 
+  0% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  10% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}
+
+[data-cid="n63"]::after{content:"";display:none;position:absolute;top:0px;left:0px;z-index:1;width:75%;height:100%;background-image:linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%)}
+@media (max-width: 571px) {
+[data-cid="n63"]::after{width:100%;background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);left:auto}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n63"]::after{width:100%;background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);left:auto}
+}
+[data-cid="n80"]::after{content:"";display:none;position:absolute;top:0px;left:0px;z-index:1;width:75%;height:100%;background-image:linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%)}
+@media (max-width: 571px) {
+[data-cid="n80"]::after{width:100%;background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);left:auto}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n80"]::after{width:100%;background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);left:auto}
+}
+[data-cid="n406"]::after{content:"";display:block;position:relative;top:8px;right:-14.6313px;bottom:-8px;left:14.625px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n406"]::after{right:-13.3313px;left:13.3281px}
+}
+[data-cid="n423"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n423"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n423"]::after{display:none}
+}
+[data-cid="n428"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n428"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n428"]::after{display:none}
+}
+[data-cid="n433"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n433"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n433"]::after{display:none}
+}
+[data-cid="n438"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n438"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n438"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n490"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n490"]::after{content:"Speakers";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:68.6094px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n490"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n490"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n492"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n492"]::after{content:"Headphones";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:95px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n492"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n492"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n494"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n494"]::after{content:"Soundbars";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:79.8125px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n494"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n494"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n496"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n496"]::after{content:"Televisions";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:77.2031px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n496"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n496"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n498"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n498"]::after{content:"Accessories";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:82.2031px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n498"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n498"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n501"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n501"]::after{content:"Design your own";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:124px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n501"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n501"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n503"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n503"]::after{content:"The World of B&O";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:136.203px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n503"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n503"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n507"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n507"]::after{content:"B&O Professional";display:block;position:absolute;top:20px;right:0px;bottom:-20px;left:0px;width:96.6094px;height:20px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:12px;line-height:20px;letter-spacing:0.1px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n507"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n507"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n509"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n509"]::after{content:"Partner Audio";display:block;position:absolute;top:20px;right:0px;bottom:-20px;left:0px;width:75.3125px;height:20px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:12px;line-height:20px;letter-spacing:0.1px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n509"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n509"]::after{display:none}
+}

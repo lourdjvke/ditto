@@ -1,0 +1,139 @@
+@-webkit-keyframes gDibJC { 
+  0% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  10% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}
+@keyframes gDibJC { 
+  0% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  10% { opacity: 0; transform: translate3d(0px, 80px, 0px); }
+  100% { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+}
+
+@media (max-width: 571px) {
+[data-cid="n59"]{background-image:linear-gradient(45deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)}
+}
+@media (max-width: 571px) {
+[data-cid="n81"]{background-image:linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)}
+}
+[data-cid="n797"]::after{content:"";display:block;position:relative;top:8px;right:-14.6313px;bottom:-8px;left:14.625px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n797"]::after{right:-13.3313px;left:13.3281px}
+}
+[data-cid="n814"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n814"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n814"]::after{display:none}
+}
+[data-cid="n819"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n819"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n819"]::after{display:none}
+}
+[data-cid="n824"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n824"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n824"]::after{display:none}
+}
+[data-cid="n829"]::after{content:"";display:block;top:9px;right:0px;width:9px;height:6px;background-image:url("/assets/cloned/svg/1556a09e9890.svg");background-position:50% 50%;background-repeat:no-repeat}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n829"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n829"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n881"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n881"]::after{content:"Speakers";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:68.6094px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n881"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n881"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n883"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n883"]::after{content:"Headphones";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:95px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n883"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n883"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n885"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n885"]::after{content:"Soundbars";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:79.8125px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n885"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n885"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n887"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n887"]::after{content:"Televisions";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:77.2031px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n887"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n887"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n889"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n889"]::after{content:"Accessories";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:82.2031px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n889"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n889"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n892"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n892"]::after{content:"Design your own";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:124px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n892"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n892"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n894"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n894"]::after{content:"The World of B&O";display:block;position:absolute;top:26px;right:0px;bottom:-26px;left:0px;width:136.203px;height:26px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:16px;line-height:26px;letter-spacing:0.2px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n894"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n894"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n898"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n898"]::after{content:"B&O Professional";display:block;position:absolute;top:20px;right:0px;bottom:-20px;left:0px;width:96.6094px;height:20px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:12px;line-height:20px;letter-spacing:0.1px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n898"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n898"]::after{display:none}
+}
+@media (min-width: 1601px) {
+[data-cid="n900"]{background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23))}
+}
+[data-cid="n900"]::after{content:"Partner Audio";display:block;position:absolute;top:20px;right:0px;bottom:-20px;left:0px;width:75.3125px;height:20px;padding-bottom:4px;color:rgb(25, 24, 23);font-size:12px;line-height:20px;letter-spacing:0.1px;background-image:linear-gradient(rgb(25, 24, 23), rgb(25, 24, 23));background-size:100% 2px;background-position:0% 100%;background-repeat:no-repeat}
+@media (max-width: 571px) {
+[data-cid="n900"]::after{display:none}
+}
+@media (min-width: 572px) and (max-width: 1024px) {
+[data-cid="n900"]::after{display:none}
+}

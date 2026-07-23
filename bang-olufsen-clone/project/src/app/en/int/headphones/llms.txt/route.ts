@@ -1,0 +1,7 @@
+export const dynamic = "force-static";
+
+export function GET() {
+  return new Response("# Wireless headphones - Beautiful design, great sound | B&O\n\nExplore Bang & Olufsen’s wireless designer headphones, made with natural materials, and delivering great sound as well as comfort.\n\nThis is a generated ditto.site clone. It preserves captured page content, metadata, route structure, and static assets where available.\n\n## Routes\n\n- [Wireless headphones - Beautiful design, great sound | B&O](https://www.bang-olufsen.com/en/int/headphones) - Explore Bang & Olufsen’s wireless designer headphones, made with natural materials, and delivering great sound as well as comfort.\n\n## Captured Content\n\n### Wireless headphones - Beautiful design, great sound | B&O\nNavigation and Content Skip to main content Skip to main footer Menu Basket Preview Modal is Closed All headphones (16) All headphones Over-Ear In-Ear Headphone Accessories New Beo Grace $1,500 2 Colours New Beo Grace $1,500 2 Colours Beoplay Eleven $599 3 Colours Beoplay Eleven $599 3 Colours Beoplay Eleven $599 3 Colours Beoplay H100 $2,200 5 Colours Beoplay H100 $2,300 5 Colours Beoplay H100 $2,200 5 Colours Beoplay H100 $2,200 5 Colours Beoplay HX $749 3 Colours Beoplay HX $749 3 Colours Beoplay HX $749 3 Colours Beoplay H95 $1,250 4 Colours Beoplay H95 $1,250 4 Colours Beoplay H95 $1,250 4 Colours Beoplay H95 $1,250 4 Colours Headphones Toe-tapping music that travels with you. Our wirel\n", {
+    headers: { "content-type": "text/plain; charset=utf-8" },
+  });
+}

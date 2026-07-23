@@ -47,3 +47,8 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Bang & Olufsen clone — raw Ditto bundles (large, regeneratable from cached API)
+bang-olufsen-clone/bundles/
+# Next.js build cache
+bang-olufsen-clone/project/.next/

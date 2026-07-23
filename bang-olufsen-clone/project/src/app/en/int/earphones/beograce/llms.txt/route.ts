@@ -1,0 +1,7 @@
+export const dynamic = "force-static";
+
+export function GET() {
+  return new Response("# Beo Grace - Wireless Earbuds | B&O\n\nDiscover Beo Grace luxury earbuds — premium sound, polished aluminium design, and 100 years of audio excellence.\n\nThis is a generated ditto.site clone. It preserves captured page content, metadata, route structure, and static assets where available.\n\n## Routes\n\n- [Beo Grace - Wireless Earbuds | B&O](https://www.bang-olufsen.com/en/int/earphones/beograce?variant=beograce-natural-aluminium) - Discover Beo Grace luxury earbuds — premium sound, polished aluminium design, and 100 years of audio excellence.\n\n## Captured Content\n\n### Beo Grace - Wireless Earbuds | B&O\nNavigation and Content Skip to main content Skip to main footer Menu Basket Preview Modal is Closed Beo Grace A future icon. Crafted for the century ahead. SCROLL TO DISCOVER SCROLL TO DISCOVER $1,500 Shop Previous Next 1 2 3 4 5 6 7 8 Zoom in Beo Grace Advanced ANC earbuds True wireless earbuds with advanced noise cancellation and a hand polished, lightweight design. Immerse in your music distraction-free, with Beo Grace. Intuitively control playback or calls with a simple gesture. Enjoy clear call quality, optimised battery life, and all-day comfort. Beo Grace Advanced ANC earbuds Honey Tone Natural Aluminium Select a colour Honey Tone Natural Aluminium $1,500 Experience in store Choose co\n", {
+    headers: { "content-type": "text/plain; charset=utf-8" },
+  });
+}

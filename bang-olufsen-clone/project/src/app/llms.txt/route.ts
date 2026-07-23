@@ -1,0 +1,7 @@
+export const dynamic = "force-static";
+
+export function GET() {
+  return new Response("# Bang & Olufsen - High-end Headphones, Speakers, and Televisions\n\nDiscover Bang & Olufsen – where sound meets design. Shop premium speakers, headphones, and televisions for home and travel.\n\nThis is a generated ditto.site clone. It preserves captured page content, metadata, route structure, and static assets where available.\n\n## Routes\n\n- [Bang & Olufsen - High-end Headphones, Speakers, and Televisions](https://www.bang-olufsen.com/en/int) - Discover Bang & Olufsen – where sound meets design. Shop premium speakers, headphones, and televisions for home and travel.\n\n## Captured Content\n\n### Bang & Olufsen - High-end Headphones, Speakers, and Televisions\nNavigation and Content Skip to main content Skip to main footer Menu Basket Preview Modal is Closed pause Beo Grace Wireless sound. Connected to the moment. Learn more Beo Grace A future icon. Crafted for the century ahead. SCROLL TO DISCOVER SCROLL TO DISCOVER $1,500 Shop Powerful multiroom speaker sounding every bit as beautiful as it looks. Beosound 2 Wireless speaker designed to move seamlessly from indoors to out - without compromising on power. Beosound A5 Introducing John Legend as Global Brand Ambassador A shared belief that music is more than sound. Learn more Introducing John Legend as Global Brand Ambassador A shared belief that music is more than sound. Learn more Wireless speake\n", {
+    headers: { "content-type": "text/plain; charset=utf-8" },
+  });
+}
