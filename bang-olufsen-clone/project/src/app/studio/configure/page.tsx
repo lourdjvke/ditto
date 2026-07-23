@@ -1,25 +1,25 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 /* ─── Data ───────────────────────────────────────────────────────── */
 const MATERIALS = [
-  { id: "cotton",   label: "100% Cotton",        desc: "Soft, breathable everyday wear",      texture: null,    grain: 0    },
-  { id: "terry",    label: "French Terry",        desc: "Loopback knit, brushed interior",     texture: "lines", grain: 0.06 },
-  { id: "fleece",   label: "Heavyweight Fleece",  desc: "480gsm, structured & warm",           texture: "dots",  grain: 0.12 },
-  { id: "recycled", label: "Recycled Poly",       desc: "Eco-friendly performance blend",      texture: "grid",  grain: 0.08 },
+  { id: "cotton",   label: "100% Cotton",       desc: "Soft, breathable everyday wear",     texture: null,    },
+  { id: "terry",    label: "French Terry",       desc: "Loopback knit, brushed interior",    texture: "lines", },
+  { id: "fleece",   label: "Heavyweight Fleece", desc: "480gsm, structured & warm",          texture: "dots",  },
+  { id: "recycled", label: "Recycled Poly",      desc: "Eco-friendly performance blend",     texture: "grid",  },
 ];
 
 const COLORS = [
-  { id: "natural",   label: "Natural",          hex: "#e8e8e8", text: "#171717" },
-  { id: "black",     label: "Black Anthracite",  hex: "#2c2c2c", text: "#f5f5f5" },
-  { id: "gold",      label: "Gold Tone",         hex: "#d4af37", text: "#171717" },
-  { id: "bronze",    label: "Bronze Tone",       hex: "#cd7f32", text: "#f5f5f5" },
-  { id: "chestnut",  label: "Chestnut Brown",    hex: "#5c4033", text: "#f5f5f5" },
-  { id: "bitter",    label: "Bitter Orange",     hex: "#d95030", text: "#f5f5f5" },
-  { id: "zesty",     label: "Zesty Orange",      hex: "#ff9900", text: "#171717" },
-  { id: "radiant",   label: "Radiant Red",       hex: "#cc0000", text: "#f5f5f5" },
-  { id: "lime",      label: "Lime Green",        hex: "#32cd32", text: "#171717" },
-  { id: "navy",      label: "Navy Blue",         hex: "#000080", text: "#f5f5f5" },
+  { id: "natural",  label: "Natural",         hex: "#e8e8e8", text: "#171717" },
+  { id: "black",    label: "Black Anthracite", hex: "#2c2c2c", text: "#f5f5f5" },
+  { id: "gold",     label: "Gold Tone",        hex: "#d4af37", text: "#171717" },
+  { id: "bronze",   label: "Bronze Tone",      hex: "#cd7f32", text: "#f5f5f5" },
+  { id: "chestnut", label: "Chestnut Brown",   hex: "#5c4033", text: "#f5f5f5" },
+  { id: "bitter",   label: "Bitter Orange",    hex: "#d95030", text: "#f5f5f5" },
+  { id: "zesty",    label: "Zesty Orange",     hex: "#ff9900", text: "#171717" },
+  { id: "radiant",  label: "Radiant Red",      hex: "#cc0000", text: "#f5f5f5" },
+  { id: "lime",     label: "Lime Green",        hex: "#32cd32", text: "#171717" },
+  { id: "navy",     label: "Navy Blue",         hex: "#000080", text: "#f5f5f5" },
 ];
 
 const FITS = [
@@ -30,10 +30,10 @@ const FITS = [
 ];
 
 const PRINTS = [
-  { id: "blank",   label: "Blank"        },
-  { id: "logo",    label: "Centre Logo"  },
-  { id: "allover", label: "All-over"     },
-  { id: "chest",   label: "Left Chest"   },
+  { id: "blank",   label: "Blank"       },
+  { id: "logo",    label: "Centre Logo" },
+  { id: "allover", label: "All-over"    },
+  { id: "chest",   label: "Left Chest"  },
 ];
 
 const CATEGORIES = ["MATERIAL", "COLOR", "FIT", "PRINT"] as const;
@@ -57,61 +57,77 @@ const HOODIE_PATH =
   "c4.475,4.469,11.628,4.766,16.458,0.683l13.14-11.109C290.632,181.248,291.513,174.107,287.804,168.95z";
 
 function HoodieSVG({
-  color, textColor, material, print,
+  color, textColor, material, print, fitTransform, fitClip,
 }: {
   color: string; textColor: string;
   material: typeof MATERIALS[0]; print: string;
+  fitTransform?: string; fitClip?: string;
 }) {
   const id = `tex-${material.id}`;
   return (
-    <svg viewBox="0 0 290.094 290.094" xmlns="http://www.w3.org/2000/svg"
-      className="w-full max-w-[300px] drop-shadow-2xl" style={{ transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)" }}>
-      <defs>
-        {material.texture === "lines" && (
-          <pattern id={id} patternUnits="userSpaceOnUse" width="8" height="5">
-            <line x1="0" y1="2.5" x2="8" y2="2.5" stroke={textColor} strokeWidth="0.6" strokeOpacity="0.15" />
-          </pattern>
-        )}
-        {material.texture === "dots" && (
-          <pattern id={id} patternUnits="userSpaceOnUse" width="6" height="6">
-            <circle cx="3" cy="3" r="0.8" fill={textColor} fillOpacity="0.18" />
-          </pattern>
-        )}
-        {material.texture === "grid" && (
-          <pattern id={id} patternUnits="userSpaceOnUse" width="8" height="8">
-            <line x1="0" y1="0" x2="8" y2="0" stroke={textColor} strokeWidth="0.5" strokeOpacity="0.12" />
-            <line x1="0" y1="0" x2="0" y2="8" stroke={textColor} strokeWidth="0.5" strokeOpacity="0.12" />
-          </pattern>
-        )}
-        <clipPath id="hoodie-clip"><path d={HOODIE_PATH} /></clipPath>
-      </defs>
+    <div style={{
+      transform: fitTransform,
+      clipPath: fitClip,
+      transition: "transform 0.45s cubic-bezier(0.4,0,0.2,1), clip-path 0.45s cubic-bezier(0.4,0,0.2,1)",
+    }}>
+      <svg viewBox="0 0 290.094 290.094" xmlns="http://www.w3.org/2000/svg"
+        className="w-full max-w-[300px] drop-shadow-2xl"
+        style={{ transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)" }}>
+        <defs>
+          {material.texture === "lines" && (
+            <pattern id={id} patternUnits="userSpaceOnUse" width="8" height="5">
+              <line x1="0" y1="2.5" x2="8" y2="2.5" stroke={textColor} strokeWidth="0.6" strokeOpacity="0.15" />
+            </pattern>
+          )}
+          {material.texture === "dots" && (
+            <pattern id={id} patternUnits="userSpaceOnUse" width="6" height="6">
+              <circle cx="3" cy="3" r="0.8" fill={textColor} fillOpacity="0.18" />
+            </pattern>
+          )}
+          {material.texture === "grid" && (
+            <pattern id={id} patternUnits="userSpaceOnUse" width="8" height="8">
+              <line x1="0" y1="0" x2="8" y2="0" stroke={textColor} strokeWidth="0.5" strokeOpacity="0.12" />
+              <line x1="0" y1="0" x2="0" y2="8" stroke={textColor} strokeWidth="0.5" strokeOpacity="0.12" />
+            </pattern>
+          )}
+          <clipPath id="hoodie-clip"><path d={HOODIE_PATH} /></clipPath>
+        </defs>
 
-      <path d={HOODIE_PATH} fill={color} stroke="rgba(0,0,0,0.25)" strokeWidth="1" />
-
-      {material.texture && (
-        <rect x="0" y="0" width="290.094" height="290.094"
-          fill={`url(#${id})`} clipPath="url(#hoodie-clip)" />
-      )}
-
-      {print === "allover" && (
-        <g clipPath="url(#hoodie-clip)" opacity="0.2">
-          {[0,1,2,3,4,5,6].map(row => [0,1,2,3,4].map(col => (
-            <circle key={`${row}-${col}`} cx={30 + col * 48} cy={60 + row * 36} r="9" fill={textColor} />
-          )))}
-        </g>
-      )}
-      {print === "logo" && (
-        <text x="145" y="175" textAnchor="middle" fontSize="16" fontWeight="800"
-          letterSpacing="3" fill={textColor} opacity="0.6"
-          fontFamily="ui-sans-serif,system-ui,sans-serif">STUDIO</text>
-      )}
-      {print === "chest" && (
-        <text x="105" y="150" textAnchor="middle" fontSize="9" fontWeight="700"
-          letterSpacing="2" fill={textColor} opacity="0.6"
-          fontFamily="ui-sans-serif,system-ui,sans-serif">STUDIO</text>
-      )}
-    </svg>
+        <path d={HOODIE_PATH} fill={color} stroke="rgba(0,0,0,0.25)" strokeWidth="1" />
+        {material.texture && (
+          <rect x="0" y="0" width="290.094" height="290.094"
+            fill={`url(#${id})`} clipPath="url(#hoodie-clip)" />
+        )}
+        {print === "allover" && (
+          <g clipPath="url(#hoodie-clip)" opacity="0.2">
+            {[0,1,2,3,4,5,6].map(row => [0,1,2,3,4].map(col => (
+              <circle key={`${row}-${col}`} cx={30 + col*48} cy={60 + row*36} r="9" fill={textColor} />
+            )))}
+          </g>
+        )}
+        {print === "logo" && (
+          <text x="145" y="175" textAnchor="middle" fontSize="16" fontWeight="800"
+            letterSpacing="3" fill={textColor} opacity="0.6"
+            fontFamily="ui-sans-serif,system-ui,sans-serif">STUDIO</text>
+        )}
+        {print === "chest" && (
+          <text x="105" y="150" textAnchor="middle" fontSize="9" fontWeight="700"
+            letterSpacing="2" fill={textColor} opacity="0.6"
+            fontFamily="ui-sans-serif,system-ui,sans-serif">STUDIO</text>
+        )}
+      </svg>
+    </div>
   );
+}
+
+/* ─── Fit helpers ────────────────────────────────────────────────── */
+function fitStyle(fitId: string): { transform?: string; clipPath?: string } {
+  switch (fitId) {
+    case "oversized": return { transform: "scale(1.18)" };
+    case "slim":      return { transform: "scaleX(0.8)" };
+    case "cropped":   return { clipPath: "inset(0 0 30% 0 round 4px)" };
+    default:          return {};
+  }
 }
 
 /* ─── Page ───────────────────────────────────────────────────────── */
@@ -124,6 +140,14 @@ export default function ConfigurePage() {
     PRINT:    PRINTS[0],
   });
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Intro animation: 'intro' → 'exit' → 'done'
+  const [intro, setIntro] = useState<"intro" | "exit" | "done">("intro");
+  useEffect(() => {
+    const t1 = setTimeout(() => setIntro("exit"), 1400);
+    const t2 = setTimeout(() => setIntro("done"), 1900);
+    return () => { clearTimeout(t1); clearTimeout(t2); };
+  }, []);
 
   function select(cat: Cat, id: string) {
     if (cat === "MATERIAL") setSelections(s => ({ ...s, MATERIAL: MATERIALS.find(x => x.id === id)! }));
@@ -151,10 +175,17 @@ export default function ConfigurePage() {
     return base;
   })();
 
+  const { transform: fitTransform, clipPath: fitClip } = fitStyle(selections.FIT.id);
+
   return (
     <>
       <style>{`
-        body {
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        .cfg-root {
+          font-family: 'Inter', sans-serif;
+          background-color: #fafafa;
+          background-image: linear-gradient(to right, #f0f0f0 1px, transparent 1px);
+          background-size: 25vw 100%;
           overscroll-behavior: none;
         }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
@@ -163,37 +194,59 @@ export default function ConfigurePage() {
           -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent);
           mask-image: linear-gradient(to bottom, black 85%, transparent);
         }
-        .option-active-indicator {
+        .opt-indicator {
           position: absolute;
-          right: 0;
-          top: 50%;
+          right: 0; top: 50%;
           transform: translateY(-50%);
-          width: 3px;
-          height: 100%;
-          background-color: black;
+          width: 3px; height: 100%;
+          background: black;
         }
-        .edit-pin {
-          animation: epulse 2s infinite;
-        }
+        .edit-pin { animation: epulse 2s infinite; }
         @keyframes epulse {
-          0%   { box-shadow: 0 0 0 0 rgba(0,0,0,0.1); }
+          0%   { box-shadow: 0 0 0 0 rgba(0,0,0,0.12); }
           70%  { box-shadow: 0 0 0 10px rgba(0,0,0,0); }
           100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
         }
+        @keyframes hoodie-tilt {
+          0%   { transform: perspective(700px) rotateY(0deg)   rotateX(0deg)   scale(1);    opacity: 1; }
+          18%  { transform: perspective(700px) rotateY(-22deg) rotateX(7deg)   scale(1.04); opacity: 1; }
+          42%  { transform: perspective(700px) rotateY(18deg)  rotateX(-5deg)  scale(1.02); opacity: 1; }
+          62%  { transform: perspective(700px) rotateY(-10deg) rotateX(10deg)  scale(0.98); opacity: 1; }
+          82%  { transform: perspective(700px) rotateY(0deg)   rotateX(0deg)   scale(0.95); opacity: 1; }
+          100% { transform: perspective(700px) rotateY(0deg)   rotateX(0deg)   scale(0.88); opacity: 1; }
+        }
+        .hoodie-intro-anim {
+          animation: hoodie-tilt 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
       `}</style>
 
-      <div
-        className="h-screen w-screen overflow-hidden flex flex-col antialiased text-[#111]"
-        style={{
-          fontFamily: "'Inter', sans-serif",
-          backgroundColor: "#fafafa",
-          backgroundImage: "linear-gradient(to right, #f0f0f0 1px, transparent 1px)",
-          backgroundSize: "25vw 100%",
-        }}
-      >
+      {/* ── Intro overlay ── */}
+      {intro !== "done" && (
+        <div
+          className="fixed inset-0 z-[200] flex items-center justify-center pointer-events-none"
+          style={{
+            backdropFilter: "blur(10px)",
+            backgroundColor: "rgba(250,250,250,0.55)",
+            transition: "opacity 0.5s ease, backdrop-filter 0.5s ease",
+            opacity: intro === "exit" ? 0 : 1,
+          }}
+        >
+          <div className="hoodie-intro-anim" style={{ width: "min(55vw, 420px)" }}>
+            <HoodieSVG
+              color={selections.COLOR.hex}
+              textColor={selections.COLOR.text}
+              material={selections.MATERIAL}
+              print={selections.PRINT.id}
+            />
+          </div>
+        </div>
+      )}
+
+      <div className="cfg-root h-screen w-screen overflow-hidden flex flex-col antialiased text-[#111]">
+
         {/* Header */}
         <header className="flex justify-between items-center px-4 md:px-6 py-4 z-30 relative bg-transparent shrink-0">
-          <a href="/studio/configuration/caps/ada693e3-60f5-41f8-b22e-eef3f6c9c833"
+          <a href="/"
             className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-100 focus:outline-none">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
@@ -221,35 +274,37 @@ export default function ConfigurePage() {
           {/* Left: Visualizer */}
           <div className="w-[55%] md:w-3/5 h-full flex flex-col justify-center relative pl-2 md:pl-8 lg:pl-16">
 
-            {/* Floating labels (desktop) */}
+            {/* Floating category labels (desktop) */}
             <div className="hidden lg:flex flex-col absolute left-8 top-1/2 -translate-y-1/2 space-y-10 text-[10px] tracking-widest uppercase font-medium text-gray-400">
               {CATEGORIES.map(cat => (
                 <span key={cat}
-                  className={`cursor-pointer transition-colors ${activeCategory === cat ? "text-black" : "hover:text-gray-600"}`}
+                  className={`cursor-pointer transition-colors duration-200 ${activeCategory === cat ? "text-black" : "hover:text-gray-600"}`}
                   onClick={() => { setActiveCategory(cat); scrollRef.current?.scrollTo({ top: 0, behavior: "smooth" }); }}>
                   {cat}
                 </span>
               ))}
             </div>
 
-            {/* Hoodie preview */}
-            <div className="relative w-full max-w-[280px] md:max-w-[360px] aspect-square flex items-center justify-center mx-auto">
+            {/* Hoodie */}
+            <div className="relative w-full max-w-[280px] md:max-w-[360px] aspect-square flex items-center justify-center mx-auto overflow-visible">
               <HoodieSVG
                 color={selections.COLOR.hex}
                 textColor={selections.COLOR.text}
                 material={selections.MATERIAL}
                 print={selections.PRINT.id}
+                fitTransform={fitTransform}
+                fitClip={fitClip}
               />
 
               {/* Edit pins */}
-              <div className="absolute top-[20%] left-[8%] bg-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center shadow-lg edit-pin cursor-pointer">
+              <div className="absolute top-[20%] left-[8%] bg-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center shadow-lg edit-pin cursor-pointer z-10">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                  <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
                 </svg>
               </div>
-              <div className="absolute bottom-[20%] right-[12%] bg-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center shadow-lg edit-pin cursor-pointer">
+              <div className="absolute bottom-[20%] right-[12%] bg-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center shadow-lg edit-pin cursor-pointer z-10">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                  <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
                 </svg>
               </div>
             </div>
@@ -291,7 +346,7 @@ export default function ConfigurePage() {
                       {opt.desc && isActive && activeCategory !== "COLOR" && (
                         <div className="text-[9px] md:text-[10px] tracking-wider mt-1 text-gray-400 pr-2">{opt.desc}</div>
                       )}
-                      {isActive && <div className="option-active-indicator" />}
+                      {isActive && <div className="opt-indicator" />}
                     </li>
                   );
                 })}
@@ -302,23 +357,21 @@ export default function ConfigurePage() {
 
         {/* Footer */}
         <footer className="bg-white/90 backdrop-blur-md border-t border-gray-100 px-4 md:px-6 py-4 flex justify-between items-center z-30 shrink-0">
-          {/* Desktop toggles */}
           <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-500">
             <div className="flex items-center space-x-2 cursor-pointer">
-              <div className="w-8 h-4 bg-black rounded-full flex items-center px-1 transition-colors">
+              <div className="w-8 h-4 bg-black rounded-full flex items-center px-1">
                 <div className="w-3 h-3 bg-white rounded-full transform translate-x-3" />
               </div>
               <span>Rotation</span>
             </div>
             <div className="flex items-center space-x-2 cursor-pointer">
-              <div className="w-8 h-4 bg-gray-200 rounded-full flex items-center px-1 transition-colors">
+              <div className="w-8 h-4 bg-gray-200 rounded-full flex items-center px-1">
                 <div className="w-3 h-3 bg-white rounded-full" />
               </div>
               <span>Zoom</span>
             </div>
           </div>
 
-          {/* Mobile: More options */}
           <div className="md:hidden text-xs font-medium text-gray-800 flex items-center space-x-2 cursor-pointer">
             <div className="grid grid-cols-2 gap-0.5 opacity-60">
               <div className="w-1 h-1 bg-black rounded-sm" /><div className="w-1 h-1 bg-black rounded-sm" />
@@ -331,7 +384,7 @@ export default function ConfigurePage() {
             <div className="flex items-center space-x-1.5 md:space-x-2 text-[10px] md:text-sm font-medium">
               <span>Est. total ${price} USD</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500 md:w-[18px] md:h-[18px]">
-                <circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" />
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
               </svg>
             </div>
             <button className="bg-[#1a1a1a] text-white px-5 py-2.5 md:px-8 md:py-3 rounded-full font-medium text-xs md:text-sm hover:bg-black transition-colors focus:outline-none whitespace-nowrap">

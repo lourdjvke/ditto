@@ -111,7 +111,7 @@ export default function Navbar() {
               ))}
             <div className="mt-8">
               {[
-                { label: "Design your own", href: "/studio/configuration/caps/ada693e3-60f5-41f8-b22e-eef3f6c9c833" },
+                { label: "Design your own", href: "/studio/configure" },
                 { label: "The World of B&O", href: "/en/int/stories" },
               ].map((item) => (
                 <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
