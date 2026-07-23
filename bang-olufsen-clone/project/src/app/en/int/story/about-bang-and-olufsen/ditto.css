@@ -1,8 +1,10 @@
-/* Kill every gradient overlay that bleeds from the root ditto.css onto this page's cids. */
+/* Kill every gradient/overlay that bleeds from root ditto.css onto this page's cids. */
 [data-cid="n70"]::after,
-[data-cid="n70"]::before { content: none !important; display: none !important; background: none !important; }
-[data-cid="n83"] { background-image: none !important; background: none !important; }
-[data-cid="n84"] { background-image: none !important; background: none !important; }
+[data-cid="n70"]::before,
+[data-cid="n107"]::after,
+[data-cid="n107"]::before { content: none !important; display: none !important; background: none !important; }
+[data-cid="n83"],
+[data-cid="n84"],
 [data-cid="n92"] { background-image: none !important; background: none !important; }
 
 @-webkit-keyframes gDibJC { 
