@@ -1,55 +1,142 @@
-import Icon from "../svgs/svg-icon";
-/** Top navigation bar. */
+"use client";
+import { useState, useEffect } from "react";
+
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", fn, { passive: true });
+    fn();
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
+
+  const imgFilter = scrolled ? "brightness(0)" : "none";
+  const textColor = scrolled ? "text-[rgb(25,24,23)]" : "text-white";
+  const lineColor = scrolled ? "bg-[rgb(25,24,23)]" : "bg-white";
+
   return (
-    <div className="block relative z-1 max-md:bg-background max-md:bg-[none] 2xl:bg-background 2xl:bg-[none]" data-cid="n15">
-      <div className="h-29 flex relative px-9 items-center max-md:h-[5.3125rem] max-md:px-4 md:max-lg:h-20.5 md:max-lg:px-6" data-cid="n16">
-        <button className="w-19 h-4.5 flex relative items-center text-center cursor-pointer" data-cid="n17" data-component="button" aria-haspopup="dialog" aria-label="Menu" type="button">
-          <Icon cid={"n18"} />
-          <em className="w-5 h-[1.5px] block relative -mt-[0.5625rem] mr-[0.6875rem] italic indent-[-999px] bg-background max-md:bg-border 2xl:bg-border before:content-[''] before:block before:absolute before:top-2 before:-bottom-2 before:inset-x-0 before:w-5 before:h-[1.5px] before:bg-background max-md:before:bg-border 2xl:before:bg-border" data-cid="n19" />
-          <p className="block text-background text-xs leading-5 tracking-[0.1px] whitespace-pre-wrap max-md:text-border 2xl:text-border" data-cid="n20">
-            Menu
-          </p>
-        </button>
-        <div className="w-160 h-8 flex absolute left-[clamp(187.5px,_50%,_calc(100%_-_187.5px))] -z-1 min-w-0 justify-center items-center transform-[matrix(1,0,0,1,-320,0)] max-md:w-[187.5px] max-md:transform-[matrix(1,0,0,1,-93.75,0)] md:max-lg:w-96 md:max-lg:transform-[matrix(1,0,0,1,-192,0)] 2xl:w-240 2xl:transform-[matrix(1,0,0,1,-480,0)]" data-cid="n21">
-          <div className="block" data-cid="n22">
-            <a className="block text-muted-foreground cursor-pointer hover:border-border hover:text-border hover:outline-border hover:[text-decoration-color:var(--border)]" data-cid="n23" data-component="link" aria-label={"Bang & Olufsen : click to navigate to homepage"} href="/en/int">
-              <p className="block text-border text-[0rem] leading-0 tracking-[-0.5px] text-center whitespace-pre-wrap" data-cid="n24">
-                <img className="w-50 h-[1.0625rem] flex max-w-full max-h-20 overflow-clip max-lg:w-29.5 max-lg:h-2.5" data-cid="n25" data-component="image" alt="Header logo white" id="header-logo" src="/assets/cloned/svg/82d176b7faa2.svg" title={"Bang & Olufsen"} />
-                <img className="w-12.5 h-4 inline max-w-full mt-1 overflow-clip text-[0.5625rem] leading-[0.5625rem] max-lg:hidden" data-cid="n26" data-component="image" alt="Est 1925 logo subline in white font" src="/assets/cloned/svg/a19aaf71a505.svg" />
-              </p>
-            </a>
-          </div>
-        </div>
-        <div className="h-8 flex ml-255 items-center order-[1] max-md:ml-[14.6875rem] md:max-lg:ml-153 2xl:ml-415" data-cid="n27">
-          <div className="flex" data-cid="n28">
-            <div className="block max-lg:hidden" data-cid="n29">
-              <button className="w-8 h-8 flex min-w-8 mr-2 justify-center text-center cursor-pointer max-lg:hidden" data-cid="n30" data-component="button" aria-label="Account" role="link" type="button">
-                <div className="block max-lg:hidden" data-cid="n31">
-                  <img className="w-8 h-8 inline max-w-full overflow-clip max-lg:hidden" data-cid="n32" data-component="image" alt="Login/Create account" src="/assets/cloned/svg/a865def8fb17.svg" />
-                </div>
-              </button>
-            </div>
-            <div className="flex mr-2 flex-col items-start max-lg:hidden" data-cid="n33">
-              <a className="w-8 h-8 flex flex-col justify-center text-muted-foreground cursor-pointer max-lg:hidden hover:border-border hover:text-border hover:outline-border hover:[text-decoration-color:var(--border)]" data-cid="n34" data-component="link" aria-label="Store Locator" href="https://stores.bang-olufsen.com/en/search?country=INT">
-                <div className="w-8 h-8 block max-lg:hidden" data-cid="n35">
-                  <img className="w-8 h-8 inline max-w-full overflow-clip max-lg:hidden" data-cid="n36" data-component="image" alt="Store Locator" aria-hidden="false" src="/assets/cloned/svg/cf54b34802e9.svg" title="Store Locator" />
-                </div>
-              </a>
-            </div>
-          </div>
-          <div className="h-8 block" data-cid="n37">
-            <span className="w-8 h-8 block" data-cid="n38">
-              <img className="w-8 h-8 inline max-w-full overflow-clip" data-cid="n39" data-component="image" alt="View Cart" src="/assets/cloned/svg/9155dccf36cd.svg" title="View Cart" />
+    <>
+      {/* Top bar */}
+      <div
+        className={`fixed top-0 inset-x-0 z-[90] transition-colors duration-300 ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
+        style={!scrolled ? { backgroundImage: "linear-gradient(rgba(25,24,23,0.35) 0%,rgba(25,24,23,0) 100%)" } : {}}
+      >
+        <div className="h-[5.3125rem] flex relative px-4 items-center lg:h-[7.25rem] lg:px-9">
+          {/* Hamburger */}
+          <button
+            className="flex items-center gap-2 cursor-pointer"
+            aria-label="Open menu"
+            type="button"
+            onClick={() => setNavOpen(true)}
+          >
+            <span className="flex flex-col gap-[5px]">
+              <span className={`w-5 h-[1.5px] block transition-colors duration-300 ${lineColor}`} />
+              <span className={`w-5 h-[1.5px] block transition-colors duration-300 ${lineColor}`} />
             </span>
-            <p className="w-px h-px block absolute overflow-hidden text-muted-foreground leading-6.5 tracking-[0.4px] whitespace-nowrap text-nowrap [clip-path:inset(50%)]" data-cid="n40" aria-atomic="true" aria-live="assertive" role="alert">
-              <span className="inline" data-cid="n41">
-                Basket Preview Modal is Closed
-              </span>
-            </p>
+            <span className={`text-xs leading-5 tracking-[0.1px] transition-colors duration-300 ${textColor}`}>Menu</span>
+          </button>
+
+          {/* Logo centred */}
+          <a
+            href="/"
+            aria-label="Bang & Olufsen"
+            className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center"
+          >
+            <img
+              src="/assets/cloned/svg/82d176b7faa2.svg"
+              alt="Bang & Olufsen"
+              className="h-[0.625rem] w-auto lg:h-[1.0625rem] transition-[filter] duration-300"
+              style={{ filter: imgFilter }}
+            />
+            <img
+              src="/assets/cloned/svg/a19aaf71a505.svg"
+              alt="Est 1925"
+              className="h-4 w-auto mt-1 hidden lg:block transition-[filter] duration-300"
+              style={{ filter: imgFilter }}
+            />
+          </a>
+
+          {/* Right icons */}
+          <div className="ml-auto flex items-center gap-2">
+            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className="w-8 h-8 hidden lg:flex items-center justify-center">
+              <img src="/assets/cloned/svg/cf54b34802e9.svg" alt="Store Locator" className="w-6 h-6 transition-[filter] duration-300" style={{ filter: imgFilter }} />
+            </a>
+            <button className="w-8 h-8 hidden lg:flex items-center justify-center" aria-label="Account">
+              <img src="/assets/cloned/svg/a865def8fb17.svg" alt="Account" className="w-6 h-6 transition-[filter] duration-300" style={{ filter: imgFilter }} />
+            </button>
+            <button className="w-8 h-8 flex items-center justify-center" aria-label="Cart">
+              <img src="/assets/cloned/svg/9155dccf36cd.svg" alt="Cart" className="w-8 h-8 transition-[filter] duration-300" style={{ filter: imgFilter }} />
+            </button>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Overlay backdrop */}
+      <div
+        className={`fixed inset-0 z-[199] bg-black/40 transition-opacity duration-300 ${navOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        onClick={() => setNavOpen(false)}
+      />
+
+      {/* Slide-out nav */}
+      <div
+        className={`fixed top-0 left-0 bottom-0 w-full max-w-[min(100vw,400px)] z-[200] bg-white flex flex-col transition-transform duration-300 ease-in-out ${navOpen ? "translate-x-0" : "-translate-x-full"}`}
+      >
+        {/* Close */}
+        <button
+          className="absolute top-5 right-5 w-8 h-8 flex items-center justify-center"
+          onClick={() => setNavOpen(false)}
+          aria-label="Close menu"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M0 15.839L15.839 0M0 0L15.839 15.839" stroke="black" strokeWidth="1.5"/>
+          </svg>
+        </button>
+
+        <div className="flex flex-col h-full pt-16 pb-8 px-6 overflow-y-auto">
+          {/* Main links */}
+          <nav className="flex-1">
+            {["Speakers","Headphones","Soundbars","Televisions","Accessories"].map((l) => (
+              <a key={l} href={`/en/int/${l.toLowerCase()}`} onClick={() => setNavOpen(false)}
+                className="block py-4 text-[rgb(25,24,23)] text-xl leading-7 border-b border-[rgb(229,229,229)]">
+                {l}
+              </a>
+            ))}
+            <div className="mt-8">
+              {[
+                { label: "Design your own", href: "/studio/configuration/caps/ada693e3-60f5-41f8-b22e-eef3f6c9c833" },
+                { label: "The World of B&O", href: "/en/int/stories" },
+              ].map((item) => (
+                <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
+                  className="block py-4 text-[rgb(25,24,23)] text-xl leading-7 border-b border-[rgb(229,229,229)]">
+                  {item.label}
+                </a>
+              ))}
+            </div>
+            <div className="mt-8">
+              {["B&O Professional","Partner Audio"].map((l) => (
+                <a key={l} href="#" onClick={() => setNavOpen(false)}
+                  className="block py-2 text-[rgb(85,85,85)] text-sm">
+                  {l}
+                </a>
+              ))}
+            </div>
+          </nav>
+
+          {/* Bottom */}
+          <div className="border-t border-[rgb(229,229,229)] pt-6 flex flex-col gap-4">
+            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className="flex items-center gap-3 text-[rgb(25,24,23)] text-sm">
+              <img src="/assets/cloned/svg/cf54b34802e9.svg" className="w-5 h-5" style={{ filter: "brightness(0)" }} alt="" />
+              Find Store
+            </a>
+            <button className="flex items-center gap-3 text-[rgb(25,24,23)] text-sm">
+              <img src="/assets/cloned/svg/a865def8fb17.svg" className="w-5 h-5" style={{ filter: "brightness(0)" }} alt="" />
+              Account
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

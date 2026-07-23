@@ -1,5 +1,6 @@
 import "./globals.css";
 import "./ditto.css";
+import "./bo-enhancements.css";
 import type { ReactNode } from "react";
 import { SITE_ORIGIN } from "../lib/site";
 
