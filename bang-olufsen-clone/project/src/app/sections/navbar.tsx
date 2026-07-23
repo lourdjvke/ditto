@@ -6,7 +6,7 @@ export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 60);
+    const fn = () => setScrolled(window.scrollY > 0);
     window.addEventListener("scroll", fn, { passive: true });
     fn();
     return () => window.removeEventListener("scroll", fn);
@@ -20,22 +20,22 @@ export default function Navbar() {
     <>
       {/* Top bar */}
       <div
-        className={`fixed top-0 inset-x-0 z-[90] transition-colors duration-300 ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
+        className={`fixed top-0 inset-x-0 z-[100] transition-[background-color,box-shadow] duration-200 ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
         style={!scrolled ? { backgroundImage: "linear-gradient(rgba(25,24,23,0.35) 0%,rgba(25,24,23,0) 100%)" } : {}}
       >
         <div className="h-[5.3125rem] flex relative px-4 items-center lg:h-[7.25rem] lg:px-9">
-          {/* Hamburger */}
+          {/* Hamburger — always clickable, full click area */}
           <button
-            className="flex items-center gap-2 cursor-pointer"
+            className="flex items-center gap-2 cursor-pointer relative z-10"
             aria-label="Open menu"
             type="button"
             onClick={() => setNavOpen(true)}
           >
             <span className="flex flex-col gap-[5px]">
-              <span className={`w-5 h-[1.5px] block transition-colors duration-300 ${lineColor}`} />
-              <span className={`w-5 h-[1.5px] block transition-colors duration-300 ${lineColor}`} />
+              <span className={`w-5 h-[1.5px] block transition-colors duration-200 ${lineColor}`} />
+              <span className={`w-5 h-[1.5px] block transition-colors duration-200 ${lineColor}`} />
             </span>
-            <span className={`text-xs leading-5 tracking-[0.1px] transition-colors duration-300 ${textColor}`}>Menu</span>
+            <span className={`text-xs leading-5 tracking-[0.1px] transition-colors duration-200 ${textColor}`}>Menu</span>
           </button>
 
           {/* Logo centred */}
@@ -47,13 +47,13 @@ export default function Navbar() {
             <img
               src="/assets/cloned/svg/82d176b7faa2.svg"
               alt="Bang & Olufsen"
-              className="h-[0.625rem] w-auto lg:h-[1.0625rem] transition-[filter] duration-300"
+              className="h-[0.625rem] w-auto lg:h-[1.0625rem] transition-[filter] duration-200"
               style={{ filter: imgFilter }}
             />
             <img
               src="/assets/cloned/svg/a19aaf71a505.svg"
               alt="Est 1925"
-              className="h-4 w-auto mt-1 hidden lg:block transition-[filter] duration-300"
+              className="h-4 w-auto mt-1 hidden lg:block transition-[filter] duration-200"
               style={{ filter: imgFilter }}
             />
           </a>
@@ -61,27 +61,27 @@ export default function Navbar() {
           {/* Right icons */}
           <div className="ml-auto flex items-center gap-2">
             <a href="https://stores.bang-olufsen.com/en/search?country=INT" className="w-8 h-8 hidden lg:flex items-center justify-center">
-              <img src="/assets/cloned/svg/cf54b34802e9.svg" alt="Store Locator" className="w-6 h-6 transition-[filter] duration-300" style={{ filter: imgFilter }} />
+              <img src="/assets/cloned/svg/cf54b34802e9.svg" alt="Store Locator" className="w-6 h-6 transition-[filter] duration-200" style={{ filter: imgFilter }} />
             </a>
             <button className="w-8 h-8 hidden lg:flex items-center justify-center" aria-label="Account">
-              <img src="/assets/cloned/svg/a865def8fb17.svg" alt="Account" className="w-6 h-6 transition-[filter] duration-300" style={{ filter: imgFilter }} />
+              <img src="/assets/cloned/svg/a865def8fb17.svg" alt="Account" className="w-6 h-6 transition-[filter] duration-200" style={{ filter: imgFilter }} />
             </button>
             <button className="w-8 h-8 flex items-center justify-center" aria-label="Cart">
-              <img src="/assets/cloned/svg/9155dccf36cd.svg" alt="Cart" className="w-8 h-8 transition-[filter] duration-300" style={{ filter: imgFilter }} />
+              <img src="/assets/cloned/svg/9155dccf36cd.svg" alt="Cart" className="w-8 h-8 transition-[filter] duration-200" style={{ filter: imgFilter }} />
             </button>
           </div>
         </div>
       </div>
 
-      {/* Overlay backdrop */}
+      {/* Overlay backdrop — z-[999] ensures it covers everything on every page */}
       <div
-        className={`fixed inset-0 z-[199] bg-black/40 transition-opacity duration-300 ${navOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`fixed inset-0 z-[999] bg-black/40 transition-opacity duration-300 ${navOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         onClick={() => setNavOpen(false)}
       />
 
-      {/* Slide-out nav */}
+      {/* Slide-out nav — z-[1000] always on top */}
       <div
-        className={`fixed top-0 left-0 bottom-0 w-full max-w-[min(100vw,400px)] z-[200] bg-white flex flex-col transition-transform duration-300 ease-in-out ${navOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 bottom-0 w-full max-w-[min(100vw,400px)] z-[1000] bg-white flex flex-col transition-transform duration-300 ease-in-out ${navOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         {/* Close */}
         <button
