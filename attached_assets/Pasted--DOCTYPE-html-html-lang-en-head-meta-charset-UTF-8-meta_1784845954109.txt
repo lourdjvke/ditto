@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>B&O Style Customizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+            /* Subtle vertical grid lines simulating the background */
+            background-image: linear-gradient(to right, #f0f0f0 1px, transparent 1px);
+            background-size: 25vw 100%;
+            overscroll-behavior: none;
+        }
+
+        /* Hide scrollbar for the options list but allow scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Smooth transitions for the SVG */
+        #custom-shape {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center center;
+        }
+
+        /* Active option indicator line */
+        .option-active-indicator {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 100%;
+            background-color: black;
+            display: none;
+        }
+        .option-item.active .option-active-indicator {
+            display: block;
+        }
+        .option-item.active span {
+            font-weight: 500;
+            color: #111;
+        }
+        .option-item:not(.active) span {
+            color: #999;
+        }
+
+        /* Edit Pin Animation */
+        .edit-pin {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+        }
+
+        /* Fade mask for scrolling list - fading only at the bottom now */
+        .scroll-mask {
+            -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent);
+            mask-image: linear-gradient(to bottom, black 85%, transparent);
+        }
+    </style>
+</head>
+<body class="h-screen w-screen overflow-hidden flex flex-col antialiased text-[#111]">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center px-4 md:px-6 py-4 z-30 relative bg-transparent shrink-0">
+        <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-100 focus:outline-none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        
+        <div class="flex flex-col items-center absolute left-1/2 transform -translate-x-1/2">
+            <div class="text-2xl md:text-3xl font-light tracking-tighter flex items-center">
+                B<span class="text-lg md:text-xl mx-0.5">&</span>O
+            </div>
+            <div class="text-[8px] md:text-[10px] tracking-widest mt-0.5 uppercase font-medium">Est. 1925</div>
+        </div>
+
+        <button class="w-10 h-10 flex items-center justify-center focus:outline-none">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+    </header>
+
+    <!-- Main Content Area: Forced Side-by-Side -->
+    <main class="flex-1 flex flex-row relative z-10 overflow-hidden w-full">
+        
+        <!-- Left Side: Visualizer (SVG) -->
+        <div class="w-[55%] md:w-3/5 h-full flex flex-col justify-center relative pl-2 md:pl-8 lg:pl-16">
+            
+            <!-- Floating labels on left (Desktop only) -->
+            <div class="hidden lg:flex flex-col absolute left-8 top-1/2 -translate-y-1/2 space-y-16 text-[10px] tracking-widest uppercase font-medium text-gray-400">
+                <span class="text-black">Material</span>
+                <span>Color</span>
+                <span>Position</span>
+            </div>
+
+            <!-- The Customizable SVG -->
+            <div class="relative w-full max-w-[280px] md:max-w-[360px] aspect-square flex items-center justify-center mx-auto">
+                <svg id="custom-shape" viewBox="0 0 200 200" class="w-full h-full drop-shadow-2xl">
+                    <!-- Base rect that changes based on material -->
+                    <rect id="svg-rect" x="10" y="10" width="180" height="180" rx="10" fill="#e8e8e8" stroke="#d1d1d1" stroke-width="2"/>
+                    <!-- Inner detail for visual interest -->
+                    <circle cx="100" cy="100" r="40" fill="black" opacity="0.05" />
+                    <path d="M70,70 L130,130 M130,70 L70,130" stroke="black" stroke-width="1" opacity="0.05" />
+                </svg>
+
+                <!-- Simulated Edit Pins -->
+                <div class="absolute top-[25%] left-[5%] bg-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center shadow-lg edit-pin cursor-pointer">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                </div>
+                <div class="absolute bottom-[15%] right-[15%] bg-white rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center shadow-lg edit-pin cursor-pointer">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Controls (Tabs + Scroll List) -->
+        <div class="w-[45%] md:w-2/5 md:max-w-[400px] h-full flex flex-col relative z-20 pt-4 md:pt-12 ml-auto">
+            
+            <!-- Category Tabs (Floating above list) -->
+            <div class="flex justify-end space-x-3 md:space-x-6 pr-4 md:pr-8 mb-6 shrink-0 flex-nowrap whitespace-nowrap overflow-x-visible" id="category-tabs">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- Options Scroll List -->
+            <div class="flex-1 overflow-y-auto hide-scrollbar scroll-mask" id="options-container">
+                <ul id="options-list" class="flex flex-col space-y-6 md:space-y-8 text-right pr-4 md:pr-8 relative w-full text-[15px] md:text-[18px] font-light pt-2 pb-24">
+                    <!-- Injected via JS -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Footer -->
+    <footer class="bg-white/90 backdrop-blur-md border-t border-gray-100 px-4 md:px-6 py-4 flex justify-between items-center z-30 shrink-0">
+        <!-- Desktop: Options toggles -->
+        <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-500">
+            <div class="flex items-center space-x-2 cursor-pointer">
+                <div class="w-8 h-4 bg-black rounded-full flex items-center px-1 transition-colors"><div class="w-3 h-3 bg-white rounded-full transform translate-x-3"></div></div>
+                <span>Rotation</span>
+            </div>
+            <div class="flex items-center space-x-2 cursor-pointer">
+                <div class="w-8 h-4 bg-gray-200 rounded-full flex items-center px-1 transition-colors"><div class="w-3 h-3 bg-white rounded-full"></div></div>
+                <span>Zoom</span>
+            </div>
+        </div>
+        
+        <!-- Mobile: More options grid icon -->
+        <div class="md:hidden text-xs md:text-sm font-medium text-gray-800 flex items-center space-x-2 cursor-pointer">
+            <div class="grid grid-cols-2 gap-0.5 opacity-60">
+                <div class="w-1 h-1 bg-black rounded-sm"></div><div class="w-1 h-1 bg-black rounded-sm"></div>
+                <div class="w-1 h-1 bg-black rounded-sm"></div><div class="w-1 h-1 bg-black rounded-sm"></div>
+            </div>
+            <span>More options</span>
+        </div>
+
+        <div class="flex items-center space-x-3 md:space-x-6 ml-auto">
+            <div class="flex items-center space-x-1.5 md:space-x-2 text-[10px] md:text-sm font-medium">
+                <span>Est. total 9,000 EUR / set</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500 md:w-[18px] md:h-[18px]"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <button class="bg-[#1a1a1a] text-white px-5 py-2.5 md:px-8 md:py-3 rounded-full font-medium text-xs md:text-sm hover:bg-black transition-colors focus:outline-none whitespace-nowrap">
+                Done
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        // Data Structure
+        const configData = {
+            categories: ['MATERIAL', 'COLOR', 'SIZE'],
+            options: {
+                'MATERIAL': [
+                    { id: 'mat-smooth', name: 'Smooth Finish', rx: 0, stroke: 'transparent', width: 180 },
+                    { id: 'mat-rounded', name: 'Soft Fabric', rx: 40, stroke: '#e5e5e5', width: 180 },
+                    { id: 'mat-circle', name: 'Metallic Orb', rx: 90, stroke: '#d1d1d1', width: 180 },
+                    { id: 'mat-tall', name: 'Tower Form', rx: 20, stroke: 'transparent', width: 120 },
+                    { id: 'mat-slim', name: 'Slim Profile', rx: 10, stroke: '#ccc', width: 80 }
+                ],
+                'COLOR': [
+                    { id: 'col-natural', name: 'Natural', value: '#e8e8e8' },
+                    { id: 'col-black', name: 'Black Anthracite', value: '#2c2c2c' },
+                    { id: 'col-gold', name: 'Gold Tone', value: '#d4af37' },
+                    { id: 'col-bronze', name: 'Bronze Tone', value: '#cd7f32' },
+                    { id: 'col-brass', name: 'Brass Tone', value: '#b5a642' },
+                    { id: 'col-chestnut', name: 'Chestnut Brown', value: '#5c4033' },
+                    { id: 'col-bitter', name: 'Bitter Orange', value: '#d95030' },
+                    { id: 'col-zesty', name: 'Zesty Orange', value: '#ff9900' },
+                    { id: 'col-radiant', name: 'Radiant Red', value: '#cc0000' },
+                    { id: 'col-lime', name: 'Lime Green', value: '#32cd32' },
+                    { id: 'col-navy', name: 'Navy Blue', value: '#000080' }
+                ],
+                'SIZE': [
+                    { id: 'size-xs', name: 'Extra Small', scale: 0.5 },
+                    { id: 'size-s', name: 'Compact', scale: 0.7 },
+                    { id: 'size-m', name: 'Standard', scale: 1.0 },
+                    { id: 'size-l', name: 'Large', scale: 1.2 },
+                    { id: 'size-xl', name: 'Grand', scale: 1.4 }
+                ]
+            }
+        };
+
+        // State
+        let activeCategory = 'COLOR';
+        let selections = {
+            'MATERIAL': configData.options['MATERIAL'][1], // Default to Soft Fabric
+            'COLOR': configData.options['COLOR'][0],       // Default to Natural
+            'SIZE': configData.options['SIZE'][2]          // Default to Standard
+        };
+
+        // DOM Elements
+        const tabsContainer = document.getElementById('category-tabs');
+        const listContainer = document.getElementById('options-list');
+        const optionsContainer = document.getElementById('options-container');
+        const svgShape = document.getElementById('custom-shape');
+        const svgRect = document.getElementById('svg-rect');
+
+        // Render Tabs
+        function renderTabs() {
+            tabsContainer.innerHTML = '';
+            configData.categories.forEach(cat => {
+                const btn = document.createElement('button');
+                const isActive = cat === activeCategory;
+                
+                btn.className = `uppercase tracking-[0.15em] text-[10px] md:text-xs font-medium pb-2 relative focus:outline-none transition-colors ${isActive ? 'text-black' : 'text-gray-400'}`;
+                btn.innerText = cat;
+                
+                if (isActive) {
+                    const underline = document.createElement('div');
+                    underline.className = 'absolute bottom-0 left-0 w-full h-[1.5px] bg-black';
+                    btn.appendChild(underline);
+                }
+
+                btn.onclick = () => {
+                    activeCategory = cat;
+                    renderTabs();
+                    renderOptions();
+                    
+                    // Reset scroll to top when switching tabs
+                    optionsContainer.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                };
+                tabsContainer.appendChild(btn);
+            });
+        }
+
+        // Render Options List
+        function renderOptions() {
+            listContainer.innerHTML = '';
+            const options = configData.options[activeCategory];
+            const currentSelection = selections[activeCategory];
+
+            options.forEach((opt, index) => {
+                const li = document.createElement('li');
+                const isActive = opt.id === currentSelection.id;
+                
+                li.className = `option-item relative cursor-pointer group pr-4 md:pr-6 ${isActive ? 'active' : ''}`;
+                li.id = `opt-${opt.id}`;
+                
+                li.innerHTML = `
+                    <span class="transition-colors duration-300 group-hover:text-black block pr-2">${opt.name}</span>
+                    ${activeCategory === 'COLOR' && isActive ? `<div class="text-[9px] md:text-[10px] tracking-wider uppercase mt-1 text-gray-500 pr-2">Signature</div>` : ''}
+                    <div class="option-active-indicator"></div>
+                `;
+
+                li.onclick = (e) => {
+                    selections[activeCategory] = opt;
+                    renderOptions();
+                    updateVisual();
+                };
+
+                listContainer.appendChild(li);
+            });
+        }
+
+        // Update SVG based on selections
+        function updateVisual() {
+            const colorOpt = selections['COLOR'];
+            const materialOpt = selections['MATERIAL'];
+            const sizeOpt = selections['SIZE'];
+
+            // Update Color
+            svgRect.setAttribute('fill', colorOpt.value);
+            
+            // Adjust stroke visibility
+            const isDark = ['col-black', 'col-chestnut', 'col-navy'].includes(colorOpt.id);
+            svgRect.setAttribute('stroke', isDark ? 'rgba(255,255,255,0.1)' : materialOpt.stroke);
+
+            // Update Material shape properties
+            svgRect.setAttribute('rx', materialOpt.rx);
+            
+            // Adjust width, keeping it centered on the 200x200 canvas
+            const newWidth = materialOpt.width;
+            const xOffset = (200 - newWidth) / 2;
+            svgRect.setAttribute('width', newWidth);
+            svgRect.setAttribute('x', xOffset);
+
+            // Update Scale (Size)
+            svgShape.style.transform = `scale(${sizeOpt.scale})`;
+        }
+
+        // Initialize App
+        renderTabs();
+        renderOptions();
+        updateVisual();
+
+    </script>
+</body>
+</html>
