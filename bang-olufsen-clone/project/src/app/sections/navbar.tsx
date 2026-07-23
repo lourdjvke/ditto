@@ -97,12 +97,18 @@ export default function Navbar() {
         <div className="flex flex-col h-full pt-16 pb-8 px-6 overflow-y-auto">
           {/* Main links */}
           <nav className="flex-1">
-            {["Speakers","Headphones","Soundbars","Televisions","Accessories"].map((l) => (
-              <a key={l} href={`/en/int/${l.toLowerCase()}`} onClick={() => setNavOpen(false)}
-                className="block py-4 text-[rgb(25,24,23)] text-xl leading-7 border-b border-[rgb(229,229,229)]">
-                {l}
-              </a>
-            ))}
+              {[
+                { label: "Speakers", href: "https://www.bang-olufsen.com/en/int/speakers" },
+                { label: "Headphones", href: "/en/int/headphones" },
+                { label: "Soundbars", href: "https://www.bang-olufsen.com/en/int/soundbars" },
+                { label: "Televisions", href: "https://www.bang-olufsen.com/en/int/televisions" },
+                { label: "Accessories", href: "https://www.bang-olufsen.com/en/int/accessories" },
+              ].map((item) => (
+                <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
+                  className="block py-4 text-[rgb(25,24,23)] text-xl leading-7 border-b border-[rgb(229,229,229)]">
+                  {item.label}
+                </a>
+              ))}
             <div className="mt-8">
               {[
                 { label: "Design your own", href: "/studio/configuration/caps/ada693e3-60f5-41f8-b22e-eef3f6c9c833" },

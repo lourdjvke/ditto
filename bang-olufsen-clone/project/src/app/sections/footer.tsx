@@ -1,17 +1,11 @@
 import ListRow4 from "../components/list-row4";
 import ListRow5 from "../components/list-row5";
-import Tile2, { type Tile2Data } from "../components/tile2";
-import { ListRow4_cids, ListRow5_cids, Tile2_cids } from "../_cids";
-import { ListRow4_styles, ListRow5_styles, Tile2_styles } from "../_styles";
+import MobileFooterAccordion from "../components/mobile-footer-accordion";
+import { ListRow4_cids, ListRow5_cids } from "../_cids";
+import { ListRow4_styles, ListRow5_styles } from "../_styles";
 import { listRow4Data as listRow4DataContent, listRow5Data as listRow5DataContent } from "../content";
-const Tile2_data: Tile2Data[] = [
-    { ariacontrols: "customercare_0_wrapper", id: "customercare_0_accordionBtn", description: "Customer Care" },
-    { ariacontrols: "ourcompany_1_wrapper", id: "ourcompany_1_accordionBtn", description: "Our Company" },
-    { ariacontrols: "socialshare_2_wrapper", id: "socialshare_2_accordionBtn", description: "Social Links" },
-    { ariacontrols: "downloadapp_3_wrapper", id: "downloadapp_3_accordionBtn", description: "Download Our App" }
-];
 /** Site footer. */
-export default function Footer({ listRow4Data = listRow4DataContent, listRow5Data = listRow5DataContent, tile2Data = Tile2_data } = {}) {
+export default function Footer({ listRow4Data = listRow4DataContent, listRow5Data = listRow5DataContent } = {}) {
   return (
     <footer className="h-230.5 min-h-230.5 block relative p-6 bg-primary max-md:h-[52.15rem] max-md:p-4 max-lg:min-h-0 md:max-lg:h-[64.675rem] 2xl:h-[57.7125rem]" data-cid="n1032" id="main-footer">
       <div className="h-full flex justify-center items-center gap-[6.0625rem] max-lg:block max-lg:max-w-378 max-lg:[justify-content:initial] max-lg:[align-items:initial] max-lg:gap-[initial] 2xl:justify-between 2xl:gap-24" data-cid="n1033">
@@ -231,7 +225,7 @@ export default function Footer({ listRow4Data = listRow4DataContent, listRow5Dat
               <div className="hidden max-lg:w-full max-lg:max-w-150 max-lg:block max-md:px-1.5 max-lg:shrink-0 max-md:basis-full md:max-lg:px-3 md:max-lg:basis-5/6" data-cid="n1158">
                 <div className="hidden max-lg:h-full max-lg:block" data-cid="n1159">
                   <div className="hidden max-lg:h-full max-lg:flex max-md:-mx-1.5 max-lg:flex-wrap max-lg:items-start max-md:gap-y-12 md:max-lg:-mx-3 md:max-lg:gap-y-14" data-cid="n1160">
-                    {tile2Data.map((d, i) => <Tile2 key={i} d={d} cids={Tile2_cids[i]} styles={Tile2_styles[i]} />)}
+                    <MobileFooterAccordion />
                     <div className="hidden max-md:w-[21.4375rem] max-md:h-[18.6875rem] max-md:border-t max-md:border-solid max-md:border-t-color-001 max-lg:block max-md:max-w-full max-md:pt-12 max-lg:shrink-0 max-md:basis-full md:max-lg:w-50 md:max-lg:h-80.5 md:max-lg:min-h-80.5 md:max-lg:max-w-[33.3333%] md:max-lg:pr-6 md:max-lg:basis-1/3" data-cid="n1181">
                       <div className="hidden max-lg:block" data-cid="n1182">
                         <button className="hidden max-md:w-full max-md:inline-block max-md:text-left max-md:cursor-default" data-cid="n1183" aria-controls="ourpolicies_4_wrapper" aria-expanded="true" aria-hidden="true" id="ourpolicies_4_accordionBtn" type="button">
