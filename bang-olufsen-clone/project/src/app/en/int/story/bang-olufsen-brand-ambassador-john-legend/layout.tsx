@@ -14,7 +14,9 @@ export default function Layout({ children }: { children: ReactNode }) {
     <>
       <Navbar />
       {children}
-      <Footer />
+      <div style={{ ["--color-001" as string]: "rgb(252, 250, 238)" }}>
+        <Footer />
+      </div>
     </>
   );
 }
