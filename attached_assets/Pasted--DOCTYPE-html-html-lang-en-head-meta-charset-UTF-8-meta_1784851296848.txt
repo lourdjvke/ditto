@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>B&O - The Composer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+            /* Bang & Olufsen signature vertical grid lines */
+            background-image: linear-gradient(to right, #f2f2f2 1px, transparent 1px);
+            background-size: 16.666% 100%;
+            overscroll-behavior: none;
+        }
+
+        /* Screen States Transition */
+        .state-view {
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .state-view.hidden-state {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.98);
+            position: absolute;
+            inset: 0;
+        }
+
+        /* Continuous Blob Morphing Keyframes */
+        @keyframes morphBlob {
+            0% {
+                d: path('M 150 50 C 220 50, 260 90, 250 160 C 240 230, 200 260, 140 250 C 80 240, 40 200, 50 130 C 60 60, 80 50, 150 50 Z');
+            }
+            33% {
+                d: path('M 160 40 C 240 60, 270 120, 240 180 C 210 240, 160 270, 100 240 C 40 210, 50 140, 70 80 C 90 20, 80 20, 160 40 Z');
+            }
+            66% {
+                d: path('M 140 60 C 210 40, 250 100, 260 170 C 270 240, 180 260, 120 260 C 60 260, 40 180, 40 120 C 40 60, 70 80, 140 60 Z');
+            }
+            100% {
+                d: path('M 150 50 C 220 50, 260 90, 250 160 C 240 230, 200 260, 140 250 C 80 240, 40 200, 50 130 C 60 60, 80 50, 150 50 Z');
+            }
+        }
+
+        .blob-path {
+            animation: morphBlob 10s ease-in-out infinite;
+        }
+
+        /* Texture Covering Liquid Transition */
+        #cover-rect {
+            transition: x 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        /* Slider Track and Slide Animations */
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform;
+        }
+        
+        .slide {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        /* Hide scrollbars */
+        .no-select {
+            user-select: none;
+            -webkit-user-select: none;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen overflow-hidden flex flex-col text-[#111] no-select">
+
+    <!-- Global Header -->
+    <header class="flex justify-between items-center px-6 py-5 z-40 relative bg-transparent shrink-0">
+        <button id="back-btn" class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-100 focus:outline-none transition-opacity duration-300 opacity-0 pointer-events-none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        
+        <div class="flex flex-col items-center absolute left-1/2 transform -translate-x-1/2">
+            <div class="text-2xl font-light tracking-tighter flex items-center">
+                B<span class="text-lg mx-0.5">&</span>O
+            </div>
+            <div class="text-[9px] tracking-[0.2em] mt-0.5 uppercase font-medium text-gray-500">Est. 1925</div>
+        </div>
+
+        <button class="w-10 h-10 flex items-center justify-center focus:outline-none">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </button>
+    </header>
+
+    <!-- STATE 1: Organic Morphing Blob Experience -->
+    <div id="state-1" class="state-view flex-1 flex flex-col items-center justify-between py-8 px-4 z-10">
+        
+        <div class="flex-1 flex items-center justify-center relative w-full max-w-[340px] md:max-w-[420px]">
+            <!-- Dynamic Blob Canvas -->
+            <svg viewBox="0 0 300 300" class="w-full h-full drop-shadow-2xl">
+                <defs>
+                    <!-- Base Pattern Texture (Knit Fabric) -->
+                    <pattern id="fabricPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect width="20" height="20" fill="#4a1521" />
+                        <circle cx="5" cy="5" r="3" fill="#8c2d42" />
+                        <circle cx="15" cy="15" r="3" fill="#8c2d42" />
+                        <path d="M 0 10 L 10 0 M 10 20 L 20 10" stroke="#60a5fa" stroke-width="1" />
+                    </pattern>
+
+                    <!-- Metallic Overlay Pattern -->
+                    <pattern id="metalPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect width="20" height="20" fill="#a37c3f" />
+                        <line x1="0" y1="0" x2="20" y2="20" stroke="#d4af37" stroke-width="3" />
+                        <line x1="0" y1="20" x2="20" y2="0" stroke="#5c4314" stroke-width="1" />
+                    </pattern>
+
+                    <!-- Clip path bound to morphing blob -->
+                    <clipPath id="blobClip">
+                        <path class="blob-path" d="M 150 50 C 220 50, 260 90, 250 160 C 240 230, 200 260, 140 250 C 80 240, 40 200, 50 130 C 60 60, 80 50, 150 50 Z" />
+                    </clipPath>
+                    
+                    <!-- Shading filter to give 3D depth -->
+                    <radialGradient id="blob3DShading" cx="35%" cy="35%" r="65%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4" />
+                        <stop offset="50%" stop-color="#000000" stop-opacity="0.0" />
+                        <stop offset="100%" stop-color="#000000" stop-opacity="0.75" />
+                    </radialGradient>
+                </defs>
+
+                <!-- Morphing Group clipped with multi-texture layers -->
+                <g clip-path="url(#blobClip)">
+                    <!-- Layer 1: Base Knit Texture -->
+                    <rect x="0" y="0" width="300" height="300" fill="url(#fabricPattern)" />
+                    
+                    <!-- Layer 2: Metallic Texture (Covering effect) -->
+                    <rect id="cover-rect" x="-300" y="0" width="300" height="300" fill="url(#metalPattern)" />
+                    
+                    <!-- Layer 3: Dynamic 3D lighting overlay -->
+                    <rect x="0" y="0" width="300" height="300" fill="url(#blob3DShading)" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- Typography & Control -->
+        <div class="text-center space-y-3 mb-6">
+            <h1 class="text-2xl md:text-3xl font-normal tracking-tight">The Composer</h1>
+            <p class="text-gray-500 text-xs md:text-sm font-light max-w-[260px] mx-auto leading-relaxed">
+                Get ready for a world of creativity and beautiful sound
+            </p>
+        </div>
+
+        <!-- Enter Action Button -->
+        <button id="enter-btn" class="bg-[#181818] text-white px-10 py-3 rounded-full text-xs font-medium tracking-wide hover:bg-black transition-transform active:scale-95 focus:outline-none shadow-md">
+            Enter
+        </button>
+    </div>
+
+    <!-- STATE 2: Product Carousel View -->
+    <div id="state-2" class="state-view hidden-state flex-1 flex flex-col justify-between py-6 z-10">
+        
+        <div class="text-center text-[11px] uppercase tracking-[0.2em] font-medium text-gray-400 mt-2">
+            Please select your product
+        </div>
+
+        <!-- Slider Container with Swipe/Gesture Support -->
+        <div class="relative flex-1 flex items-center justify-center my-auto overflow-hidden w-full" id="slider-container">
+            
+            <!-- Previous Button -->
+            <button id="prev-btn" class="absolute left-4 z-30 w-8 h-8 rounded-full bg-white/80 shadow-md border border-gray-100 flex items-center justify-center text-gray-700 hover:bg-white focus:outline-none transition-opacity opacity-0 pointer-events-none">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+
+            <!-- Slider Track -->
+            <div class="slider-track w-full h-full items-center" id="slider-track">
+                
+                <!-- Slide 1: Beolab 28 -->
+                <div class="slide flex flex-col items-center justify-center h-full px-8">
+                    <div class="h-[220px] md:h-[300px] flex items-center justify-center relative">
+                        <svg viewBox="0 0 100 200" class="h-full drop-shadow-xl">
+                            <!-- Left Speaker -->
+                            <rect x="25" y="20" width="12" height="110" rx="6" fill="#e5e5e5" stroke="#ccc" stroke-width="0.5"/>
+                            <path d="M 23 130 L 39 130 L 35 150 L 27 150 Z" fill="#444"/>
+                            <!-- Right Speaker -->
+                            <rect x="63" y="20" width="12" height="110" rx="6" fill="#e5e5e5" stroke="#ccc" stroke-width="0.5"/>
+                            <path d="M 61 130 L 77 130 L 73 150 L 65 150 Z" fill="#444"/>
+                        </svg>
+                    </div>
+                    <div class="text-center space-y-1 mt-6">
+                        <div class="text-[9px] uppercase tracking-[0.25em] font-semibold text-gray-400">BEOLAB 28</div>
+                        <div class="text-xs font-medium text-gray-800">Hi-fidelity wireless home speakers</div>
+                        <div class="text-[10px] text-gray-400 font-light pt-1">From 21,200 USD / set</div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Beosound Balance -->
+                <div class="slide flex flex-col items-center justify-center h-full px-8">
+                    <div class="h-[220px] md:h-[300px] flex items-center justify-center relative">
+                        <svg viewBox="0 0 100 200" class="h-full drop-shadow-xl">
+                            <!-- Cylinder Speaker Body -->
+                            <path d="M 30 50 Q 50 45 70 50 L 68 120 Q 50 125 32 120 Z" fill="#2b2b2b" />
+                            <!-- Base -->
+                            <path d="M 32 120 Q 50 125 68 120 L 65 150 Q 50 155 35 150 Z" fill="#c4a47c" />
+                        </svg>
+                    </div>
+                    <div class="text-center space-y-1 mt-6">
+                        <div class="text-[9px] uppercase tracking-[0.25em] font-semibold text-gray-400">BEOSOUND BALANCE</div>
+                        <div class="text-xs font-medium text-gray-800">Sculptural home audio system</div>
+                        <div class="text-[10px] text-gray-400 font-light pt-1">From 3,200 USD / set</div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Beolab 50 -->
+                <div class="slide flex flex-col items-center justify-center h-full px-8">
+                    <div class="h-[220px] md:h-[300px] flex items-center justify-center relative">
+                        <svg viewBox="0 0 100 200" class="h-full drop-shadow-xl">
+                            <polygon points="35,30 65,30 75,150 25,150" fill="#d4d4d4" stroke="#aaaaaa" stroke-width="0.5" />
+                            <line x1="35" y1="30" x2="25" y2="150" stroke="#b0b0b0" stroke-width="2" />
+                            <line x1="65" y1="30" x2="75" y2="150" stroke="#b0b0b0" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="text-center space-y-1 mt-6">
+                        <div class="text-[9px] uppercase tracking-[0.25em] font-semibold text-gray-400">BEOLAB 50</div>
+                        <div class="text-xs font-medium text-gray-800">High-end active loudspeaker</div>
+                        <div class="text-[10px] text-gray-400 font-light pt-1">From 46,000 USD / set</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Next Button -->
+            <button id="next-btn" class="absolute right-4 z-30 w-8 h-8 rounded-full bg-white/80 shadow-md border border-gray-100 flex items-center justify-center text-gray-700 hover:bg-white focus:outline-none transition-opacity">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+        </div>
+
+        <!-- Footer Bar for State 2 -->
+        <div class="flex justify-between items-center px-6 pt-2 pb-2">
+            <button class="text-[10px] tracking-wider uppercase font-medium text-gray-400 flex items-center space-x-1">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                <span>View all</span>
+            </button>
+            <button class="bg-[#181818] text-white px-6 py-2.5 rounded-full text-xs font-medium tracking-wide hover:bg-black transition-colors focus:outline-none">
+                Start composing
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const state1 = document.getElementById('state-1');
+        const state2 = document.getElementById('state-2');
+        const enterBtn = document.getElementById('enter-btn');
+        const backBtn = document.getElementById('back-btn');
+        const coverRect = document.getElementById('cover-rect');
+        
+        const sliderTrack = document.getElementById('slider-track');
+        const sliderContainer = document.getElementById('slider-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        // State Machine
+        let currentState = 1;
+        let isCovered = false;
+
+        // Texture Covering Interval (State 1)
+        setInterval(() => {
+            if (currentState === 1) {
+                isCovered = !isCovered;
+                coverRect.setAttribute('x', isCovered ? '0' : '-300');
+            }
+        }, 3500);
+
+        // View Switcher logic
+        enterBtn.addEventListener('click', () => switchState(2));
+        backBtn.addEventListener('click', () => switchState(1));
+
+        function switchState(targetState) {
+            currentState = targetState;
+            if (targetState === 2) {
+                state1.classList.add('hidden-state');
+                state2.classList.remove('hidden-state');
+                backBtn.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                state2.classList.add('hidden-state');
+                state1.classList.remove('hidden-state');
+                backBtn.classList.add('opacity-0', 'pointer-events-none');
+            }
+        }
+
+        // --- Touch / Swipe & Click Carousel Slider Engine ---
+        let currentSlide = 0;
+        const totalSlides = 3;
+        let startX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let isDragging = false;
+
+        function updateSliderPosition() {
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Toggle Arrow visibility
+            prevBtn.style.opacity = currentSlide === 0 ? '0' : '1';
+            prevBtn.style.pointerEvents = currentSlide === 0 ? 'none' : 'auto';
+            
+            nextBtn.style.opacity = currentSlide === totalSlides - 1 ? '0' : '1';
+            nextBtn.style.pointerEvents = currentSlide === totalSlides - 1 ? 'none' : 'auto';
+        }
+
+        // Button Controls
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSliderPosition();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSliderPosition();
+            }
+        });
+
+        // Touch & Drag Gesture Listeners
+        sliderContainer.addEventListener('touchstart', touchStart);
+        sliderContainer.addEventListener('touchend', touchEnd);
+        sliderContainer.addEventListener('touchmove', touchMove);
+
+        sliderContainer.addEventListener('mousedown', touchStart);
+        sliderContainer.addEventListener('mouseup', touchEnd);
+        sliderContainer.addEventListener('mouseleave', touchEnd);
+        sliderContainer.addEventListener('mousemove', touchMove);
+
+        function touchStart(e) {
+            isDragging = true;
+            startX = getPositionX(e);
+            sliderTrack.style.transition = 'none';
+        }
+
+        function touchMove(e) {
+            if (!isDragging) return;
+            const currentPosition = getPositionX(e);
+            const diff = currentPosition - startX;
+            const movePercent = (diff / sliderContainer.clientWidth) * 100;
+            sliderTrack.style.transform = `translateX(calc(-${currentSlide * 100}% + ${movePercent}px))`;
+        }
+
+        function touchEnd(e) {
+            if (!isDragging) return;
+            isDragging = false;
+            sliderTrack.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+            
+            const endX = getPositionX(e);
+            const movedBy = endX - startX;
+
+            // Threshold for swipe gesture
+            if (movedBy < -50 && currentSlide < totalSlides - 1) {
+                currentSlide++;
+            } else if (movedBy > 50 && currentSlide > 0) {
+                currentSlide--;
+            }
+            
+            updateSliderPosition();
+        }
+
+        function getPositionX(e) {
+            return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        }
+
+        // Initial setup
+        updateSliderPosition();
+    </script>
+</body>
+</html>
