@@ -26,12 +26,20 @@ export default function LivingPremiumHeadphonesSection({ mediaTileData = MediaTi
           </a>
           <div className="block" data-cid="n154">
             <div className="block relative text-center" data-cid="n155">
-              <div className="block relative max-md:h-90.5 max-md:flex max-md:overflow-auto max-md:static max-md:inset-auto" data-cid="n156" dir="ltr">
-                <div className="h-full block relative overflow-hidden max-md:hidden" data-cid="n157">
-                  <div className="w-2581 h-full flex relative max-md:hidden md:max-lg:w-[393.3125rem] 2xl:w-3074" data-cid="n158">
-                    {mediaTileData.map((d, i) => <MediaTile key={i} d={d} cids={MediaTile_cids[i]} />)}
-                  </div>
-                </div>
+              {/* Mobile carousel */}
+              <div className="flex overflow-x-auto md:hidden h-83.5" dir="ltr">
+                {mediaTileData.map((d) => (
+                  <a key={d.id} className="h-83.5 block text-muted-foreground cursor-pointer flex-shrink-0" href={d.href}>
+                    <div className="w-52.5 h-full block mr-[0.9375rem]">
+                      <img className="w-52.5 h-52.5 block relative max-w-full overflow-clip" alt={d.alt} src={d.imgSrc} />
+                      <div className="block pr-5"><p className="block mt-6 mb-1 text-border text-[0.625rem] leading-4.5 tracking-[2px] text-left uppercase">{d.description}</p><p className="block text-border leading-6.5 tracking-[0.2px] text-left">{d.description2}</p></div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+              {/* Desktop carousel */}
+              <div className="hidden md:flex overflow-x-auto" dir="ltr">
+                {mediaTileData.map((d, i) => <MediaTile key={i} d={d} cids={MediaTile_cids[i]} />)}
               </div>
             </div>
           </div>
@@ -47,129 +55,36 @@ export default function LivingPremiumHeadphonesSection({ mediaTileData = MediaTi
           </a>
           <div className="block" data-cid="n216">
             <div className="block relative text-center" data-cid="n217">
-              <div className="block relative max-md:h-83.5 max-md:flex max-md:overflow-auto max-md:static max-md:inset-auto" data-cid="n218" dir="ltr">
-                <a className="hidden max-md:h-83.5 max-md:block max-md:text-muted-foreground max-md:cursor-pointer" data-cid="n219" href="/en/int/story/atelier-editions-beolab-18-antolini-edition">
-                  <div className="hidden max-md:w-52.5 max-md:h-full max-md:block max-md:mr-[0.9375rem]" data-cid="n220" id="carousel-item-0-beolab-18-antolini®-limited-edition">
-                    <div className="hidden max-md:block" data-cid="n221">
-                      <div className="hidden max-md:block max-md:relative max-md:bg-surface" data-cid="n222">
-                        <div className="hidden max-md:block" data-cid="n223">
-                          <picture className="hidden max-md:inline" data-cid="n224">
-                            <img className="hidden max-md:w-52.5 max-md:h-52.5 max-md:block max-md:relative max-md:max-w-full max-md:overflow-clip" data-cid="n226" alt="Beolab 18 Antolini Limited edition Amazonite variant displayed in a showroom" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/af892f2d225d.webp" />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="hidden max-md:block max-md:pr-5" data-cid="n227">
-                      <p className="hidden max-md:block max-md:mt-6 max-md:mb-1 max-md:text-border max-md:text-[0.625rem] max-md:leading-4.5 max-md:tracking-[2px] max-md:text-left max-md:uppercase" data-cid="n228">
-                        {"Atelier Edition | 04.2026 "}
-                      </p>
-                      <p className="hidden max-md:block max-md:text-border max-md:leading-6.5 max-md:tracking-[0.2px] max-md:text-left" data-cid="n229">
-                        Beolab 18 Antolini® Limited Edition
-                      </p>
-                    </div>
+              {/* Mobile carousel */}
+              <div className="flex overflow-x-auto md:hidden h-83.5" dir="ltr">
+                <a className="h-83.5 block text-muted-foreground cursor-pointer flex-shrink-0" href="/en/int/story/atelier-editions-beolab-18-antolini-edition">
+                  <div className="w-52.5 h-full block mr-[0.9375rem]">
+                    <div className="block relative bg-surface"><img className="w-52.5 h-52.5 block relative max-w-full overflow-clip" alt="Beolab 18 Antolini Limited edition Amazonite variant displayed in a showroom" src="/assets/cloned/images/af892f2d225d.webp" /></div>
+                    <div className="block pr-5"><p className="block mt-6 mb-1 text-border text-[0.625rem] leading-4.5 tracking-[2px] text-left uppercase">{"Atelier Edition | 04.2026 "}</p><p className="block text-border leading-6.5 tracking-[0.2px] text-left">Beolab 18 Antolini® Limited Edition</p></div>
                   </div>
                 </a>
-                <a className="hidden max-md:h-83.5 max-md:block max-md:text-muted-foreground max-md:cursor-pointer" data-cid="n230" href="/en/int/story/atelier-editions-beolab-90-titan">
-                  <div className="hidden max-md:w-52.5 max-md:h-full max-md:block max-md:mr-[0.9375rem]" data-cid="n231" id="carousel-item-1-beolab-90-titan">
-                    <div className="hidden max-md:block" data-cid="n232">
-                      <div className="hidden max-md:block max-md:relative max-md:bg-surface" data-cid="n233">
-                        <div className="hidden max-md:block" data-cid="n234">
-                          <picture className="hidden max-md:inline" data-cid="n235">
-                            <img className="hidden max-md:w-52.5 max-md:h-52.5 max-md:block max-md:relative max-md:max-w-full max-md:overflow-clip" data-cid="n237" alt="Beolab 90 Titan edition" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/c5102e3bf9f0.webp" />
-                          </picture>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="hidden max-md:block max-md:pr-5" data-cid="n238">
-                      <p className="hidden max-md:block max-md:mt-6 max-md:mb-1 max-md:text-border max-md:text-[0.625rem] max-md:leading-4.5 max-md:tracking-[2px] max-md:text-left max-md:uppercase" data-cid="n239">
-                        {"Atelier Edition | 11.2025 "}
-                      </p>
-                      <p className="hidden max-md:block max-md:text-border max-md:leading-6.5 max-md:tracking-[0.2px] max-md:text-left" data-cid="n240">
-                        Beolab 90 Titan
-                      </p>
-                    </div>
+                <a className="h-83.5 block text-muted-foreground cursor-pointer flex-shrink-0" href="/en/int/story/atelier-editions-beolab-90-titan">
+                  <div className="w-52.5 h-full block mr-[0.9375rem]">
+                    <div className="block relative bg-surface"><img className="w-52.5 h-52.5 block relative max-w-full overflow-clip" alt="Beolab 90 Titan edition" src="/assets/cloned/images/c5102e3bf9f0.webp" /></div>
+                    <div className="block pr-5"><p className="block mt-6 mb-1 text-border text-[0.625rem] leading-4.5 tracking-[2px] text-left uppercase">{"Atelier Edition | 11.2025 "}</p><p className="block text-border leading-6.5 tracking-[0.2px] text-left">Beolab 90 Titan</p></div>
                   </div>
                 </a>
-                <a className="hidden max-md:h-83.5 max-md:block max-md:text-muted-foreground max-md:cursor-pointer" data-cid="n241" href="/en/int/story/atelier-editions-beoplay-ex-lilac-purple">
-                  <div className="hidden max-md:w-52.5 max-md:h-83.5 max-md:block max-md:mr-[0.9375rem]" data-cid="n242" id="carousel-item-14-beoplay-ex-lilac-purple">
-                    <div className="hidden max-md:h-52.5 max-md:block max-md:relative" data-cid="n243">
-                      <div className="hidden max-md:h-52.5 max-md:block max-md:aspect-square" data-cid="n244">
-                        <div className="hidden max-md:w-52.5 max-md:h-52.5 max-md:block max-md:relative max-md:flex-1 max-md:overflow-hidden max-md:[animation-name:jTBhup] max-md:[animation-duration:1.2s] max-md:[animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] max-md:[animation-fill-mode:forwards] before:content-[''] before:block before:w-52.5 before:h-52.5 before:pt-[118.1px] md:max-lg:before:hidden 2xl:before:hidden" data-cid="n245">
-                          <div className="hidden" data-cid="n246">
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n247" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n248" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n249" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <a className="h-83.5 block text-muted-foreground cursor-pointer flex-shrink-0" href="/en/int/story/atelier-editions-beosound-premiere-haute">
+                  <div className="w-52.5 h-full block mr-[0.9375rem]">
+                    <div className="block relative bg-surface"><img className="w-52.5 h-52.5 block relative max-w-full overflow-clip" alt="Close-up of a sleek silver and black Beosound Premiere Haute soundbar" src="/assets/cloned/images/ceaccea1c13d.webp" /></div>
+                    <div className="block pr-5"><p className="block mt-6 mb-1 text-border text-[0.625rem] leading-4.5 tracking-[2px] text-left uppercase">{"Atelier Edition | 11.2025 "}</p><p className="block text-border leading-6.5 tracking-[0.2px] text-left">Beosound Premiere Haute Edition</p></div>
                   </div>
                 </a>
-                <a className="hidden max-md:h-83.5 max-md:block max-md:text-muted-foreground max-md:cursor-pointer" data-cid="n250" href="/en/int/story/atelier-editions-beoplay-ex-forest-green">
-                  <div className="hidden max-md:w-52.5 max-md:h-83.5 max-md:block max-md:mr-[0.9375rem]" data-cid="n251" id="carousel-item-16-beoplay-ex-forest-green">
-                    <div className="hidden max-md:h-52.5 max-md:block max-md:relative" data-cid="n252">
-                      <div className="hidden max-md:h-52.5 max-md:block max-md:aspect-square" data-cid="n253">
-                        <div className="hidden max-md:w-52.5 max-md:h-52.5 max-md:block max-md:relative max-md:flex-1 max-md:overflow-hidden max-md:[animation-name:jTBhup] max-md:[animation-duration:1.2s] max-md:[animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] max-md:[animation-fill-mode:forwards] before:content-[''] before:block before:w-52.5 before:h-52.5 before:pt-[118.1px] md:max-lg:before:hidden 2xl:before:hidden" data-cid="n254">
-                          <div className="hidden" data-cid="n255">
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n256" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n257" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n258" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <a className="h-83.5 block text-muted-foreground cursor-pointer flex-shrink-0" href="/en/int/story/atelier-editions-art-deco">
+                  <div className="w-52.5 h-full block mr-[0.9375rem]">
+                    <div className="block relative bg-surface"><img className="w-52.5 h-52.5 block relative max-w-full overflow-clip" alt="Art Deco Atelier Limited Edition with Beovision Theatre and Beolab 28" src="/assets/cloned/images/193cafa7ba96.jpg" /></div>
+                    <div className="block pr-5"><p className="block mt-6 mb-1 text-border text-[0.625rem] leading-4.5 tracking-[2px] text-left uppercase">{"Atelier Edition | 04.2025 "}</p><p className="block text-border leading-6.5 tracking-[0.2px] text-left">Art Deco</p></div>
                   </div>
                 </a>
-                <a className="hidden max-md:h-83.5 max-md:block max-md:text-muted-foreground max-md:cursor-pointer" data-cid="n259" href="/en/int/story/atelier-editions-beoplay-ex-peach-pink">
-                  <div className="hidden max-md:w-52.5 max-md:h-83.5 max-md:block max-md:mr-[0.9375rem]" data-cid="n260" id="carousel-item-17-beoplay-ex-peach-pink">
-                    <div className="hidden max-md:h-52.5 max-md:block max-md:relative" data-cid="n261">
-                      <div className="hidden max-md:h-52.5 max-md:block max-md:aspect-square" data-cid="n262">
-                        <div className="hidden max-md:w-52.5 max-md:h-52.5 max-md:block max-md:relative max-md:flex-1 max-md:overflow-hidden max-md:[animation-name:jTBhup] max-md:[animation-duration:1.2s] max-md:[animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] max-md:[animation-fill-mode:forwards] before:content-[''] before:block before:w-52.5 before:h-52.5 before:pt-[118.1px] md:max-lg:before:hidden 2xl:before:hidden" data-cid="n263">
-                          <div className="hidden" data-cid="n264">
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n265" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n266" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n267" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="hidden max-md:h-83.5 max-md:block max-md:text-muted-foreground max-md:cursor-pointer" data-cid="n268" href="/en/int/story/atelier-editions-beoplay-ex-pineapple-yellow">
-                  <div className="hidden max-md:w-52.5 max-md:h-83.5 max-md:block max-md:mr-[0.9375rem]" data-cid="n269" id="carousel-item-18-beoplay-ex-pineapple-yellow">
-                    <div className="hidden max-md:h-52.5 max-md:block max-md:relative" data-cid="n270">
-                      <div className="hidden max-md:h-52.5 max-md:block max-md:aspect-square" data-cid="n271">
-                        <div className="hidden max-md:w-52.5 max-md:h-52.5 max-md:block max-md:relative max-md:flex-1 max-md:overflow-hidden max-md:[animation-name:jTBhup] max-md:[animation-duration:1.2s] max-md:[animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] max-md:[animation-fill-mode:forwards] before:content-[''] before:block before:w-52.5 before:h-52.5 before:pt-[118.1px] md:max-lg:before:hidden 2xl:before:hidden" data-cid="n272">
-                          <div className="hidden" data-cid="n273">
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n274" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n275" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n276" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="hidden max-md:h-83.5 max-md:block max-md:text-muted-foreground max-md:cursor-pointer" data-cid="n277" href="/en/int/story/atelier-editions-beoplay-ex-lime-green">
-                  <div className="hidden max-md:w-52.5 max-md:h-83.5 max-md:block max-md:mr-[0.9375rem]" data-cid="n278" id="carousel-item-19-beoplay-ex-lime-green">
-                    <div className="hidden max-md:h-52.5 max-md:block max-md:relative" data-cid="n279">
-                      <div className="hidden max-md:h-52.5 max-md:block max-md:aspect-square" data-cid="n280">
-                        <div className="hidden max-md:w-52.5 max-md:h-52.5 max-md:block max-md:relative max-md:flex-1 max-md:overflow-hidden max-md:[animation-name:jTBhup] max-md:[animation-duration:1.2s] max-md:[animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] max-md:[animation-fill-mode:forwards] before:content-[''] before:block before:w-52.5 before:h-52.5 before:pt-[118.1px] md:max-lg:before:hidden 2xl:before:hidden" data-cid="n281">
-                          <div className="hidden" data-cid="n282">
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n283" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n284" />
-                            <div className="hidden max-md:w-px max-md:h-0 max-md:block max-md:fixed max-md:top-px max-md:left-px max-md:overflow-hidden" data-cid="n285" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <div className="h-full block relative overflow-hidden max-md:hidden" data-cid="n286">
-                  <div className="w-2047 h-full flex relative max-md:hidden md:max-lg:w-[311.9375rem] 2xl:w-2438" data-cid="n287">
-                    {mediaTileData2.map((d, i) => <MediaTile key={i} d={d} cids={MediaTile_cids2[i]} />)}
-                  </div>
-                </div>
+              </div>
+              {/* Desktop carousel */}
+              <div className="hidden md:flex overflow-x-auto" dir="ltr">
+                {mediaTileData2.map((d, i) => <MediaTile key={i} d={d} cids={MediaTile_cids2[i]} />)}
               </div>
             </div>
           </div>

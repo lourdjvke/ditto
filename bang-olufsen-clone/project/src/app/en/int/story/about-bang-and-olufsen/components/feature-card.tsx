@@ -27,7 +27,7 @@ export default function FeatureCard({ d, cids, styles }: { d: FeatureCardData; c
   const answer = answers[d.title2] ?? answers[d.title] ?? "";
 
   return (
-    <div data-cid={cids[0]} className={cn("border-t border-solid border-t-surface block", styles.className)} itemProp="mainEntity">
+    <div data-cid={cids[0]} className="border-t border-solid border-t-surface block" itemProp="mainEntity">
       <button
         data-cid={cids[4]}
         className={cn("w-full flex py-5 text-left cursor-pointer items-center", styles.className2)}

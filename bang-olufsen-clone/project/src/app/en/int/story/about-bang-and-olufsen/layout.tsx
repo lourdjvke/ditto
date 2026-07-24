@@ -2,6 +2,7 @@ import "./globals.css";
 import "./ditto.css";
 import type { ReactNode } from "react";
 import Navbar from "../../../../sections/navbar";
+import Footer from "../../../../sections/footer";
 
 /* Inline style block — guaranteed to override root ditto.css regardless of bundle order */
 const overlayKillStyles = `
@@ -29,6 +30,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <style dangerouslySetInnerHTML={{ __html: overlayKillStyles }} />
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 }
