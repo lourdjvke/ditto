@@ -39,8 +39,8 @@ const ListRow_data: ListRowData[] = [
 export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_data2, listRowData = ListRow_data, logos = logosContent } = {}) {
   return (
     <div className="block max-w-378 px-9 mx-auto max-md:h-[67.4375rem] max-lg:px-0 md:max-lg:h-358" data-cid="n78">
-      <div className="h-[50.1875rem] flex relative -mx-4 flex-wrap max-md:h-[59.4375rem] max-lg:mx-0 md:max-lg:h-[85.9375rem] 2xl:h-[58.6875rem]" data-cid="n79">
-        <div className="w-[723.3px] h-[50.1875rem] flex relative max-w-[58.3333%] pb-20 flex-col justify-center shrink-0 basis-[58.3333%] text-right bg-surface-2 [animation-name:jTBhup] [animation-duration:1.2s] [animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] [animation-delay:0.2s] [animation-fill-mode:forwards] max-md:w-[23.4375rem] max-md:h-[25.9375rem] max-lg:max-w-full max-md:mb-[0.3125rem] max-lg:basis-full max-md:pb-0 max-md:[animation-delay:initial] md:max-lg:w-192 md:max-lg:h-212 2xl:w-[858.7px] 2xl:h-[58.6875rem]" data-cid="n80">
+      <div className="h-[38rem] flex relative -mx-4 flex-wrap max-md:h-[59.4375rem] max-lg:mx-0 md:max-lg:h-[85.9375rem] 2xl:h-[58.6875rem]" data-cid="n79">
+        <div className="w-[723.3px] h-[38rem] flex relative max-w-[58.3333%] pb-20 flex-col justify-center shrink-0 basis-[58.3333%] text-right bg-surface-2 [animation-name:jTBhup] [animation-duration:1.2s] [animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] [animation-delay:0.2s] [animation-fill-mode:forwards] max-md:w-[23.4375rem] max-md:h-[25.9375rem] max-lg:max-w-full max-md:mb-[0.3125rem] max-lg:basis-full max-md:pb-0 max-md:[animation-delay:initial] md:max-lg:w-192 md:max-lg:h-212 2xl:w-[858.7px] 2xl:h-[58.6875rem]" data-cid="n80">
           <div className="h-full block" data-cid="n81">
             <div className="w-px h-0 block fixed top-px left-px overflow-hidden" data-cid="n82" />
             <div className="w-px h-0 block fixed top-px left-px overflow-hidden" data-cid="n83" />
@@ -49,7 +49,7 @@ export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_dat
                 <div className="h-full block max-w-378" data-cid="n86">
                   <div className="h-full block relative" data-cid="n87">
                     <div className="h-full block relative" data-cid="n88" dir="ltr">
-                      <button className="w-10 h-10 block absolute top-161.5 left-[651.3px] z-1 mb-[0.3125rem] -ml-20 py-px px-1.5 rounded-[50%] text-center indent-[-9999px] [background-position:50%_50%] bg-no-repeat cursor-default max-md:hidden md:max-lg:top-96 md:max-lg:left-23 2xl:top-195.5 2xl:left-[786.7px] hover:bg-[url('https://www.bang-olufsen.com/static-assets/images/common/chevron-white-left-black-bg.svg')]" style={{ backgroundImage: "url(\"/assets/cloned/svg/9632fdabb2ef.svg\")" }} data-cid="n89" data-component="button" aria-label="Previous slide" type="button">
+                      <button className="w-10 h-10 block absolute top-68 left-[651.3px] z-1 mb-[0.3125rem] -ml-20 py-px px-1.5 rounded-[50%] text-center indent-[-9999px] [background-position:50%_50%] bg-no-repeat cursor-default max-md:hidden md:max-lg:top-96 md:max-lg:left-23 2xl:top-195.5 2xl:left-[786.7px] hover:bg-[url('https://www.bang-olufsen.com/static-assets/images/common/chevron-white-left-black-bg.svg')]" style={{ backgroundImage: "url(\"/assets/cloned/svg/9632fdabb2ef.svg\")" }} data-cid="n89" data-component="button" aria-label="Previous slide" type="button">
                         <span className="inline max-md:hidden" data-cid="n90">
                           Previous
                         </span>
@@ -57,15 +57,15 @@ export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_dat
                       </button>
                       <div className="block relative overflow-hidden" data-cid="n92">
                         <div className="w-[768.1875rem] block relative mr-[-11567.7px] transform-[matrix(1,0,0,1,-723,0)] max-md:w-[398.4375rem] max-md:-mr-1500 max-md:transform-[matrix(1,0,0,1,-375,0)] md:max-lg:w-3264 md:max-lg:-mr-3072 md:max-lg:transform-[matrix(1,0,0,1,-768,0)] 2xl:w-[912.6875rem] 2xl:mr-[-13744.3px] 2xl:transform-[matrix(1,0,0,1,-859,0)] before:content-[''] before:table before:w-0 before:h-0 after:content-[''] after:table after:w-0 after:h-0" data-cid="n93">
-                          <div className="w-[45.1875rem] h-[45.1875rem] min-h-px block float-left max-md:w-[23.4375rem] max-md:h-[23.4375rem] md:max-lg:w-192 md:max-lg:h-192 2xl:w-[53.6875rem] 2xl:h-[53.6875rem]" data-cid="n94">
+                          <div className="w-[34rem] h-[34rem] min-h-px block float-left max-md:w-[23.4375rem] max-md:h-[23.4375rem] md:max-lg:w-192 md:max-lg:h-192 2xl:w-[53.6875rem] 2xl:h-[53.6875rem]" data-cid="n94">
                             <div className="h-full block overflow-hidden" data-cid="n95">
-                              <div className="h-full block relative mx-px pt-[45.1875rem] max-md:pt-[23.4375rem] md:max-lg:pt-192 2xl:pt-[53.6875rem]" data-cid="n96">
+                              <div className="h-full block relative mx-px pt-[34rem] max-md:pt-[23.4375rem] md:max-lg:pt-192 2xl:pt-[53.6875rem]" data-cid="n96">
                                 <div className="h-full flex absolute top-0 inset-x-0 justify-center items-center" data-cid="n97">
                                   <button className="block py-px px-1.5 text-center cursor-pointer" data-cid="n98" data-component="button" type="button">
                                     <div className="block relative" data-cid="n99">
                                       <div className="block" data-cid="n100">
                                         <picture className="inline" data-cid="n101">
-                                          <img className="w-full h-[44.3125rem] block relative max-w-full overflow-clip object-cover [font-family:'object-fit:_cover;_object-position:_center;'] max-md:h-[22.5625rem] md:max-lg:h-188.5 2xl:h-[52.8125rem]" data-cid="n103" data-component="image" alt="Beo Grace in Natural Aluminium" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/46e4fd451331.png" />
+                                          <img className="w-full h-[33rem] block relative max-w-full overflow-clip object-cover [font-family:'object-fit:_cover;_object-position:_center;'] max-md:h-[22.5625rem] md:max-lg:h-188.5 2xl:h-[52.8125rem]" data-cid="n103" data-component="image" alt="Beo Grace in Natural Aluminium" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/46e4fd451331.png" />
                                         </picture>
                                       </div>
                                     </div>
@@ -74,15 +74,15 @@ export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_dat
                               </div>
                             </div>
                           </div>
-                          <div className="w-[45.1875rem] h-[45.1875rem] min-h-px block float-left max-md:w-[23.4375rem] max-md:h-[23.4375rem] md:max-lg:w-192 md:max-lg:h-192 2xl:w-[53.6875rem] 2xl:h-[53.6875rem]" data-cid="n104" aria-current="true">
+                          <div className="w-[34rem] h-[34rem] min-h-px block float-left max-md:w-[23.4375rem] max-md:h-[23.4375rem] md:max-lg:w-192 md:max-lg:h-192 2xl:w-[53.6875rem] 2xl:h-[53.6875rem]" data-cid="n104" aria-current="true">
                             <div className="h-full block overflow-hidden" data-cid="n105">
-                              <div className="h-full block relative mx-px pt-[45.1875rem] max-md:pt-[23.4375rem] md:max-lg:pt-192 2xl:pt-[53.6875rem]" data-cid="n106">
+                              <div className="h-full block relative mx-px pt-[34rem] max-md:pt-[23.4375rem] md:max-lg:pt-192 2xl:pt-[53.6875rem]" data-cid="n106">
                                 <div className="h-full flex absolute top-0 inset-x-0 justify-center items-center" data-cid="n107">
                                   <button className="block py-px px-1.5 text-center cursor-pointer" data-cid="n108" data-component="button" type="button">
                                     <div className="block relative" data-cid="n109">
                                       <div className="block" data-cid="n110">
                                         <picture className="inline" data-cid="n111">
-                                          <img className="w-full h-[44.3125rem] block relative max-w-full overflow-clip object-cover [font-family:'object-fit:_cover;_object-position:_center;'] max-md:h-[22.5625rem] md:max-lg:h-188.5 2xl:h-[52.8125rem]" data-cid="n113" data-component="image" alt="Beo Grace in Natural Aluminium" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/cbf2bb49024b.png" />
+                                          <img className="w-full h-[33rem] block relative max-w-full overflow-clip object-cover [font-family:'object-fit:_cover;_object-position:_center;'] max-md:h-[22.5625rem] md:max-lg:h-188.5 2xl:h-[52.8125rem]" data-cid="n113" data-component="image" alt="Beo Grace in Natural Aluminium" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/cbf2bb49024b.png" />
                                         </picture>
                                       </div>
                                     </div>
@@ -91,9 +91,9 @@ export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_dat
                               </div>
                             </div>
                           </div>
-                          <div className="w-[45.1875rem] h-[45.1875rem] min-h-px block float-left max-md:w-[23.4375rem] max-md:h-[23.4375rem] md:max-lg:w-192 md:max-lg:h-192 2xl:w-[53.6875rem] 2xl:h-[53.6875rem]" data-cid="n114">
+                          <div className="w-[34rem] h-[34rem] min-h-px block float-left max-md:w-[23.4375rem] max-md:h-[23.4375rem] md:max-lg:w-192 md:max-lg:h-192 2xl:w-[53.6875rem] 2xl:h-[53.6875rem]" data-cid="n114">
                             <div className="h-full block overflow-hidden" data-cid="n115">
-                              <div className="h-full block relative mx-px pt-[45.1875rem] max-md:pt-[23.4375rem] md:max-lg:pt-192 2xl:pt-[53.6875rem]" data-cid="n116">
+                              <div className="h-full block relative mx-px pt-[34rem] max-md:pt-[23.4375rem] md:max-lg:pt-192 2xl:pt-[53.6875rem]" data-cid="n116">
                                 <div className="h-full flex absolute top-0 inset-x-0 justify-center items-center" data-cid="n117">
                                   <button className="block py-px px-1.5 text-center cursor-pointer" data-cid="n118" data-component="button" type="button">
                                     <div className="block relative" data-cid="n119">
@@ -110,9 +110,9 @@ export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_dat
                             </div>
                           </div>
                           {logoData.map((d, i) => <Logo key={i} d={d} cids={Logo_cids[i]} />)}
-                          <div className="w-[45.1875rem] h-[45.1875rem] min-h-px block float-left max-md:w-[23.4375rem] max-md:h-[23.4375rem] md:max-lg:w-192 md:max-lg:h-192 2xl:w-[53.6875rem] 2xl:h-[53.6875rem]" data-cid="n173">
+                          <div className="w-[34rem] h-[34rem] min-h-px block float-left max-md:w-[23.4375rem] max-md:h-[23.4375rem] md:max-lg:w-192 md:max-lg:h-192 2xl:w-[53.6875rem] 2xl:h-[53.6875rem]" data-cid="n173">
                             <div className="h-full block overflow-hidden" data-cid="n174">
-                              <div className="h-full block relative mx-px pt-[45.1875rem] max-md:pt-[23.4375rem] md:max-lg:pt-192 2xl:pt-[53.6875rem]" data-cid="n175">
+                              <div className="h-full block relative mx-px pt-[34rem] max-md:pt-[23.4375rem] md:max-lg:pt-192 2xl:pt-[53.6875rem]" data-cid="n175">
                                 <div className="h-full flex absolute top-0 inset-x-0 justify-center items-center" data-cid="n176">
                                   <button className="block py-px px-1.5 text-center cursor-pointer" data-cid="n177" type="button">
                                     <div className="w-0 block relative" data-cid="n178">
@@ -129,13 +129,13 @@ export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_dat
                           {logoData2.map((d, i) => <Logo key={i} d={d} cids={Logo_cids2[i]} />)}
                         </div>
                       </div>
-                      <button className="w-10 h-10 block absolute top-161.5 right-30 z-999 -mr-20 mb-[0.3125rem] py-px px-1.5 rounded-[50%] text-center indent-[-9999px] [background-position:50%_50%] bg-no-repeat cursor-default max-md:hidden md:max-lg:top-96 md:max-lg:right-22 md:max-lg:z-1 2xl:top-195.5 hover:bg-[url('https://www.bang-olufsen.com/static-assets/images/common/chevron-white-right-black-bg.svg')]" style={{ backgroundImage: "url(\"/assets/cloned/svg/e2104b2e059b.svg\")" }} data-cid="n238" data-component="button" aria-label="Next slide" type="button">
+                      <button className="w-10 h-10 block absolute top-68 right-30 z-999 -mr-20 mb-[0.3125rem] py-px px-1.5 rounded-[50%] text-center indent-[-9999px] [background-position:50%_50%] bg-no-repeat cursor-default max-md:hidden md:max-lg:top-96 md:max-lg:right-22 md:max-lg:z-1 2xl:top-195.5 hover:bg-[url('https://www.bang-olufsen.com/static-assets/images/common/chevron-white-right-black-bg.svg')]" style={{ backgroundImage: "url(\"/assets/cloned/svg/e2104b2e059b.svg\")" }} data-cid="n238" data-component="button" aria-label="Next slide" type="button">
                         <span className="inline max-md:hidden" data-cid="n239">
                           Next
                         </span>
                         <Icon3 cid={"n240"} />
                       </button>
-                      <ul className="w-45 h-10 flex absolute top-[40.6875rem] left-8 max-w-45 pt-2.5 overflow-x-auto overflow-y-hidden text-center [list-style-type:disc] list-outside transform-[matrix(1,0,0,1,-12,0)] max-md:left-[3.05rem] max-md:mx-[97.5px] max-md:static max-md:top-auto md:max-lg:top-174 md:max-lg:left-[19.2rem] 2xl:top-[49.1875rem]" data-cid="n241">
+                      <ul className="w-45 h-10 flex absolute top-[33.5rem] left-8 max-w-45 pt-2.5 overflow-x-auto overflow-y-hidden text-center [list-style-type:disc] list-outside transform-[matrix(1,0,0,1,-12,0)] max-md:left-[3.05rem] max-md:mx-[97.5px] max-md:static max-md:top-auto md:max-lg:top-174 md:max-lg:left-[19.2rem] 2xl:top-[49.1875rem]" data-cid="n241">
                         {listRowData.map((d, i) => <ListRow key={i} d={d} cids={ListRow_cids[i]} styles={ListRow_styles[i]} />)}
                       </ul>
                     </div>
@@ -163,7 +163,7 @@ export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_dat
             <div className="w-px h-0 block fixed top-px left-px overflow-hidden" data-cid="n269" />
           </div>
         </div>
-        <div className="h-[50.1875rem] flex relative max-w-[24.0625rem] ml-[5.425rem] pt-10 px-4 flex-col justify-center items-stretch flex-1 max-md:h-[33.1875rem] max-md:max-w-full max-md:px-9 max-lg:ml-0 max-md:pt-0 md:max-lg:h-[32.9375rem] md:max-lg:pl-9 md:max-lg:pr-0 2xl:h-[58.6875rem] 2xl:ml-29" data-cid="n270">
+        <div className="h-[38rem] flex relative max-w-[24.0625rem] ml-[5.425rem] pt-10 px-4 flex-col justify-center items-stretch flex-1 max-md:h-[33.1875rem] max-md:max-w-full max-md:px-9 max-lg:ml-0 max-md:pt-0 md:max-lg:h-[32.9375rem] md:max-lg:pl-9 md:max-lg:pr-0 2xl:h-[58.6875rem] 2xl:ml-29" data-cid="n270">
           <div className="hidden max-lg:h-45.5 max-lg:block max-md:my-8" data-cid="n271">
             <h3 className="hidden max-lg:h-6.5 max-lg:flex max-lg:flex-col max-lg:shrink-0 max-lg:text-border max-md:text-[2rem] max-md:leading-10.5 max-lg:tracking-[-0.5px] max-lg:[animation-name:cxjtGy] max-lg:[animation-duration:1.2s] max-lg:[animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] max-lg:[animation-fill-mode:forwards] md:max-lg:order-[1] md:max-lg:text-4xl md:max-lg:leading-12 md:max-lg:[animation-delay:0.5s]" data-cid="n272">
               <span className="hidden max-lg:block max-lg:mb-2 max-lg:text-[0.625rem] max-lg:leading-4.5 max-lg:tracking-[2px] max-lg:uppercase" data-cid="n273">
