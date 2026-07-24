@@ -201,7 +201,7 @@ export default function CustomPage() {
         }
       `}</style>
 
-      <div className="custom-root h-screen w-screen overflow-hidden flex flex-col text-[#111] no-select antialiased">
+      <div className="custom-root min-h-[100dvh] w-screen overflow-y-auto flex flex-col text-[#111] no-select antialiased">
 
         {/* ── Global Header ── */}
         <header className="flex justify-between items-center px-6 py-5 z-40 relative bg-transparent shrink-0">
