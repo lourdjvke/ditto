@@ -95,8 +95,8 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="block relative max-w-full bg-background" data-cid="n56" id="tab-container">
-                      <div className="h-[3.3125rem] flex relative max-w-378 overflow-auto whitespace-nowrap text-nowrap mx-auto max-md:h-14" data-cid="n57">
-                        <div className="h-[3.3125rem] flex relative -ml-15 py-4 [justify-content:left] items-center overflow-auto [list-style-type:none] list-outside max-md:h-14 max-md:ml-0 md:max-lg:-ml-6" data-cid="n58" aria-label="Category Filters, Press Esc to skip" id="subCategoryFilters" role="tablist">
+                      <div className="h-[3.3125rem] flex relative max-w-378 overflow-auto whitespace-nowrap text-nowrap mx-auto px-9 max-md:h-14 max-md:px-4 md:max-lg:px-6" data-cid="n57">
+                        <div className="h-[3.3125rem] flex relative py-4 [justify-content:left] items-center overflow-auto [list-style-type:none] list-outside max-md:h-14" data-cid="n58" aria-label="Category Filters, Press Esc to skip" id="subCategoryFilters" role="tablist">
                           <div className="hidden max-md:w-4 max-md:h-6 max-md:block max-md:sticky max-md:left-0 max-md:z-1 max-md:min-w-4 max-md:pointer-events-none" data-cid="n59" />
                           {ListRow_data.map((d, i) => <ListRow key={i} d={d} cids={ListRow_cids[i]} styles={ListRow_styles[i]} />)}
                           <div className="w-33.5 h-0.5 block absolute bottom-4.5 left-0 bg-border max-lg:w-34 md:max-lg:left-4" data-cid="n80" />
@@ -106,7 +106,7 @@ export default function Page() {
                     </div>
                     <div className="block" data-cid="n82" id="productListing">
                       <div className="block max-w-378 mb-11 px-9 mx-auto max-lg:px-4 md:max-lg:mb-10" data-cid="n83">
-                        <ul className="h-auto grid mt-[2.1875rem] px-1 flex-wrap gap-1 [grid-auto-flow:dense] [list-style-type:none] list-outside grid-cols-4 grid-rows-4 max-md:mt-7.5 max-lg:grid-cols-12 max-lg:grid-rows-8 max-lg:px-0 md:max-lg:mt-5" data-cid="n84">
+                        <ul className="h-auto grid mt-[2.1875rem] px-1 flex-wrap gap-1 [grid-auto-flow:dense] [list-style-type:none] list-outside grid-cols-5 grid-rows-4 max-md:mt-7.5 max-lg:grid-cols-12 max-lg:grid-rows-8 max-lg:px-0 md:max-lg:mt-5" data-cid="n84">
                           <li className="list-item max-w-full col-end-[span_1] bg-surface [animation-name:gDibJC] [animation-duration:0.5s] [animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] [animation-fill-mode:forwards] max-md:min-h-[18.9875rem] max-md:grow max-md:col-start-[span_6] max-md:[grid-column-end:initial] md:max-lg:my-4 md:max-lg:mx-auto md:max-lg:col-end-[span_5]" data-cid="n85">
                             <div className="h-full flex relative pb-4 flex-col justify-center bg-surface" data-cid="n86">
                               <article className="h-full flex relative flex-col overflow-hidden text-center" data-cid="n87">
