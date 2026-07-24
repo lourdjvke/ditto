@@ -95,8 +95,8 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="block relative max-w-full bg-background" data-cid="n56" id="tab-container">
-                      <div className="h-[3.3125rem] flex relative max-w-[1100px] overflow-auto whitespace-nowrap text-nowrap mx-auto px-4 max-md:h-14" data-cid="n57">
-                        <div className="h-[3.3125rem] flex relative py-4 [justify-content:left] items-center overflow-auto [list-style-type:none] list-outside max-md:h-14" data-cid="n58" aria-label="Category Filters, Press Esc to skip" id="subCategoryFilters" role="tablist">
+                      <div className="h-[3.3125rem] flex relative max-w-378 overflow-x-auto overflow-y-hidden whitespace-nowrap text-nowrap mx-auto px-9 max-lg:px-4 max-md:h-14" data-cid="n57">
+                        <div className="h-[3.3125rem] flex relative py-4 [justify-content:left] items-center overflow-x-auto overflow-y-hidden [list-style-type:none] list-outside max-md:h-14" data-cid="n58" aria-label="Category Filters, Press Esc to skip" id="subCategoryFilters" role="tablist">
                           <div className="hidden max-md:w-4 max-md:h-6 max-md:block max-md:sticky max-md:left-0 max-md:z-1 max-md:min-w-4 max-md:pointer-events-none" data-cid="n59" />
                           {ListRow_data.map((d, i) => <ListRow key={i} d={d} cids={ListRow_cids[i]} styles={ListRow_styles[i]} />)}
                           <div className="w-33.5 h-0.5 block absolute bottom-4.5 left-0 bg-border max-lg:w-34 md:max-lg:left-4" data-cid="n80" />

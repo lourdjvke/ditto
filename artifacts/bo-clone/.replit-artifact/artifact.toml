@@ -14,9 +14,9 @@ localPort = 24149
 run = "cd /home/runner/workspace/bang-olufsen-clone/project && npm run dev -- -H 0.0.0.0 -p $PORT"
 
 [services.production]
-build = [ "pnpm", "--filter", "@workspace/bo-clone", "run", "build" ]
+build = [ "pnpm", "--filter", "cloned-app", "run", "build" ]
 serve = "static"
-publicDir = "artifacts/bo-clone/dist/public"
+publicDir = "bang-olufsen-clone/project/out"
 
 [[services.production.rewrites]]
 from = "/*"
