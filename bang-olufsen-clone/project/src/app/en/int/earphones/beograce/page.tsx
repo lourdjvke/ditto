@@ -84,77 +84,6 @@ export default function Page() {
       <div className="h-full block" data-cid="n2" id="__next">
         <div className="h-full block" data-cid="n3">
           <div className="h-full block" data-cid="n4">
-            <nav className="block" data-cid="n5" data-component="nav">
-              <div className="block" data-cid="n6" role="banner" />
-              <div className="h-0 block opacity-0 max-w-378" data-cid="n7">
-                <span className="w-px h-px block absolute overflow-hidden whitespace-nowrap text-nowrap [clip-path:inset(50%)]" data-cid="n8">
-                  Navigation and Content
-                </span>
-                <ul className="flex pl-10 [list-style-type:disc] list-outside max-md:flex-col" data-cid="n9">
-                  <li className="h-6.5 list-item [list-style-type:none]" data-cid="n10">
-                    <a className="inline text-border leading-6.5 tracking-[0.2px] cursor-pointer focus:underline" data-cid="n11" data-component="link" href="#main-layout">
-                      Skip to main content
-                    </a>
-                  </li>
-                  <li className="h-6.5 list-item [list-style-type:none]" data-cid="n12">
-                    <a className="inline text-border leading-6.5 tracking-[0.2px] cursor-pointer focus:underline" data-cid="n13" data-component="link" href="#main-footer">
-                      Skip to main footer
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            <header className="h-0 block relative z-91" data-cid="n14" aria-hidden="false">
-              <div className="block relative z-1 bg-background max-lg:bg-[initial]" data-cid="n15">
-                <div className="h-29 flex relative px-9 items-center max-md:h-[5.3125rem] max-md:px-4 md:max-lg:h-20.5 md:max-lg:px-6" data-cid="n16">
-                  <button className="w-19 h-4.5 flex relative items-center text-center cursor-pointer" data-cid="n17" data-component="button" aria-haspopup="dialog" aria-label="Menu" type="button">
-                    <Icon cid={"n18"} />
-                    <em className="w-5 h-[1.5px] block relative -mt-[0.5625rem] mr-[0.6875rem] italic indent-[-999px] bg-border max-lg:bg-background before:content-[''] before:block before:absolute before:top-2 before:-bottom-2 before:inset-x-0 before:w-5 before:h-[1.5px] before:bg-border max-lg:before:bg-background" data-cid="n19" />
-                    <p className="block text-border text-xs leading-5 tracking-[0.1px] whitespace-pre-wrap max-lg:text-background" data-cid="n20">
-                      Menu
-                    </p>
-                  </button>
-                  <div className="w-160 h-8 flex absolute left-[clamp(187.5px,_50%,_calc(100%_-_187.5px))] -z-1 min-w-0 justify-center items-center transform-[matrix(1,0,0,1,-320,0)] max-md:w-[187.5px] max-md:transform-[matrix(1,0,0,1,-93.75,0)] md:max-lg:w-96 md:max-lg:transform-[matrix(1,0,0,1,-192,0)] 2xl:w-240 2xl:transform-[matrix(1,0,0,1,-480,0)]" data-cid="n21">
-                    <div className="block" data-cid="n22">
-                      <a className="block text-muted-foreground cursor-pointer hover:border-border hover:text-border hover:outline-border hover:[text-decoration-color:var(--border)]" data-cid="n23" data-component="link" aria-label={"Bang & Olufsen : click to navigate to homepage"} href="/en/int">
-                        <p className="block text-border text-[0rem] leading-0 tracking-[-0.5px] text-center whitespace-pre-wrap" data-cid="n24">
-                          <img className="w-50 h-[1.0625rem] flex max-w-full max-h-20 overflow-clip max-lg:w-29.5 max-lg:h-2.5" data-cid="n25" data-component="image" alt={"Bang & Olufsen"} id="header-logo" src="/assets/cloned/svg/cb819f67fdd9.svg" title={"Bang & Olufsen"} />
-                          <img className="w-12.5 h-4 inline max-w-full mt-1 overflow-clip text-[0.5625rem] leading-[0.5625rem] max-lg:hidden" data-cid="n26" data-component="image" alt="Est 1925 logo subline in black font" src="/assets/cloned/svg/235689782c93.svg" />
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="h-8 flex ml-255 items-center order-[1] max-md:ml-[14.6875rem] md:max-lg:ml-153 2xl:ml-415" data-cid="n27">
-                    <div className="flex" data-cid="n28">
-                      <div className="block max-lg:hidden" data-cid="n29">
-                        <button className="w-8 h-8 flex min-w-8 mr-2 justify-center text-center cursor-pointer max-lg:hidden" data-cid="n30" data-component="button" aria-label="Account" role="link" type="button">
-                          <div className="block max-lg:hidden" data-cid="n31">
-                            <img className="w-8 h-8 inline max-w-full overflow-clip max-lg:hidden" data-cid="n32" data-component="image" alt="Login/Create account" src="/assets/cloned/svg/96d563c45e44.svg" />
-                          </div>
-                        </button>
-                      </div>
-                      <div className="flex mr-2 flex-col items-start max-lg:hidden" data-cid="n33">
-                        <a className="w-8 h-8 flex flex-col justify-center text-muted-foreground cursor-pointer max-lg:hidden hover:border-border hover:text-border hover:outline-border hover:[text-decoration-color:var(--border)]" data-cid="n34" data-component="link" aria-label="Store Locator" href="https://stores.bang-olufsen.com/en/search?country=INT">
-                          <div className="w-8 h-8 block max-lg:hidden" data-cid="n35">
-                            <img className="w-8 h-8 inline max-w-full overflow-clip max-lg:hidden" data-cid="n36" data-component="image" alt="Store Locator" aria-hidden="false" src="/assets/cloned/svg/7e8af1a78bb6.svg" title="Store Locator" />
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="h-8 block" data-cid="n37">
-                      <span className="w-8 h-8 block" data-cid="n38">
-                        <img className="w-8 h-8 inline max-w-full overflow-clip" data-cid="n39" data-component="image" alt="View Cart" src="/assets/cloned/svg/1e343ba67e88.svg" title="View Cart" />
-                      </span>
-                      <p className="w-px h-px block absolute overflow-hidden text-muted-foreground leading-6.5 tracking-[0.4px] whitespace-nowrap text-nowrap [clip-path:inset(50%)]" data-cid="n40" aria-atomic="true" aria-live="assertive" role="alert">
-                        <span className="inline" data-cid="n41">
-                          Basket Preview Modal is Closed
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </header>
             <main className="block relative flex-1 bg-background" data-cid="n42" id="main-layout">
               <div className="block" data-cid="n43">
                 <div className="h-200 flex flex-col justify-center max-md:h-203 md:max-lg:h-256 2xl:h-270" data-cid="n44">
@@ -231,54 +160,6 @@ export default function Page() {
                     </div>
                   </div>
                   <div className="block" data-cid="n340">
-                    <nav className="h-18 block fixed -top-18 inset-x-0 z-89 text-center bg-background" data-cid="n341">
-                      <div className="h-18 flex max-w-378 px-9 justify-between items-center [list-style-type:none] list-outside bg-background mx-auto max-lg:h-14 max-lg:px-4" data-cid="n342">
-                        <li className="flex relative items-center gap-4 max-lg:flex-col max-lg:items-start max-lg:gap-[initial]" data-cid="n343">
-                          <span className="flex relative items-center gap-4 text-border font-medium leading-6 tracking-[2px] uppercase max-lg:flex-col max-lg:items-start max-lg:text-sm max-lg:leading-[1.3125rem] max-lg:gap-[initial]" data-cid="n344">
-                            Beo Grace
-                          </span>
-                          <span className="hidden md:max-lg:w-8 md:max-lg:h-[2.2125rem] md:max-lg:block md:max-lg:absolute md:max-lg:top-[10.5px] md:max-lg:-right-12 md:max-lg:min-w-0 md:max-lg:transform-[matrix(1,0,0,1,0,-17.6953)]" data-cid="n345">
-                            <span className="hidden md:max-lg:inline-block md:max-lg:relative md:max-lg:max-w-full md:max-lg:overflow-hidden" data-cid="n346">
-                              <span className="hidden md:max-lg:block md:max-lg:max-w-full" data-cid="n347">
-                                <img className="hidden md:max-lg:w-8 md:max-lg:h-8 md:max-lg:block md:max-lg:max-w-full md:max-lg:overflow-clip" data-cid="n348" alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-                              </span>
-                              <img className="hidden md:max-lg:w-full md:max-lg:h-full md:max-lg:min-h-full md:max-lg:block md:max-lg:absolute md:max-lg:top-0 md:max-lg:left-0 md:max-lg:min-w-full md:max-lg:max-w-full md:max-lg:max-h-full md:max-lg:overflow-clip" data-cid="n349" src="/assets/cloned/svg/e751a4dfdaba.svg" srcSet="/assets/cloned/svg/e751a4dfdaba.svg 1x, /assets/cloned/svg/e751a4dfdaba.svg 2x" />
-                            </span>
-                          </span>
-                          <span className="w-0 h-0 block text-xs leading-5 tracking-[0.1px] transform-[none] max-md:w-8 max-md:h-[2.2125rem] max-md:absolute max-md:top-[10.5px] max-md:-right-12 max-md:min-w-0 max-md:transform-[matrix(1,0,0,1,0,-17.6953)] max-md:[font-size:inherit] max-md:leading-[inherit] max-md:tracking-[inherit]" data-cid="n350">
-                            <span className="hidden max-md:inline-block max-md:relative max-md:max-w-full max-md:overflow-hidden" data-cid="n351">
-                              <span className="hidden max-md:block max-md:max-w-full" data-cid="n352">
-                                <img className="hidden max-md:w-8 max-md:h-8 max-md:block max-md:max-w-full max-md:overflow-clip" data-cid="n353" alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-                              </span>
-                              <img className="hidden max-md:w-full max-md:h-full max-md:min-h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:min-w-full max-md:max-w-full max-md:max-h-full max-md:overflow-clip" data-cid="n354" src="/assets/cloned/svg/e751a4dfdaba.svg" srcSet="/assets/cloned/svg/e751a4dfdaba.svg 1x, /assets/cloned/svg/e751a4dfdaba.svg 2x" />
-                            </span>
-                          </span>
-                        </li>
-                        <div className="flex justify-between items-center gap-5" data-cid="n355">
-                          <li className="list-item mr-5 max-lg:hidden" data-cid="n356">
-                            <div className="block max-lg:hidden" data-cid="n357">
-                              <a className="inline text-muted-foreground cursor-pointer max-lg:hidden" data-cid="n358" data-component="link" aria-current="false" href="/en/int/earphones/beograce?variant=beograce-natural-aluminium#inspiration">
-                                <span className="inline text-xs leading-5 tracking-[0.1px] max-lg:hidden" data-cid="n359">
-                                  Features
-                                </span>
-                              </a>
-                            </div>
-                          </li>
-                          <li className="list-item mr-5 max-lg:hidden" data-cid="n360">
-                            <div className="block max-lg:hidden" data-cid="n361">
-                              <a className="inline text-muted-foreground cursor-pointer max-lg:hidden" data-cid="n362" data-component="link" aria-current="true" href="/en/int/earphones/beograce?variant=beograce-natural-aluminium#technicalSpecifications">
-                                <span className="border-b border-solid border-b-border inline bottom-1 pb-0.5 text-border text-xs leading-5 tracking-[0.1px] max-lg:hidden" data-cid="n363">
-                                  Tech Specs
-                                </span>
-                              </a>
-                            </div>
-                          </li>
-                          <a className="w-[4.4rem] border border-solid border-clr-0 block relative min-w-14 py-2 px-5 rounded-[40px] text-color-001 text-xs font-medium leading-4.5 tracking-[0.1px] bg-border cursor-pointer" data-cid="n364" data-component="link" aria-label="Shop" href="#overview" target="_self">
-                            Shop
-                          </a>
-                        </div>
-                      </div>
-                    </nav>
                     <div className="h-[995.1125rem] block max-md:h-[17707.7px] md:max-lg:h-[18600.3px] 2xl:h-[19128.3px]" data-cid="n365" aria-hidden="false">
                       <div className="block text-border bg-background" data-cid="n366" id="inspiration">
                         <div className="h-[12560.7px] block max-md:h-3219 md:max-lg:h-[938.2875rem] 2xl:h-[981.4125rem]" data-cid="n367">
