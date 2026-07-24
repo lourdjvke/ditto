@@ -18,19 +18,16 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Bang & Olufsen Clone"
+args = "artifacts/bo-clone: web"
 
 [[workflows.workflow]]
-name = "Bang & Olufsen Clone"
+name = "artifacts/bo-clone: web"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd /home/runner/workspace/bang-olufsen-clone/project && npm run dev -- -H 0.0.0.0 -p 3000"
-waitForPort = 3000
-
-[workflows.workflow.metadata]
-outputType = "webview"
+args = "cd /home/runner/workspace/bang-olufsen-clone/project && npm run dev -- -H 0.0.0.0 -p 24149"
+waitForPort = 24149
 
 [agent]
 stack = "PNPM_WORKSPACE"
