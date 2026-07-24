@@ -2,6 +2,7 @@ import "./globals.css";
 import "./ditto.css";
 import type { ReactNode } from "react";
 import Navbar from "../../../../sections/navbar";
+import Footer from "../../../../sections/footer";
 export const metadata = {
   "metadataBase": new URL("http://localhost:3000"),
   "title": "John Legend x Bang & Olufsen | Brand Ambassador",
@@ -13,6 +14,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 }
