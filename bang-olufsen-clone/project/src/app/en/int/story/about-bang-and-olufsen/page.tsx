@@ -1,3 +1,4 @@
+import HeroVideo from "./components/hero-video";
 import DittoMotion from "./ditto/DittoMotion";
 import DropdownMenu from "./ditto/DropdownMenu";
 import GalleryShowcaseSection from "./sections/gallery-showcase-section";
@@ -74,33 +75,7 @@ export default function Page() {
                         </div>
                       </div>
                     </div>
-                    <div className="block relative mx-9 overflow-hidden aspect-video transform-[matrix(1.1,0,0,1.1,0,0)] origin-[604px_339.75px] max-lg:mx-4 max-md:aspect-[9/16] max-md:origin-[171.5px_304.883px] md:max-lg:transform-[matrix(1.05,0,0,1.05,0,0)] md:max-lg:origin-[368px_207px] 2xl:origin-[924px_519.75px]" data-cid="n53">
-                      <div className="h-full block relative" data-cid="n54" aria-label="Rich Media Video" role="group">
-                        <div className="w-[2.8125rem] h-[2.8125rem] block absolute right-[0.8rem] bottom-4 z-3 invisible rounded-[50%] bg-clr-0 max-lg:w-8 max-lg:h-8 max-md:right-1 max-lg:[visibility:inherit] md:max-lg:right-[7.7px] 2xl:right-[1.2rem]" data-cid="n55" aria-label="Pause" aria-pressed="true" role="button">
-                          <button className="w-[2.8125rem] h-[2.8125rem] block absolute right-[22.5px] bottom-[22.5px] z-99 py-px px-1.5 rounded-[50%] text-center [background-position:50%_50%] bg-no-repeat transform-[matrix(1,0,0,1,22.5,22.5)] cursor-pointer max-lg:w-8 max-lg:h-8 max-lg:right-4 max-lg:bottom-4 max-lg:transform-[matrix(1,0,0,1,16,16)]" style={{ backgroundImage: "url(\"/assets/cloned/svg/31a3f7c0c24b.svg\")" }} data-cid="n56" aria-label="Pause" aria-pressed="true" title="pause" type="button">
-                            <div className="block" data-cid="n57" aria-atomic="true" aria-live="assertive" role="alert">
-                              <span className="inline max-lg:invisible" data-cid="n58">
-                                pause
-                              </span>
-                            </div>
-                          </button>
-                        </div>
-                        <div className="h-full flex relative flex-1" data-cid="n59">
-                          <div className="h-full block absolute top-0 inset-x-0 min-w-0" data-cid="n60">
-                            <div className="w-px h-0 block fixed top-px left-px overflow-hidden" data-cid="n61" />
-                            <div className="w-px h-0 block fixed top-px left-px overflow-hidden" data-cid="n62" />
-                            <div className="block" data-cid="n63">
-                              <div className="block" data-cid="n64">
-                                <video className="w-302 h-170 block absolute overflow-clip object-cover transform-[matrix(1.1,0,0,1.1,0,0)] origin-[604px_339.75px] max-md:w-[21.4375rem] max-md:h-152.5 max-md:origin-[171.5px_304.883px] md:max-lg:w-184 md:max-lg:h-103.5 md:max-lg:transform-[matrix(1.05,0,0,1.05,0,0)] md:max-lg:origin-[368px_207px] 2xl:w-462 2xl:h-260 2xl:origin-[924px_519.75px]" data-cid="n65" autoPlay loop muted playsInline poster="/assets/cloned/images/0a10a48e50af.jpg" preload="auto">
-                                  <source className="inline [font-family:'Times_New_Roman'] leading-4.5" data-cid="n66" src="/assets/cloned/videos/199456e98835.mp4" type="video/mp4" />
-                                </video>
-                              </div>
-                            </div>
-                            <div className="w-px h-0 block fixed top-px left-px overflow-hidden" data-cid="n67" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <HeroVideo />
                   </div>
                   <div className="block" data-cid="n68">
                     <div className="h-20 block relative bg-background max-md:h-[2.5375rem] md:max-lg:h-[3.2rem] 2xl:h-27" data-cid="n69" />

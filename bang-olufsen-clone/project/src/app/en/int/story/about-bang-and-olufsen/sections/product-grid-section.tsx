@@ -7,13 +7,13 @@ export default function ProductGridSection() {
           <h2 className="hidden max-md:block max-md:mb-5 max-md:text-background max-md:text-2xl max-md:leading-8 max-md:tracking-[-0.5px]" data-cid="n172">
             Celebrating 100 years of sound, design and craft
           </h2>
-          <div className="w-[42.625rem] flex mr-8 flex-col max-md:w-[21.4375rem] max-md:block max-md:relative max-md:mr-0 max-md:[flex-direction:initial] md:max-lg:w-[414.1px] md:max-lg:mr-5.5 2xl:w-[51.0375rem]" data-cid="n173">
+          <div className="w-[42.625rem] flex mr-8 flex-col max-md:w-full max-md:block max-md:relative max-md:mr-0 max-md:[flex-direction:initial] md:max-lg:w-[414.1px] md:max-lg:mr-5.5 2xl:w-[51.0375rem]" data-cid="n173">
             <h2 className="block mb-4 text-background text-4xl leading-13.5 tracking-[-0.5px] max-md:hidden md:max-lg:text-[1.625rem] md:max-lg:leading-10" data-cid="n174" data-component="heading">
               Celebrating 100 years of sound, design and craft
             </h2>
             <div className="w-[57%] block relative max-md:w-full max-md:mb-14 max-md:static max-md:inset-auto md:max-lg:w-4/5" data-cid="n175">
               <div className="w-full block mb-14 max-md:w-1/2 max-md:h-[13.4rem] max-md:relative max-md:mb-4 max-md:aspect-[4/5]" data-cid="n176">
-                <span className="hidden max-md:w-[171.5px] max-md:h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:overflow-hidden" data-cid="n177">
+                <span className="hidden max-md:w-full max-md:h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:overflow-hidden" data-cid="n177">
                   <img className="hidden max-md:w-full max-md:h-full max-md:min-h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:min-w-full max-md:max-w-full max-md:max-h-full max-md:overflow-clip max-md:object-cover" data-cid="n178" alt="Dancers in white suits performing on a dining table under a crystal chandelier, creating motion blur against a dark background." sizes="100vw" src="/assets/cloned/images/dd915a8a728d.webp" srcSet="/assets/cloned/images/9efe681f6828.webp 640w, /assets/cloned/images/0631f41188db.webp 750w, /assets/cloned/images/a6e73a3d7321.webp 828w, /assets/cloned/images/bdd6fc156486.webp 1080w, /assets/cloned/images/a43e74d47cc1.webp 1200w, /assets/cloned/images/ee0eb4b438b4.webp 1920w, /assets/cloned/images/c9f4d433fb1c.webp 2048w, /assets/cloned/images/dd915a8a728d.webp 3840w" />
                 </span>
                 <div className="block relative mb-4 aspect-[4/5] max-md:hidden" data-cid="n179">
@@ -73,7 +73,7 @@ export default function ProductGridSection() {
           <div className="w-[41%] block max-md:w-full max-md:relative md:max-lg:w-[40.5%]" data-cid="n201">
             <div className="h-[115.6875rem] block relative max-md:mb-14 max-md:h-auto max-md:static max-md:inset-auto md:max-lg:h-[92.0375rem] 2xl:h-[130.8625rem]" data-cid="n202">
               <div className="block max-w-full px-4 shrink-0 max-md:h-[27.5625rem] max-md:relative max-md:mb-4 max-md:aspect-[7/9] max-md:max-w-none max-md:px-0 max-md:shrink-[initial] md:max-lg:px-3" data-cid="n203">
-                <span className="hidden max-md:w-[21.4375rem] max-md:h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:overflow-hidden" data-cid="n204">
+                <span className="hidden max-md:w-full max-md:h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:overflow-hidden" data-cid="n204">
                   <img className="hidden max-md:w-full max-md:h-full max-md:min-h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:min-w-full max-md:max-w-full max-md:max-h-full max-md:overflow-clip max-md:object-cover" data-cid="n205" alt="Beolab 90 Atelier Editions, Titan, Shadow, Zenith, Monarch, and Mirage" sizes="100vw" src="/assets/cloned/images/1f792e72b75b.webp" srcSet="/assets/cloned/images/b7a92a4c5556.webp 640w, /assets/cloned/images/a646fdfeac98.webp 750w, /assets/cloned/images/71723447f86a.webp 828w, /assets/cloned/images/dba123b422ca.webp 1080w, /assets/cloned/images/d61f8efa8f0d.webp 1200w, /assets/cloned/images/dddc055a9546.webp 1920w, /assets/cloned/images/c8df9d8039ca.webp 2048w, /assets/cloned/images/1f792e72b75b.webp 3840w" />
                 </span>
                 <div className="block relative mb-4 aspect-[5/7] max-md:hidden" data-cid="n206">
@@ -111,7 +111,7 @@ export default function ProductGridSection() {
           <div className="hidden max-md:h-[41.8375rem] max-md:block max-md:relative" data-cid="n218">
             <div className="hidden max-md:block max-md:max-w-full max-md:mb-14 max-md:ml-[3.575rem] max-md:px-1.5 max-md:shrink-0 max-md:basis-full" data-cid="n219">
               <div className="hidden max-md:block max-md:relative max-md:mb-4 max-md:aspect-[5/7]" data-cid="n220">
-                <span className="hidden max-md:w-[17.1125rem] max-md:h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:overflow-hidden" data-cid="n221">
+                <span className="hidden max-md:w-full max-md:h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:overflow-hidden" data-cid="n221">
                   <img className="hidden max-md:w-full max-md:h-full max-md:min-h-full max-md:block max-md:absolute max-md:top-0 max-md:left-0 max-md:min-w-full max-md:max-w-full max-md:max-h-full max-md:overflow-clip max-md:object-cover" data-cid="n222" alt="Woman using Beosound A5 in the variant Century Weave. The speaker is on a side table with books and candle." sizes="100vw" src="/assets/cloned/images/7c8aba89bd19.webp" srcSet="/assets/cloned/images/9ad8c0ff3f83.webp 640w, /assets/cloned/images/83b80cf571b3.webp 750w, /assets/cloned/images/54b4658ca6f6.webp 828w, /assets/cloned/images/4a08c5ae655f.webp 1080w, /assets/cloned/images/4278e87ee829.webp 1200w, /assets/cloned/images/a0e7a8454f01.webp 1920w, /assets/cloned/images/34d1d5836b30.webp 2048w, /assets/cloned/images/7c8aba89bd19.webp 3840w" />
                 </span>
               </div>

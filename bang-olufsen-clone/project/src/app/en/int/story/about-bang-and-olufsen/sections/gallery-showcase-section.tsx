@@ -14,7 +14,7 @@ export default function GalleryShowcaseSection() {
               <div className="h-full block relative bg-clr-1" data-cid="n117">
                 <div className="h-full block" data-cid="n118">
                   <picture className="inline" data-cid="n119">
-                    <img className="w-[23.1875rem] h-52 block relative max-w-full overflow-clip max-md:w-[21.4375rem] max-md:h-[12.0625rem] md:max-lg:w-178 md:max-lg:h-[25.0625rem] 2xl:w-112 2xl:h-63" data-cid="n121" data-component="image" alt="Sound Stories Geoff Martin" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/a0fc81e4ae71.jpg" />
+                    <img className="w-full h-52 block relative max-w-full overflow-clip max-md:w-full max-md:h-[12.0625rem] md:max-lg:w-full md:max-lg:h-[25.0625rem] 2xl:w-full 2xl:h-63" data-cid="n121" data-component="image" alt="Sound Stories Geoff Martin" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/a0fc81e4ae71.jpg" />
                   </picture>
                 </div>
               </div>
@@ -46,7 +46,7 @@ export default function GalleryShowcaseSection() {
               <div className="h-full block relative bg-clr-1" data-cid="n133">
                 <div className="h-full block" data-cid="n134">
                   <picture className="inline" data-cid="n135">
-                    <img className="w-[23.1875rem] h-52 block relative max-w-full overflow-clip max-md:w-[21.4375rem] max-md:h-[12.0625rem] md:max-lg:w-178 md:max-lg:h-[25.0625rem] 2xl:w-112 2xl:h-63" data-cid="n137" data-component="image" alt="Close up on wood details" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/80ca52dec38d.jpg" />
+                    <img className="w-full h-52 block relative max-w-full overflow-clip max-md:w-full max-md:h-[12.0625rem] md:max-lg:w-full md:max-lg:h-[25.0625rem] 2xl:w-full 2xl:h-63" data-cid="n137" data-component="image" alt="Close up on wood details" sizes="(min-width: 1024px) 1440px, (min-width: 768px) 1024px, 375px" src="/assets/cloned/images/80ca52dec38d.jpg" />
                   </picture>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function GalleryShowcaseSection() {
                   <div className="w-px h-0 block fixed top-px left-px overflow-hidden" data-cid="n152" />
                   <div className="block" data-cid="n153">
                     <div className="block" data-cid="n154">
-                      <video className="w-[23.1875rem] h-[13.0625rem] block absolute overflow-clip object-cover max-md:w-[21.4375rem] max-md:h-[12.0625rem] md:max-lg:w-178 md:max-lg:h-[25.0625rem] 2xl:w-112 2xl:h-63" data-cid="n155" controls preload="none">
+                      <video className="w-full h-[13.0625rem] block absolute overflow-clip object-cover max-md:w-full max-md:h-[12.0625rem] md:max-lg:w-full md:max-lg:h-[25.0625rem] 2xl:w-full 2xl:h-63" data-cid="n155" controls preload="none">
                         <source className="inline [font-family:'Times_New_Roman'] leading-4.5" data-cid="n156" src="/assets/cloned/videos/175712fd2fdb.mp4" type="video/mp4" />
                       </video>
                       <div className="h-[208.7px] block absolute inset-x-0 align-middle bg-border bg-cover [background-position:50%_50%] bg-no-repeat cursor-pointer max-md:h-[12.0625rem] md:max-lg:h-[400.5px] 2xl:h-63" style={{ backgroundImage: "url(\"/assets/cloned/images/03ddac19bbbd.jpg\")" }} data-cid="n157" />
