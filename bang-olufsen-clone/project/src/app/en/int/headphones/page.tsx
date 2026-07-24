@@ -73,7 +73,7 @@ export default function Page() {
                 <div className="block" data-cid="n44">
                   <div className="block" data-cid="n45">
                     <div className="flex items-center" data-cid="n46">
-                      <div className="w-full block max-w-[1100px] mx-auto px-4" data-cid="n47">
+                      <div className="w-full block max-w-378 mx-auto px-9 max-lg:px-4" data-cid="n47">
                         <div className="block py-10 px-1 bg-background max-md:py-4 max-lg:px-0 md:max-lg:py-6" data-cid="n48">
                           <div className="h-9 flex -mx-4 flex-wrap max-md:h-7 max-md:-mx-1.5 md:max-lg:h-8 md:max-lg:-mx-3" data-cid="n49">
                             <div className="w-[1026.7px] h-9 block max-w-[83.3333%] px-4 shrink-0 basis-5/6 max-md:w-[22.1875rem] max-md:h-7 max-lg:max-w-full max-md:px-1.5 max-lg:basis-full md:max-lg:w-190 md:max-lg:h-8 md:max-lg:px-3 2xl:w-305" data-cid="n50">
@@ -512,14 +512,13 @@ export default function Page() {
                         <div className="block max-w-378 px-9 mx-auto max-lg:px-4" data-cid="n654">
                           <div className="block py-10 px-1 bg-background max-md:py-4 max-lg:px-0 md:max-lg:py-6" data-cid="n655">
                             <div className="flex -mx-4 flex-wrap max-md:-mx-1.5 md:max-lg:-mx-3" data-cid="n656">
-                              <div className="block max-w-[83.3333%] px-4 shrink-0 basis-5/6 max-lg:max-w-full max-md:px-1.5 max-lg:basis-full md:max-lg:px-3" data-cid="n657" />
-                              <div className="w-154 block max-w-[50%] mb-11 px-4 shrink-0 basis-1/2 max-md:w-[22.1875rem] max-md:max-w-full max-md:mb-15 max-md:px-1.5 max-md:basis-full md:max-lg:w-[506.7px] md:max-lg:max-w-[66.6667%] md:max-lg:px-3 md:max-lg:basis-2/3 2xl:w-183" data-cid="n658">
+<div className="w-154 block max-w-[50%] mb-11 px-4 shrink-0 basis-1/2 max-md:w-[22.1875rem] max-md:max-w-full max-md:mb-15 max-md:px-1.5 max-md:basis-full md:max-lg:w-[506.7px] md:max-lg:max-w-[66.6667%] md:max-lg:px-3 md:max-lg:basis-2/3 2xl:w-183" data-cid="n658">
                                 <h2 className="block mb-5 text-border text-5xl leading-16 tracking-[-0.5px] max-md:text-2xl max-md:leading-8 md:max-lg:text-4xl md:max-lg:leading-12" data-cid="n659" data-component="heading">
                                   <span className="inline" data-cid="n660">
                                     {"Headphones "}
                                   </span>
                                 </h2>
-                                <div className="h-78 block text-muted-foreground leading-6.5 tracking-[0.2px] whitespace-pre-wrap max-md:h-143 md:max-lg:h-97.5 2xl:h-65" data-cid="n661">
+                                <div className="block text-muted-foreground leading-6.5 tracking-[0.2px] whitespace-pre-wrap" data-cid="n661">
                                   <div className="inline" data-cid="n662">
                                     <p className="inline tracking-[0.4px]" data-cid="n663">
                                       {"Toe-tapping music that travels with you. Our wireless over-ear Bluetooth headphones let you lose yourself in sound, whether you’re working out, concentrating at the office or flying to your next holiday destination. "}
