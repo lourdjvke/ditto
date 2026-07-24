@@ -73,7 +73,7 @@ export default function Page() {
                 <div className="block" data-cid="n44">
                   <div className="block" data-cid="n45">
                     <div className="flex items-center" data-cid="n46">
-                      <div className="w-full block max-w-378 px-9 mx-auto max-lg:px-4" data-cid="n47">
+                      <div className="w-full block max-w-[1100px] mx-auto px-4" data-cid="n47">
                         <div className="block py-10 px-1 bg-background max-md:py-4 max-lg:px-0 md:max-lg:py-6" data-cid="n48">
                           <div className="h-9 flex -mx-4 flex-wrap max-md:h-7 max-md:-mx-1.5 md:max-lg:h-8 md:max-lg:-mx-3" data-cid="n49">
                             <div className="w-[1026.7px] h-9 block max-w-[83.3333%] px-4 shrink-0 basis-5/6 max-md:w-[22.1875rem] max-md:h-7 max-lg:max-w-full max-md:px-1.5 max-lg:basis-full md:max-lg:w-190 md:max-lg:h-8 md:max-lg:px-3 2xl:w-305" data-cid="n50">
@@ -95,7 +95,7 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="block relative max-w-full bg-background" data-cid="n56" id="tab-container">
-                      <div className="h-[3.3125rem] flex relative max-w-378 overflow-auto whitespace-nowrap text-nowrap mx-auto px-9 max-md:h-14 max-md:px-4 md:max-lg:px-6" data-cid="n57">
+                      <div className="h-[3.3125rem] flex relative max-w-[1100px] overflow-auto whitespace-nowrap text-nowrap mx-auto px-4 max-md:h-14" data-cid="n57">
                         <div className="h-[3.3125rem] flex relative py-4 [justify-content:left] items-center overflow-auto [list-style-type:none] list-outside max-md:h-14" data-cid="n58" aria-label="Category Filters, Press Esc to skip" id="subCategoryFilters" role="tablist">
                           <div className="hidden max-md:w-4 max-md:h-6 max-md:block max-md:sticky max-md:left-0 max-md:z-1 max-md:min-w-4 max-md:pointer-events-none" data-cid="n59" />
                           {ListRow_data.map((d, i) => <ListRow key={i} d={d} cids={ListRow_cids[i]} styles={ListRow_styles[i]} />)}
