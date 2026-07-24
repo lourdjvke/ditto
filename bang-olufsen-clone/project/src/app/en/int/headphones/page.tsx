@@ -106,7 +106,7 @@ export default function Page() {
                     </div>
                     <div className="block" data-cid="n82" id="productListing">
                       <div className="block max-w-378 mb-11 px-9 mx-auto max-lg:px-4 md:max-lg:mb-10" data-cid="n83">
-                        <ul className="h-auto grid mt-[2.1875rem] px-1 flex-wrap gap-1 [grid-auto-flow:dense] [list-style-type:none] list-outside grid-cols-5 grid-rows-4 max-md:mt-7.5 max-lg:grid-cols-12 max-lg:grid-rows-8 max-lg:px-0 md:max-lg:mt-5" data-cid="n84">
+                        <ul className="h-auto grid mt-[2.1875rem] px-1 flex-wrap gap-1 [grid-auto-flow:dense] [list-style-type:none] list-outside grid-cols-4 grid-rows-4 max-md:mt-7.5 max-lg:grid-cols-12 max-lg:grid-rows-8 max-lg:px-0 md:max-lg:mt-5" data-cid="n84">
                           <li className="list-item max-w-full col-end-[span_1] bg-surface [animation-name:gDibJC] [animation-duration:0.5s] [animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] [animation-fill-mode:forwards] max-md:min-h-[18.9875rem] max-md:grow max-md:col-start-[span_6] max-md:[grid-column-end:initial] md:max-lg:my-4 md:max-lg:mx-auto md:max-lg:col-end-[span_5]" data-cid="n85">
                             <div className="h-full flex relative pb-4 flex-col justify-center bg-surface" data-cid="n86">
                               <article className="h-full flex relative flex-col overflow-hidden text-center" data-cid="n87">
