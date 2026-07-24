@@ -508,7 +508,7 @@ export default function Page() {
                         </ul>
                       </div>
                       <div className="h-[0.4375rem] block" data-cid="n652" />
-                      <div className="flex items-center" data-cid="n653">
+                      <div className="block" data-cid="n653">
                         <div className="block max-w-378 px-9 mx-auto max-lg:px-4" data-cid="n654">
                           <div className="block py-10 px-1 bg-background max-md:py-4 max-lg:px-0 md:max-lg:py-6" data-cid="n655">
                             <div className="flex -mx-4 flex-wrap max-md:-mx-1.5 md:max-lg:-mx-3" data-cid="n656">
