@@ -7,7 +7,7 @@ import { listRow4Data as listRow4DataContent, listRow5Data as listRow5DataConten
 /** Site footer. */
 export default function Footer({ listRow4Data = listRow4DataContent, listRow5Data = listRow5DataContent } = {}) {
   return (
-    <footer className="h-230.5 min-h-230.5 block relative p-6 bg-primary max-md:h-[52.15rem] max-md:p-4 max-lg:min-h-0 md:max-lg:h-[64.675rem] 2xl:h-[57.7125rem]" data-cid="n1032" id="main-footer">
+    <footer className="h-auto block relative p-6 bg-primary max-md:p-4" data-cid="n1032" id="main-footer">
       <div className="h-full flex justify-center items-center gap-[6.0625rem] max-lg:block max-lg:max-w-378 max-lg:[justify-content:initial] max-lg:[align-items:initial] max-lg:gap-[initial] 2xl:justify-between 2xl:gap-24" data-cid="n1033">
         <div className="w-35 h-[54.7125rem] block absolute top-[1.3125rem] left-6 min-w-0 pointer-events-none max-lg:hidden 2xl:static" data-cid="n1034">
           <span className="inline-block relative max-w-full overflow-hidden pointer-events-none" data-cid="n1035">
