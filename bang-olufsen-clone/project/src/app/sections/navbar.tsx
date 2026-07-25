@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="h-[5.3125rem] flex relative px-4 items-center lg:h-[7.25rem] lg:px-9">
           {/* Hamburger — always clickable, full click area */}
           <button
-            className={`flex items-center gap-2 cursor-pointer relative z-10 group rounded-full px-2 py-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white/15 hover:text-[rgb(25,24,23)]"}`}
+            className={`flex items-center gap-2 cursor-pointer relative z-10 group rounded-full px-2 py-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white hover:text-black"}`}
             aria-label="Open menu"
             type="button"
             onClick={() => setNavOpen(true)}
@@ -60,14 +60,14 @@ export default function Navbar() {
 
           {/* Right icons */}
           <div className="ml-auto flex items-center gap-2">
-            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className={`w-8 h-8 hidden lg:flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white/15 hover:text-[rgb(25,24,23)]"}`}>
-              <img src="/assets/cloned/svg/cf54b34802e9.svg" alt="Store Locator" className={`w-6 h-6 transition duration-200 filter ${scrolled ? "brightness-0" : ""} ${!scrolled ? "group-hover:invert group-hover:brightness-0" : ""}`} />
+            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className={`w-8 h-8 hidden lg:flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white hover:text-black"}`}>
+              <img src="/assets/cloned/svg/cf54b34802e9.svg" alt="Store Locator" className={`w-6 h-6 transition duration-200 filter ${scrolled ? "brightness-0" : "group-hover:brightness-0"}`} />
             </a>
-            <button className={`w-8 h-8 hidden lg:flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white/15 hover:text-[rgb(25,24,23)]"}`} aria-label="Account">
-              <img src="/assets/cloned/svg/a865def8fb17.svg" alt="Account" className={`w-6 h-6 transition duration-200 filter ${scrolled ? "brightness-0" : ""} ${!scrolled ? "group-hover:invert group-hover:brightness-0" : ""}`} />
+            <button className={`w-8 h-8 hidden lg:flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white hover:text-black"}`} aria-label="Account">
+              <img src="/assets/cloned/svg/a865def8fb17.svg" alt="Account" className={`w-6 h-6 transition duration-200 filter ${scrolled ? "brightness-0" : "group-hover:brightness-0"}`} />
             </button>
-            <button className={`w-8 h-8 flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white/15 hover:text-[rgb(25,24,23)]"}`} aria-label="Cart">
-              <img src="/assets/cloned/svg/9155dccf36cd.svg" alt="Cart" className={`w-8 h-8 transition duration-200 filter ${scrolled ? "brightness-0" : ""} ${!scrolled ? "group-hover:invert group-hover:brightness-0" : ""}`} />
+            <button className={`w-8 h-8 flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white hover:text-black"}`} aria-label="Cart">
+              <img src="/assets/cloned/svg/9155dccf36cd.svg" alt="Cart" className={`w-8 h-8 transition duration-200 filter ${scrolled ? "brightness-0" : "group-hover:brightness-0"}`} />
             </button>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function Navbar() {
                 { label: "About", href: "/en/int/story/about-bang-and-olufsen" },
               ].map((item) => (
                 <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
-                  className="block py-4 text-[rgb(25,24,23)] text-[0.8rem] leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:leading-6">
+                  className="block pt-4 pb-0 text-[rgb(25,24,23)] text-[0.8rem] leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:leading-6">
                   {item.label}
                 </a>
               ))}
@@ -118,7 +118,7 @@ export default function Navbar() {
                 { label: "The World of B&O", href: "/en/int/stories" },
               ].map((item) => (
                 <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
-                  className="block py-4 text-[rgb(25,24,23)] text-[0.8rem] leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:leading-6">
+                  className="block pt-4 pb-0 text-[rgb(25,24,23)] text-[0.8rem] leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:leading-6">
                   {item.label}
                 </a>
               ))}
@@ -126,7 +126,7 @@ export default function Navbar() {
             <div className="mt-8">
               {["B&O Professional","Partner Audio"].map((l) => (
                 <a key={l} href="#" onClick={() => setNavOpen(false)}
-                  className="block py-2 text-[rgb(85,85,85)] text-[0.8rem]">
+                  className="block pt-2 pb-0 text-[rgb(85,85,85)] text-[0.8rem]">
                   {l}
                 </a>
               ))}
