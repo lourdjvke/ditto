@@ -28,7 +28,7 @@ export default function HeroSection() {
           </figure>
 
           {/* Mobile/tablet video block */}
-          <div className="block 2xl:hidden max-md:rounded-2xl overflow-hidden relative" style={{ aspectRatio: "9/16" }} data-cid="n56">
+          <div className="block 2xl:hidden max-md:rounded-2xl overflow-hidden relative" style={{ aspectRatio: "9/16", maxHeight: "100%", width: "100%" }} data-cid="n56">
             {/* Video */}
             <video
               ref={videoRef}

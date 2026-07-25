@@ -71,7 +71,7 @@ function HoodieSVG({
       transition: "transform 0.45s cubic-bezier(0.4,0,0.2,1), clip-path 0.45s cubic-bezier(0.4,0,0.2,1)",
     }}>
       <svg viewBox="0 0 290.094 290.094" xmlns="http://www.w3.org/2000/svg"
-        className="w-full max-w-[300px] drop-shadow-2xl"
+        className="w-full max-w-[300px] lg:max-w-none drop-shadow-2xl"
         style={{ transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)" }}>
         <defs>
           {material.texture === "lines" && (
