@@ -18,9 +18,25 @@ export default function Navbar() {
 
   return (
     <>
+      <style>{`
+        .nav-transparent:hover {
+          background-color: white !important;
+          background-image: none !important;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+        }
+        .nav-transparent:hover img {
+          filter: brightness(0) !important;
+        }
+        .nav-transparent:hover .nav-line {
+          background-color: rgb(25,24,23) !important;
+        }
+        .nav-transparent:hover .nav-menu-text {
+          color: rgb(25,24,23) !important;
+        }
+      `}</style>
       {/* Top bar */}
       <div
-        className={`fixed top-0 inset-x-0 z-[100] transition-[background-color,box-shadow] duration-200 ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
+        className={`fixed top-0 inset-x-0 z-[100] transition-[background-color,box-shadow] duration-200 ${scrolled ? "bg-white shadow-sm" : "bg-transparent nav-transparent"}`}
         style={!scrolled ? { backgroundImage: "linear-gradient(rgba(25,24,23,0.35) 0%,rgba(25,24,23,0) 100%)" } : {}}
       >
         <div className="h-[5.3125rem] flex relative px-4 items-center lg:h-[7.25rem] lg:px-9">
@@ -32,10 +48,10 @@ export default function Navbar() {
             onClick={() => setNavOpen(true)}
           >
             <span className="flex flex-col gap-[5px]">
-              <span className={`w-5 h-[1.5px] block transition-colors duration-200 ${lineColor} ${!scrolled ? "group-hover:bg-[rgb(25,24,23)]" : ""}`} />
-              <span className={`w-5 h-[1.5px] block transition-colors duration-200 ${lineColor} ${!scrolled ? "group-hover:bg-[rgb(25,24,23)]" : ""}`} />
+              <span className={`w-5 h-[1.5px] block transition-colors duration-200 nav-line ${lineColor} ${!scrolled ? "group-hover:bg-[rgb(25,24,23)]" : ""}`} />
+              <span className={`w-5 h-[1.5px] block transition-colors duration-200 nav-line ${lineColor} ${!scrolled ? "group-hover:bg-[rgb(25,24,23)]" : ""}`} />
             </span>
-            <span className={`text-xs leading-5 tracking-[0.1px] transition-colors duration-200 ${textColor}`}>Menu</span>
+            <span className={`text-xs leading-5 tracking-[0.1px] transition-colors duration-200 nav-menu-text ${textColor}`}>Menu</span>
           </button>
 
           {/* Logo centred */}

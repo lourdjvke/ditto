@@ -120,7 +120,7 @@ export default function Page() {
                   <LightWeightPortableSection />
                   <HouseOfBangSection />
                 </div>
-                <div className="hidden 2xl:block" data-cid="n231">
+                <div className="hidden" data-cid="n231">
                   <div className="hidden 2xl:block 2xl:relative 2xl:pt-4 2xl:pb-6 2xl:bg-clr-0" data-cid="n232" id="overview">
                     <div className="hidden 2xl:block 2xl:max-w-378 2xl:mx-51 2xl:px-9" data-cid="n233">
                       <div className="hidden 2xl:h-[58.6875rem] 2xl:flex 2xl:relative 2xl:-mx-4 2xl:flex-wrap" data-cid="n234">
