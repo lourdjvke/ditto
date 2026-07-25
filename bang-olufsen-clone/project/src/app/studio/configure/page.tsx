@@ -286,7 +286,7 @@ export default function ConfigurePage() {
             </div>
 
             {/* Hoodie */}
-            <div className="relative w-full max-w-[280px] md:max-w-[360px] aspect-square flex items-center justify-center mx-auto overflow-visible">
+            <div className="relative w-full max-w-[280px] md:max-w-[760px] lg:max-w-[1200px] aspect-square flex items-center justify-center mx-auto overflow-visible">
               <HoodieSVG
                 color={selections.COLOR.hex}
                 textColor={selections.COLOR.text}

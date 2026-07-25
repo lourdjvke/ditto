@@ -26,14 +26,14 @@ export default function Navbar() {
         <div className="h-[5.3125rem] flex relative px-4 items-center lg:h-[7.25rem] lg:px-9">
           {/* Hamburger — always clickable, full click area */}
           <button
-            className="flex items-center gap-2 cursor-pointer relative z-10"
+            className={`flex items-center gap-2 cursor-pointer relative z-10 group rounded-full px-2 py-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white/15 hover:text-[rgb(25,24,23)]"}`}
             aria-label="Open menu"
             type="button"
             onClick={() => setNavOpen(true)}
           >
             <span className="flex flex-col gap-[5px]">
-              <span className={`w-5 h-[1.5px] block transition-colors duration-200 ${lineColor}`} />
-              <span className={`w-5 h-[1.5px] block transition-colors duration-200 ${lineColor}`} />
+              <span className={`w-5 h-[1.5px] block transition-colors duration-200 ${lineColor} ${!scrolled ? "group-hover:bg-[rgb(25,24,23)]" : ""}`} />
+              <span className={`w-5 h-[1.5px] block transition-colors duration-200 ${lineColor} ${!scrolled ? "group-hover:bg-[rgb(25,24,23)]" : ""}`} />
             </span>
             <span className={`text-xs leading-5 tracking-[0.1px] transition-colors duration-200 ${textColor}`}>Menu</span>
           </button>
@@ -60,14 +60,14 @@ export default function Navbar() {
 
           {/* Right icons */}
           <div className="ml-auto flex items-center gap-2">
-            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className="w-8 h-8 hidden lg:flex items-center justify-center">
-              <img src="/assets/cloned/svg/cf54b34802e9.svg" alt="Store Locator" className="w-6 h-6 transition-[filter] duration-200" style={{ filter: imgFilter }} />
+            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className={`w-8 h-8 hidden lg:flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white/15 hover:text-[rgb(25,24,23)]"}`}>
+              <img src="/assets/cloned/svg/cf54b34802e9.svg" alt="Store Locator" className={`w-6 h-6 transition duration-200 filter ${scrolled ? "brightness-0" : ""} ${!scrolled ? "group-hover:invert group-hover:brightness-0" : ""}`} />
             </a>
-            <button className="w-8 h-8 hidden lg:flex items-center justify-center" aria-label="Account">
-              <img src="/assets/cloned/svg/a865def8fb17.svg" alt="Account" className="w-6 h-6 transition-[filter] duration-200" style={{ filter: imgFilter }} />
+            <button className={`w-8 h-8 hidden lg:flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white/15 hover:text-[rgb(25,24,23)]"}`} aria-label="Account">
+              <img src="/assets/cloned/svg/a865def8fb17.svg" alt="Account" className={`w-6 h-6 transition duration-200 filter ${scrolled ? "brightness-0" : ""} ${!scrolled ? "group-hover:invert group-hover:brightness-0" : ""}`} />
             </button>
-            <button className="w-8 h-8 flex items-center justify-center" aria-label="Cart">
-              <img src="/assets/cloned/svg/9155dccf36cd.svg" alt="Cart" className="w-8 h-8 transition-[filter] duration-200" style={{ filter: imgFilter }} />
+            <button className={`w-8 h-8 flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white/15 hover:text-[rgb(25,24,23)]"}`} aria-label="Cart">
+              <img src="/assets/cloned/svg/9155dccf36cd.svg" alt="Cart" className={`w-8 h-8 transition duration-200 filter ${scrolled ? "brightness-0" : ""} ${!scrolled ? "group-hover:invert group-hover:brightness-0" : ""}`} />
             </button>
           </div>
         </div>
@@ -81,11 +81,11 @@ export default function Navbar() {
 
       {/* Slide-out nav — z-[1000] always on top */}
       <div
-        className={`fixed top-0 left-0 bottom-0 w-[min(100vw,240px)] z-[1000] bg-white flex flex-col transition-transform duration-300 ease-in-out ${navOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 bottom-0 w-[min(100vw,240px)] md:w-[min(100vw,217.6px)] z-[1000] bg-white flex flex-col transition-transform duration-300 ease-in-out ${navOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         {/* Close */}
         <button
-          className="absolute top-5 left-5 flex items-center gap-2 text-[rgb(25,24,23)] text-sm font-medium md:top-6 md:left-6 md:text-base"
+          className="absolute top-5 left-5 flex items-center gap-2 text-[rgb(25,24,23)] text-[0.7rem] font-normal md:top-6 md:left-6"
           onClick={() => setNavOpen(false)}
           aria-label="Close menu"
         >
@@ -97,7 +97,7 @@ export default function Navbar() {
           <span>Close</span>
         </button>
 
-        <div className="flex flex-col h-full pt-20 pb-8 px-5 overflow-y-auto md:px-6">
+        <div className="flex flex-col h-full pt-20 pb-8 px-5 overflow-y-auto md:px-10">
           {/* Main links */}
           <nav className="flex-1">
               {[
@@ -108,7 +108,7 @@ export default function Navbar() {
                 { label: "About", href: "/en/int/story/about-bang-and-olufsen" },
               ].map((item) => (
                 <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
-                  className="block py-4 text-[rgb(25,24,23)] text-sm leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:text-[0.95rem] md:leading-6">
+                  className="block py-4 text-[rgb(25,24,23)] text-[0.8rem] leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:leading-6">
                   {item.label}
                 </a>
               ))}
@@ -118,7 +118,7 @@ export default function Navbar() {
                 { label: "The World of B&O", href: "/en/int/stories" },
               ].map((item) => (
                 <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
-                  className="block py-4 text-[rgb(25,24,23)] text-sm leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:text-[0.95rem] md:leading-6">
+                  className="block py-4 text-[rgb(25,24,23)] text-[0.8rem] leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:leading-6">
                   {item.label}
                 </a>
               ))}
@@ -126,7 +126,7 @@ export default function Navbar() {
             <div className="mt-8">
               {["B&O Professional","Partner Audio"].map((l) => (
                 <a key={l} href="#" onClick={() => setNavOpen(false)}
-                  className="block py-2 text-[rgb(85,85,85)] text-sm md:text-[0.95rem]">
+                  className="block py-2 text-[rgb(85,85,85)] text-[0.8rem]">
                   {l}
                 </a>
               ))}
@@ -135,11 +135,11 @@ export default function Navbar() {
 
           {/* Bottom */}
           <div className="border-t border-[rgb(229,229,229)] pt-6 flex flex-col gap-4">
-            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className="flex items-center gap-3 text-[rgb(25,24,23)] text-sm md:text-[0.95rem]">
+            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className="flex items-center gap-3 text-[rgb(25,24,23)] text-[0.8rem]">
               <img src="/assets/cloned/svg/cf54b34802e9.svg" className="w-5 h-5" style={{ filter: "brightness(0)" }} alt="" />
               Find Store
             </a>
-            <button className="flex items-center gap-3 text-[rgb(25,24,23)] text-sm md:text-[0.95rem]">
+            <button className="flex items-center gap-3 text-[rgb(25,24,23)] text-[0.8rem]">
               <img src="/assets/cloned/svg/a865def8fb17.svg" className="w-5 h-5" style={{ filter: "brightness(0)" }} alt="" />
               Account
             </button>
