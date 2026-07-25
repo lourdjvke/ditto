@@ -108,12 +108,12 @@ export default function Page() {
                 </ul>
               </div>
             </nav>
-            <header className="h-0 block fixed top-0 inset-x-0 z-91 2xl:relative 2xl:bottom-0" data-cid="n14" aria-hidden="false">
+            <header className="h-0 block fixed top-0 inset-x-0 z-91" data-cid="n14" aria-hidden="false">
               <Navbar />
             </header>
-            <main className="block relative pt-[6.3125rem] flex-1 bg-background max-lg:pt-15 2xl:pt-0" data-cid="n42" id="main-layout">
+            <main className="block relative pt-[6.3125rem] flex-1 bg-background max-lg:pt-15" data-cid="n42" id="main-layout">
               <div className="block" data-cid="n43">
-                <div className="block 2xl:h-270 2xl:flex 2xl:flex-col 2xl:justify-center" data-cid="n44">
+                <div className="block" data-cid="n44">
                   <HeroSection />
                   <PowerfulMultiroomSpeakerSection />
                   <WirelessSpeakerDesignedSection />
