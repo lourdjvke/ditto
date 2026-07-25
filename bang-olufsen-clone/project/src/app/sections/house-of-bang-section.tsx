@@ -12,7 +12,7 @@ export default function HouseOfBangSection({ listRowData = listRowDataContent } 
 
   return (
     <div className="block bg-primary md:max-lg:px-4" data-cid="n165">
-      <div className="block max-w-378 py-15 px-9 max-lg:py-7.5 max-lg:px-4 max-md:bg-primary" data-cid="n166">
+      <div className="block max-w-378 py-15 px-17 max-lg:py-7.5 max-lg:px-4 max-md:bg-primary" data-cid="n166">
         <div className="flex -mx-4 flex-wrap bg-background max-md:-mx-1.5 md:max-lg:-mx-3" data-cid="n167">
           <div className="block relative max-w-[50%] pr-4 shrink-0 basis-1/2 max-lg:max-w-full max-lg:basis-full max-lg:pr-0 max-md:shrink-[initial]" data-cid="n168">
             <div className="h-full block" data-cid="n169">
@@ -42,64 +42,64 @@ export default function HouseOfBangSection({ listRowData = listRowDataContent } 
                 <legend className="sr-only" data-cid="n194">newsletter-form</legend>
 
                 {/* Email */}
-                <div className="block relative mt-2.5 mb-8" data-cid="n195">
-                  <label className="block relative cursor-text" data-cid="n196" htmlFor="newsletter-email">
-                    <span
-                      className="block text-muted-foreground text-xs leading-5 tracking-[0.5px] mb-1"
-                      data-cid="n197"
-                    >
-                      Email <span className="opacity-60">(required)</span>
-                    </span>
-                    <input
-                      className="w-full h-10 border-b-2 border-solid border-b-[rgb(25,24,23)] block py-1 pr-0.5 text-border text-sm leading-6 bg-background cursor-text outline-none transition-colors focus:border-b-border"
-                      data-cid="n200"
-                      aria-required="true"
-                      id="newsletter-email"
-                      name="email"
-                      type="email"
-                      value={email}
-                      onChange={e => setEmail(e.target.value)}
-                      placeholder="your@email.com"
-                    />
+                <div className="relative mt-2.5 mb-8 pt-5" data-cid="n195">
+                  <input
+                    className="peer w-full h-10 border-b-2 border-solid border-b-[rgb(25,24,23)] block py-1 pr-0.5 text-border text-sm leading-6 bg-background cursor-text outline-none transition-colors focus:border-b-border placeholder-transparent"
+                    data-cid="n200"
+                    aria-required="true"
+                    id="newsletter-email"
+                    name="email"
+                    type="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    placeholder=" "
+                  />
+                  <label
+                    className="absolute left-0 top-1/2 -translate-y-1/2 text-sm text-muted-foreground tracking-[0.5px] cursor-text pointer-events-none transition-all duration-200 peer-focus:top-0 peer-focus:-translate-y-full peer-focus:text-xs peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:-translate-y-full peer-[&:not(:placeholder-shown)]:text-xs"
+                    htmlFor="newsletter-email"
+                  >
+                    Email <span className="opacity-60">(required)</span>
                   </label>
                 </div>
 
                 {/* First + Last name row */}
                 <div className="flex gap-4 mb-8 max-md:flex-col max-md:gap-0">
-                  <div className="flex-1 max-md:mb-8" data-cid="n201">
-                    <label className="block relative cursor-text" data-cid="n202" htmlFor="newsletter-firstName">
-                      <span className="block text-muted-foreground text-xs leading-5 tracking-[0.5px] mb-1" data-cid="n203">
-                        First name <span className="opacity-60">(required)</span>
-                      </span>
-                      <input
-                        className="w-full h-10 border-b-2 border-solid border-b-[rgb(25,24,23)] block py-1 pr-0.5 text-border text-sm leading-6 bg-background cursor-text outline-none transition-colors focus:border-b-border"
-                        data-cid="n206"
-                        aria-required="true"
-                        id="newsletter-firstName"
-                        name="firstName"
-                        type="text"
-                        value={firstName}
-                        onChange={e => setFirstName(e.target.value)}
-                        placeholder="First name"
-                      />
+                  <div className="relative flex-1 pt-5 max-md:mb-8" data-cid="n201">
+                    <input
+                      className="peer w-full h-10 border-b-2 border-solid border-b-[rgb(25,24,23)] block py-1 pr-0.5 text-border text-sm leading-6 bg-background cursor-text outline-none transition-colors focus:border-b-border placeholder-transparent"
+                      data-cid="n206"
+                      aria-required="true"
+                      id="newsletter-firstName"
+                      name="firstName"
+                      type="text"
+                      value={firstName}
+                      onChange={e => setFirstName(e.target.value)}
+                      placeholder=" "
+                    />
+                    <label
+                      className="absolute left-0 top-1/2 -translate-y-1/2 text-sm text-muted-foreground tracking-[0.5px] cursor-text pointer-events-none transition-all duration-200 peer-focus:top-0 peer-focus:-translate-y-full peer-focus:text-xs peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:-translate-y-full peer-[&:not(:placeholder-shown)]:text-xs"
+                      htmlFor="newsletter-firstName"
+                    >
+                      First name <span className="opacity-60">(required)</span>
                     </label>
                   </div>
-                  <div className="flex-1" data-cid="n207">
-                    <label className="block relative cursor-text" data-cid="n208" htmlFor="newsletter-lastName">
-                      <span className="block text-muted-foreground text-xs leading-5 tracking-[0.5px] mb-1" data-cid="n209">
-                        Last name <span className="opacity-60">(required)</span>
-                      </span>
-                      <input
-                        className="w-full h-10 border-b-2 border-solid border-b-[rgb(25,24,23)] block py-1 pr-0.5 text-border text-sm leading-6 bg-background cursor-text outline-none transition-colors focus:border-b-border"
-                        data-cid="n212"
-                        aria-required="true"
-                        id="newsletter-lastName"
-                        name="lastName"
-                        type="text"
-                        value={lastName}
-                        onChange={e => setLastName(e.target.value)}
-                        placeholder="Last name"
-                      />
+                  <div className="relative flex-1 pt-5" data-cid="n207">
+                    <input
+                      className="peer w-full h-10 border-b-2 border-solid border-b-[rgb(25,24,23)] block py-1 pr-0.5 text-border text-sm leading-6 bg-background cursor-text outline-none transition-colors focus:border-b-border placeholder-transparent"
+                      data-cid="n212"
+                      aria-required="true"
+                      id="newsletter-lastName"
+                      name="lastName"
+                      type="text"
+                      value={lastName}
+                      onChange={e => setLastName(e.target.value)}
+                      placeholder=" "
+                    />
+                    <label
+                      className="absolute left-0 top-1/2 -translate-y-1/2 text-sm text-muted-foreground tracking-[0.5px] cursor-text pointer-events-none transition-all duration-200 peer-focus:top-0 peer-focus:-translate-y-full peer-focus:text-xs peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:-translate-y-full peer-[&:not(:placeholder-shown)]:text-xs"
+                      htmlFor="newsletter-lastName"
+                    >
+                      Last name <span className="opacity-60">(required)</span>
                     </label>
                   </div>
                 </div>
