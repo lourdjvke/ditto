@@ -69,7 +69,7 @@ function HoodieSVG({
       transform: fitTransform,
       clipPath: fitClip,
       transition: "transform 0.45s cubic-bezier(0.4,0,0.2,1), clip-path 0.45s cubic-bezier(0.4,0,0.2,1)",
-    }}>
+    }} className="w-full">
       <svg viewBox="0 0 290.094 290.094" xmlns="http://www.w3.org/2000/svg"
         className="w-full max-w-[300px] lg:max-w-none drop-shadow-2xl"
         style={{ transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)" }}>
@@ -271,11 +271,11 @@ export default function ConfigurePage() {
         {/* Main */}
         <main className="flex-1 flex flex-row relative z-10 overflow-hidden w-full">
 
-          {/* Left: Visualizer */}
-          <div className="w-[55%] md:w-3/5 h-full flex flex-col justify-center relative pl-2 md:pl-8 lg:pl-16">
+          {/* Left: Visualizer — absolute, covers full main area so SVG is screen-centred */}
+          <div className="absolute inset-0 h-full flex flex-col justify-center pointer-events-none z-10">
 
             {/* Floating category labels (desktop) */}
-            <div className="hidden lg:flex flex-col absolute left-8 top-1/2 -translate-y-1/2 space-y-10 text-[10px] tracking-widest uppercase font-medium text-gray-400">
+            <div className="hidden lg:flex flex-col absolute left-8 top-1/2 -translate-y-1/2 space-y-10 text-[10px] tracking-widest uppercase font-medium text-gray-400 pointer-events-auto">
               {CATEGORIES.map(cat => (
                 <span key={cat}
                   className={`cursor-pointer transition-colors duration-200 ${activeCategory === cat ? "text-black" : "hover:text-gray-600"}`}
@@ -285,8 +285,9 @@ export default function ConfigurePage() {
               ))}
             </div>
 
-            {/* Hoodie */}
-            <div className="relative w-full max-w-[280px] md:max-w-[760px] lg:max-w-[1200px] aspect-square flex items-center justify-center mx-auto overflow-visible">
+            {/* Hoodie — centred on full screen, reduced 3em */}
+            <div className="relative aspect-square flex items-center justify-center pointer-events-auto overflow-visible mx-auto"
+              style={{ width: "calc(min(100vw, 100vh) - 3em)", height: "calc(min(100vw, 100vh) - 3em)" }}>
               <HoodieSVG
                 color={selections.COLOR.hex}
                 textColor={selections.COLOR.text}

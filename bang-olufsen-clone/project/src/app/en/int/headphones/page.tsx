@@ -385,7 +385,7 @@ export default function Page() {
                             </div>
                           </li>
                           {MediaTile_data.map((d, i) => <MediaTile key={i} d={d} cids={MediaTile_cids[i]} styles={MediaTile_styles[i]} />)}
-                          <li className="list-item max-w-full col-end-[span_1] bg-surface [animation-name:gDibJC] [animation-duration:0.7s] [animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] [animation-delay:0.04s] [animation-fill-mode:forwards] max-md:min-h-[18.9875rem] max-md:grow max-md:col-start-[span_6] max-md:[animation-duration:0.6s] max-md:[animation-delay:0.02s] max-md:[grid-column-end:initial] md:max-lg:my-4 md:max-lg:mx-auto md:max-lg:col-end-[span_5] 2xl:opacity-0" data-cid="n590">
+                          <li className="list-item max-w-full col-end-[span_1] bg-surface [animation-name:gDibJC] [animation-duration:0.7s] [animation-timing-function:cubic-bezier(0.165,_0.84,_0.44,_1)] [animation-delay:0.04s] [animation-fill-mode:forwards] max-md:min-h-[18.9875rem] max-md:grow max-md:col-start-[span_6] max-md:[animation-duration:0.6s] max-md:[animation-delay:0.02s] max-md:[grid-column-end:initial] md:max-lg:my-4 md:max-lg:mx-auto md:max-lg:col-end-[span_5]" data-cid="n590">
                             <div className="h-full flex relative pb-4 flex-col justify-center bg-surface" data-cid="n591">
                               <article className="h-full flex relative flex-col overflow-hidden text-center" data-cid="n592">
                                 <div className="h-full block" data-cid="n593">
@@ -580,7 +580,7 @@ export default function Page() {
             </main>
           </div>
         </div>
-        <div className="hidden 2xl:block" data-cid="n865">
+        <div className="hidden" data-cid="n865">
           <div className="hidden 2xl:block" data-cid="n866" aria-modal="true" role="dialog">
             <div className="hidden 2xl:w-70 2xl:h-full 2xl:block 2xl:fixed 2xl:top-0 2xl:min-w-70 2xl:bg-background" data-cid="n867">
               <div className="hidden 2xl:w-px 2xl:h-0 2xl:block 2xl:fixed 2xl:top-px 2xl:left-px 2xl:overflow-hidden" data-cid="n868" />
