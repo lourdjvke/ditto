@@ -1,6 +1,6 @@
 import DittoWire from "./ditto/DittoWire";
 import DropdownMenu from "./ditto/DropdownMenu";
-import HeroSection from "./sections/hero-section";
+import BeoGraceHeroCarouselSection from "./sections/BeoGraceHeroCarouselSection";
 import CtaSection from "./sections/cta-section";
 import CardGridSection from "./sections/card-grid-section";
 import CtaSection2 from "./sections/cta-section2";
@@ -20,7 +20,6 @@ import { MediaCard_cids, ListRow2_cids, FeatureCard_cids, TextLink_cids, MediaTi
 import { MediaCard_styles, FeatureCard_styles, TextLink_styles, MediaTile_styles, ListRow3_styles, ListRow4_styles, Tile9_styles } from "./_styles";
 import AdaptiveChargingCarousel from "./components/AdaptiveChargingCarousel";
 import LeatherCaseCarousel from "./components/LeatherCaseCarousel";
-import BeoGraceFullscreenCarousel from "./components/BeoGraceFullscreenCarousel";
 
 const MediaCard_data: MediaCardData[] = [
     { alt: "A hand holding one of Beo Grace earphone piece with a beautiful sunset background behind", imgSrc: "/assets/cloned/images/d3c3900027f5.webp", srcSet: "/assets/cloned/images/a43e2d583c31.webp 640w, /assets/cloned/images/3e6741fac54d.webp 750w, /assets/cloned/images/33dbf6290e99.webp 828w, /assets/cloned/images/e7858d3860b6.webp 1080w, /assets/cloned/images/f4471e4040fb.webp 1200w, /assets/cloned/images/593aeb94cf76.webp 1920w, /assets/cloned/images/a4844b18fd13.webp 2048w, /assets/cloned/images/d3c3900027f5.webp 3840w", title: "Active Noise Cancellation and transparency", description: "Hear only what matters", ariaLabel: "Active Noise Cancellation and transparency (Open in tab overlay)" },
@@ -152,17 +151,16 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-                <div className="block max-md:h-[18826.7px] md:max-lg:h-[20072.3px]" data-cid="n76">
+                <div className="block" data-cid="n76">
                   <div className="block relative pt-4 pb-6 bg-surface-2" data-cid="n77" id="overview">
                     <div className="relative">
-                      <HeroSection />
-                      <BeoGraceFullscreenCarousel />
+                      <BeoGraceHeroCarouselSection />
                     </div>
                   </div>
                   <div className="block" data-cid="n340">
-                    <div className="h-[995.1125rem] block max-md:h-[17707.7px] md:max-lg:h-[18600.3px] 2xl:h-[19128.3px]" data-cid="n365" aria-hidden="false">
+                    <div className="block" data-cid="n365" aria-hidden="false">
                       <div className="block text-border bg-background" data-cid="n366" id="inspiration">
-                        <div className="h-[12560.7px] block max-md:h-3219 md:max-lg:h-[938.2875rem] 2xl:h-[981.4125rem]" data-cid="n367">
+                        <div className="block" data-cid="n367">
                           <div className="block relative" data-cid="n368">
                             <div className="h-176 block relative max-md:h-203 md:max-lg:h-256 2xl:h-264" data-cid="n369">
                               <div className="h-full block relative" data-cid="n370" aria-label="Rich Media Video" role="group">
@@ -172,7 +170,7 @@ export default function Page() {
                                     <div className="w-px h-0 block fixed top-px left-px overflow-hidden" data-cid="n374" />
                                     <div className="block" data-cid="n375">
                                       <div className="block" data-cid="n376">
-                                        <video className="w-320 h-176 block absolute overflow-clip object-cover max-md:w-[23.4375rem] max-md:h-203 md:max-lg:w-192 md:max-lg:h-256 2xl:w-480 2xl:h-264" data-cid="n377" autoPlay loop playsInline preload="auto">
+                                        <video className="w-full h-full absolute top-0 left-0 block overflow-clip object-cover" data-cid="n377" autoPlay loop playsInline preload="auto">
                                           <source className="inline text-foreground [font-family:'Times_New_Roman'] leading-4.5" data-cid="n378" src="/assets/cloned/videos/270fe397655a.mp4" type="video/mp4" />
                                         </video>
                                       </div>

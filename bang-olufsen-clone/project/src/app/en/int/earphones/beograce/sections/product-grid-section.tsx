@@ -16,8 +16,8 @@ export default function ProductGridSection({ products = productsContent, tileDat
     <div className="block max-w-378 py-10 px-[2.3125rem] mx-auto max-lg:pl-[1.0625rem] max-lg:pr-0 2xl:py-20 2xl:px-[5.5625rem]" data-cid="n805">
       <div className="flex -mx-4 flex-wrap max-md:-mx-1.5 md:max-lg:-mx-3" data-cid="n806">
         <div className="w-309.5 block max-w-full px-4 shrink-0 basis-full max-md:w-92.5 max-md:px-1.5 md:max-lg:w-[48.4375rem] md:max-lg:px-3 2xl:w-341.5" data-cid="n807">
-          <div className="h-[72.0625rem] flex relative flex-col max-md:h-[78.3125rem] max-md:overflow-auto md:max-lg:h-[70.8125rem] 2xl:h-[61.5625rem]" data-cid="n808">
-            <table className="h-[70.8125rem] table relative mt-5 max-md:h-[78.3125rem] max-lg:mt-0 2xl:h-[60.3125rem]" data-cid="n809">
+          <div className="min-h-[72.0625rem] flex relative flex-col w-full overflow-x-auto max-md:min-h-[78.3125rem] max-md:overflow-auto md:max-lg:min-h-[70.8125rem] 2xl:min-h-[61.5625rem]" data-cid="n808">
+            <table className="w-full table relative mt-5 max-md:h-[78.3125rem] max-lg:mt-0 2xl:min-h-[60.3125rem]" data-cid="n809">
               <thead className="table-header-group align-middle" data-cid="n810">
                 <tr className="h-58.5 table-row relative align-middle max-md:h-50.5 md:max-lg:h-55.5 grid-cols-3" data-cid="n811">
                   <th className="hidden 2xl:table-cell 2xl:py-5 2xl:px-2.5 2xl:align-middle 2xl:font-bold 2xl:text-center" data-cid="n812" aria-hidden="true" />

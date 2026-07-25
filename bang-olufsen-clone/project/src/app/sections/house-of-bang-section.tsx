@@ -33,11 +33,9 @@ export default function HouseOfBangSection({ listRowData = listRowDataContent } 
               Join our global community for exclusive benefits and news about
             </h3>
             <div className="block mb-6 leading-[2.1875rem] tracking-[0.4px] 2xl:hidden" data-cid="n178">
-              <span className="inline 2xl:hidden" data-cid="n179">
-                <ul className="block my-4 pl-0 list-none list-outside 2xl:hidden" data-cid="n180">
-                  {listRowData.map((d, i) => <ListRow key={i} d={d} cids={ListRow_cids[i]} />)}
-                </ul>
-              </span>
+              <ul className="block my-4 pl-0 list-none list-outside 2xl:hidden" data-cid="n180">
+                {listRowData.map((d, i) => <ListRow key={i} d={d} cids={ListRow_cids[i]} />)}
+              </ul>
             </div>
             <form className="block 2xl:hidden" data-cid="n192" name="newsletter-form" onSubmit={e => e.preventDefault()}>
               <fieldset className="block min-w-[min-content] border-0 p-0 m-0 2xl:hidden" data-cid="n193">

@@ -49,7 +49,7 @@ export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_dat
                 <div className="h-full block max-w-378" data-cid="n86">
                   <div className="h-full block relative" data-cid="n87">
                     <div className="h-full block relative" data-cid="n88" dir="ltr">
-                      <button className="w-10 h-10 block absolute top-68 left-[651.3px] z-1 mb-[0.3125rem] -ml-20 py-px px-1.5 rounded-[50%] text-center indent-[-9999px] [background-position:50%_50%] bg-no-repeat cursor-default max-md:hidden md:max-lg:top-96 md:max-lg:left-23 2xl:top-195.5 2xl:left-[786.7px] hover:bg-[url('https://www.bang-olufsen.com/static-assets/images/common/chevron-white-left-black-bg.svg')]" style={{ backgroundImage: "url(\"/assets/cloned/svg/9632fdabb2ef.svg\")" }} data-cid="n89" data-component="button" aria-label="Previous slide" type="button">
+                      <button className="w-10 h-10 absolute left-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-background/90 shadow-sm hover:bg-background cursor-pointer max-md:hidden" style={{ backgroundImage: "url(\"/assets/cloned/svg/9632fdabb2ef.svg\")", backgroundPosition: "50% 50%" }} data-cid="n89" data-component="button" aria-label="Previous slide" type="button">
                         <span className="inline max-md:hidden" data-cid="n90">
                           Previous
                         </span>
@@ -129,13 +129,13 @@ export default function HeroSection({ logoData = Logo_data, logoData2 = Logo_dat
                           {logoData2.map((d, i) => <Logo key={i} d={d} cids={Logo_cids2[i]} />)}
                         </div>
                       </div>
-                      <button className="w-10 h-10 block absolute top-68 right-30 z-999 -mr-20 mb-[0.3125rem] py-px px-1.5 rounded-[50%] text-center indent-[-9999px] [background-position:50%_50%] bg-no-repeat cursor-default max-md:hidden md:max-lg:top-96 md:max-lg:right-22 md:max-lg:z-1 2xl:top-195.5 hover:bg-[url('https://www.bang-olufsen.com/static-assets/images/common/chevron-white-right-black-bg.svg')]" style={{ backgroundImage: "url(\"/assets/cloned/svg/e2104b2e059b.svg\")" }} data-cid="n238" data-component="button" aria-label="Next slide" type="button">
+                      <button className="w-10 h-10 absolute right-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-background/90 shadow-sm hover:bg-background cursor-pointer max-md:hidden" style={{ backgroundImage: "url(\"/assets/cloned/svg/e2104b2e059b.svg\")", backgroundPosition: "50% 50%" }} data-cid="n238" data-component="button" aria-label="Next slide" type="button">
                         <span className="inline max-md:hidden" data-cid="n239">
                           Next
                         </span>
                         <Icon3 cid={"n240"} />
                       </button>
-                      <ul className="w-45 h-10 flex absolute top-[33.5rem] left-8 max-w-45 pt-2.5 overflow-x-auto overflow-y-hidden text-center [list-style-type:disc] list-outside transform-[matrix(1,0,0,1,-12,0)] max-md:left-[3.05rem] max-md:mx-[97.5px] max-md:static max-md:top-auto md:max-lg:top-174 md:max-lg:left-[19.2rem] 2xl:top-[49.1875rem]" data-cid="n241">
+                      <ul className="flex h-10 absolute left-1/2 bottom-6 z-10 -translate-x-1/2 items-center justify-center gap-2 overflow-x-auto overflow-y-hidden px-2 text-center [list-style-type:disc] list-outside max-md:static max-md:mx-auto max-md:mt-4 max-md:w-full max-md:px-4 md:max-lg:bottom-5" data-cid="n241">
                         {listRowData.map((d, i) => <ListRow key={i} d={d} cids={ListRow_cids[i]} styles={ListRow_styles[i]} />)}
                       </ul>
                     </div>
