@@ -1,4 +1,4 @@
-import HouseOfBangSection from "../../../../sections/house-of-bang-section";
+import JohnLegendNewsletterSection from "../../../../sections/john-legend-newsletter-section";
 import DittoMotion from "./ditto/DittoMotion";
 import DropdownMenu from "./ditto/DropdownMenu";
 import Icon from "./svgs/svg-icon";
@@ -384,7 +384,7 @@ export default function Page() {
                         </li>
                       </ul>
                     </div>
-                    <HouseOfBangSection />
+                    <JohnLegendNewsletterSection />
                   </div>
                 </div>
               </div>

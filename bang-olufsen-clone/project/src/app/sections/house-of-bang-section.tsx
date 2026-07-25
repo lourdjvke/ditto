@@ -12,7 +12,7 @@ export default function HouseOfBangSection({ listRowData = listRowDataContent } 
 
   return (
     <div className="block bg-primary md:max-lg:px-4" data-cid="n165">
-      <div className="block max-w-378 py-15 px-17 max-lg:py-7.5 max-lg:px-4 max-md:bg-primary" data-cid="n166">
+      <div className="block max-w-[1400px] mx-auto py-15 px-17 max-lg:py-7.5 max-lg:px-4 max-md:bg-primary" data-cid="n166">
         <div className="flex -mx-4 flex-wrap bg-background max-md:-mx-1.5 md:max-lg:-mx-3" data-cid="n167">
           <div className="block relative max-w-[50%] pr-4 shrink-0 basis-1/2 max-lg:max-w-full max-lg:basis-full max-lg:pr-0 max-md:shrink-[initial]" data-cid="n168">
             <div className="h-full block" data-cid="n169">

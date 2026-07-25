@@ -300,7 +300,7 @@ export default function Footer({ listRow4Data = listRow4DataContent, listRow5Dat
             {"© Bang & Olufsen 2026"}
           </div>
         </div>
-        <div className="w-34.5 h-[54.4rem] block absolute top-[1.5375rem] left-281.5 min-w-0 pointer-events-none max-lg:hidden 2xl:right-4 2xl:bottom-[1.6875rem] 2xl:static 2xl:top-auto 2xl:left-auto" data-cid="n1210">
+        <div className="w-34.5 h-[54.4rem] block absolute top-[1.5375rem] right-6 min-w-0 pointer-events-none max-lg:hidden 2xl:right-4 2xl:bottom-[1.6875rem] 2xl:static 2xl:top-auto" data-cid="n1210">
           <span className="inline-block relative max-w-full overflow-hidden pointer-events-none" data-cid="n1211">
             <span className="block max-w-full pointer-events-none" data-cid="n1212">
               <img className="w-34.5 h-[54.1875rem] block max-w-full overflow-clip pointer-events-none" data-cid="n1213" data-component="image" alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
