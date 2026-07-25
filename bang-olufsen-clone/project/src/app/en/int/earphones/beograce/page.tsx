@@ -439,7 +439,7 @@ export default function Page() {
                                     <div className="w-px h-0 block fixed top-px left-px overflow-hidden" data-cid="n702" />
                                     <div className="block" data-cid="n703">
                                       <div className="block" data-cid="n704">
-                                        <video className="w-320 h-176 block absolute overflow-clip object-cover max-md:w-[23.4375rem] max-md:h-203 md:max-lg:w-192 md:max-lg:h-256 2xl:w-480 2xl:h-264" data-cid="n705" autoPlay loop playsInline preload="auto">
+                                        <video className="w-full h-full min-w-full min-h-full block absolute top-0 left-0 overflow-clip object-cover" data-cid="n705" autoPlay loop playsInline preload="auto">
                                           <source className="inline text-foreground [font-family:'Times_New_Roman'] leading-4.5" data-cid="n706" src="/assets/cloned/videos/81110e2f25f0.mp4" type="video/mp4" />
                                         </video>
                                       </div>
