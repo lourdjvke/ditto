@@ -22,7 +22,6 @@ export default function Navbar() {
         .nav-transparent:hover {
           background-color: white !important;
           background-image: none !important;
-          box-shadow: 0 1px 3px rgba(0,0,0,0.12);
         }
         .nav-transparent:hover img {
           filter: brightness(0) !important;
@@ -36,11 +35,11 @@ export default function Navbar() {
       `}</style>
       {/* Top bar */}
       <div
-        className={`fixed top-0 inset-x-0 z-[100] transition-[background-color,box-shadow] duration-200 ${scrolled ? "bg-white shadow-sm" : "bg-transparent nav-transparent"}`}
+        className={`fixed top-0 inset-x-0 z-[100] transition-[background-color] duration-200 ${scrolled ? "bg-white" : "bg-transparent nav-transparent"}`}
         style={!scrolled ? { backgroundImage: "linear-gradient(rgba(25,24,23,0.35) 0%,rgba(25,24,23,0) 100%)" } : {}}
       >
         <div className="h-[5.3125rem] flex relative px-4 items-center lg:h-[7.25rem] lg:px-9">
-          {/* Hamburger — always clickable, full click area */}
+          {/* Hamburger */}
           <button
             className={`flex items-center gap-2 cursor-pointer relative z-10 group rounded-full px-2 py-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white hover:text-black"}`}
             aria-label="Open menu"
@@ -69,8 +68,8 @@ export default function Navbar() {
             <img
               src="/assets/cloned/svg/a19aaf71a505.svg"
               alt="Est 1925"
-              className="h-4 w-auto mt-1 hidden lg:block transition-[filter] duration-200"
-              style={{ filter: imgFilter }}
+              className="h-2.5 w-auto mt-1 hidden lg:block transition-[filter,opacity] duration-200"
+              style={{ filter: imgFilter, opacity: scrolled ? 0 : 1 }}
             />
           </a>
 
@@ -89,13 +88,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Overlay backdrop — z-[999] ensures it covers everything on every page */}
+      {/* Overlay backdrop */}
       <div
         className={`fixed inset-0 z-[999] bg-black/40 transition-opacity duration-300 ${navOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         onClick={() => setNavOpen(false)}
       />
 
-      {/* Slide-out nav — z-[1000] always on top */}
+      {/* Slide-out nav */}
       <div
         className={`fixed top-0 left-0 bottom-0 w-[min(100vw,240px)] md:w-[min(100vw,217.6px)] z-[1000] bg-white flex flex-col transition-transform duration-300 ease-in-out ${navOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
@@ -114,7 +113,6 @@ export default function Navbar() {
         </button>
 
         <div className="flex flex-col h-full pt-20 pb-8 px-5 overflow-y-auto md:px-10">
-          {/* Main links */}
           <nav className="flex-1">
               {[
                 { label: "Speakers", href: "/en/int/composer/product/beolab-8" },

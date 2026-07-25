@@ -16,6 +16,25 @@ const overlayKillStyles = `
     background-image: none !important;
     background: none !important;
   }
+  /* Navbar: always white, no hover effect, no transparent gradient */
+  .nav-transparent,
+  .nav-transparent:hover {
+    background-color: white !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+  .nav-transparent img,
+  .nav-transparent:hover img {
+    filter: brightness(0) !important;
+  }
+  .nav-transparent .nav-line,
+  .nav-transparent:hover .nav-line {
+    background-color: rgb(25,24,23) !important;
+  }
+  .nav-transparent .nav-menu-text,
+  .nav-transparent:hover .nav-menu-text {
+    color: rgb(25,24,23) !important;
+  }
 `;
 
 export const metadata = {
