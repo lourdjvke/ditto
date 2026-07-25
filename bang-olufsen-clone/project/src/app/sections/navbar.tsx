@@ -81,20 +81,23 @@ export default function Navbar() {
 
       {/* Slide-out nav — z-[1000] always on top */}
       <div
-        className={`fixed top-0 left-0 bottom-0 w-full max-w-[min(100vw,400px)] z-[1000] bg-white flex flex-col transition-transform duration-300 ease-in-out ${navOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 bottom-0 w-[min(100vw,240px)] z-[1000] bg-white flex flex-col transition-transform duration-300 ease-in-out ${navOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         {/* Close */}
         <button
-          className="absolute top-5 right-5 w-8 h-8 flex items-center justify-center"
+          className="absolute top-5 left-5 flex items-center gap-2 text-[rgb(25,24,23)] text-sm font-medium md:top-6 md:left-6 md:text-base"
           onClick={() => setNavOpen(false)}
           aria-label="Close menu"
         >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M0 15.839L15.839 0M0 0L15.839 15.839" stroke="black" strokeWidth="1.5"/>
-          </svg>
+          <span className="inline-flex items-center justify-center w-6 h-6" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M0 15.839L15.839 0M0 0L15.839 15.839" stroke="black" strokeWidth="1.5"/>
+            </svg>
+          </span>
+          <span>Close</span>
         </button>
 
-        <div className="flex flex-col h-full pt-16 pb-8 px-6 overflow-y-auto">
+        <div className="flex flex-col h-full pt-20 pb-8 px-5 overflow-y-auto md:px-6">
           {/* Main links */}
           <nav className="flex-1">
               {[
@@ -105,7 +108,7 @@ export default function Navbar() {
                 { label: "About", href: "/en/int/story/about-bang-and-olufsen" },
               ].map((item) => (
                 <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
-                  className="block py-4 text-[rgb(25,24,23)] text-xl leading-7 border-b border-[rgb(229,229,229)]">
+                  className="block py-4 text-[rgb(25,24,23)] text-sm leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:text-[0.95rem] md:leading-6">
                   {item.label}
                 </a>
               ))}
@@ -115,7 +118,7 @@ export default function Navbar() {
                 { label: "The World of B&O", href: "/en/int/stories" },
               ].map((item) => (
                 <a key={item.label} href={item.href} onClick={() => setNavOpen(false)}
-                  className="block py-4 text-[rgb(25,24,23)] text-xl leading-7 border-b border-[rgb(229,229,229)]">
+                  className="block py-4 text-[rgb(25,24,23)] text-sm leading-5 border-b border-[rgb(229,229,229)] md:border-b-0 md:text-[0.95rem] md:leading-6">
                   {item.label}
                 </a>
               ))}
@@ -123,7 +126,7 @@ export default function Navbar() {
             <div className="mt-8">
               {["B&O Professional","Partner Audio"].map((l) => (
                 <a key={l} href="#" onClick={() => setNavOpen(false)}
-                  className="block py-2 text-[rgb(85,85,85)] text-sm">
+                  className="block py-2 text-[rgb(85,85,85)] text-sm md:text-[0.95rem]">
                   {l}
                 </a>
               ))}
@@ -132,11 +135,11 @@ export default function Navbar() {
 
           {/* Bottom */}
           <div className="border-t border-[rgb(229,229,229)] pt-6 flex flex-col gap-4">
-            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className="flex items-center gap-3 text-[rgb(25,24,23)] text-sm">
+            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className="flex items-center gap-3 text-[rgb(25,24,23)] text-sm md:text-[0.95rem]">
               <img src="/assets/cloned/svg/cf54b34802e9.svg" className="w-5 h-5" style={{ filter: "brightness(0)" }} alt="" />
               Find Store
             </a>
-            <button className="flex items-center gap-3 text-[rgb(25,24,23)] text-sm">
+            <button className="flex items-center gap-3 text-[rgb(25,24,23)] text-sm md:text-[0.95rem]">
               <img src="/assets/cloned/svg/a865def8fb17.svg" className="w-5 h-5" style={{ filter: "brightness(0)" }} alt="" />
               Account
             </button>

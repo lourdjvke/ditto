@@ -14,7 +14,7 @@ export default function Footer({ listRow4Data = listRow4DataContent, listRow5Dat
             <span className="block max-w-full pointer-events-none" data-cid="n1036">
               <img className="w-35 h-218 block max-w-full overflow-clip pointer-events-none" data-cid="n1037" data-component="image" alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
             </span>
-            <img className="w-full h-full min-h-full block absolute top-0 left-0 min-w-full max-w-full max-h-full overflow-clip pointer-events-none" data-cid="n1038" data-component="image" alt="footer-left-text" src="/assets/cloned/svg/b30878aca917.svg" srcSet="/assets/cloned/svg/280f2d2e2a77.svg 1x, /assets/cloned/svg/b30878aca917.svg 2x" />
+            <img className="w-full h-full min-h-full block absolute top-0 left-0 min-w-full max-w-full max-h-full overflow-clip pointer-events-none" data-cid="n1038" data-component="image" alt="footer-left-text" src="https://images.ctfassets.net/8cd2csgvqd3m/ogHuOZpvRur5rZBkoEwvC/0c202e855fcf5d598af41f8e8cef57d3/footer-left-side-text.svg?q=90&w=256&fit=fill&fm=webp" srcSet="https://images.ctfassets.net/8cd2csgvqd3m/ogHuOZpvRur5rZBkoEwvC/0c202e855fcf5d598af41f8e8cef57d3/footer-left-side-text.svg?q=90&w=256&fit=fill&fm=webp 1x" />
           </span>
         </div>
         <div className="h-[54.2125rem] flex max-w-192 flex-col justify-between items-start self-stretch grow shrink-0 basis-0 gap-14 max-md:h-[50.15rem] max-lg:max-w-378 max-md:gap-9 md:max-lg:h-[61.675rem] 2xl:h-[54.7125rem] 2xl:max-w-378" data-cid="n1039">
@@ -305,7 +305,7 @@ export default function Footer({ listRow4Data = listRow4DataContent, listRow5Dat
             <span className="block max-w-full pointer-events-none" data-cid="n1212">
               <img className="w-34.5 h-[54.1875rem] block max-w-full overflow-clip pointer-events-none" data-cid="n1213" data-component="image" alt="" aria-hidden="true" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
             </span>
-            <img className="w-full h-full min-h-full block absolute top-0 left-0 min-w-full max-w-full max-h-full overflow-clip pointer-events-none" data-cid="n1214" data-component="image" alt="Brand Word Mark Right" aria-hidden="true" src="/assets/cloned/svg/18f4ef4357d9.svg" srcSet="/assets/cloned/svg/c7301ed94c9d.svg 1x, /assets/cloned/svg/18f4ef4357d9.svg 2x" />
+            <img className="w-full h-full min-h-full block absolute top-0 left-0 min-w-full max-w-full max-h-full overflow-clip pointer-events-none" data-cid="n1214" data-component="image" alt="Brand Word Mark Right" aria-hidden="true" src="https://images.ctfassets.net/8cd2csgvqd3m/67NjOWCsdBAqrnArJ1TigX/f56927bc52be07ffeab6d938ddcbc455/footer-right-side-text.svg?q=90&w=256&fit=fill&fm=webp" srcSet="https://images.ctfassets.net/8cd2csgvqd3m/67NjOWCsdBAqrnArJ1TigX/f56927bc52be07ffeab6d938ddcbc455/footer-right-side-text.svg?q=90&w=256&fit=fill&fm=webp 1x" />
           </span>
         </div>
       </div>
