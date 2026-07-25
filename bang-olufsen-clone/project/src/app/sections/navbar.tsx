@@ -12,45 +12,23 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  const imgFilter = scrolled ? "brightness(0)" : "none";
-  const textColor = scrolled ? "text-[rgb(25,24,23)]" : "text-white";
-  const lineColor = scrolled ? "bg-[rgb(25,24,23)]" : "bg-white";
-
   return (
     <>
-      <style>{`
-        .nav-transparent:hover {
-          background-color: white !important;
-          background-image: none !important;
-        }
-        .nav-transparent:hover img {
-          filter: brightness(0) !important;
-        }
-        .nav-transparent:hover .nav-line {
-          background-color: rgb(25,24,23) !important;
-        }
-        .nav-transparent:hover .nav-menu-text {
-          color: rgb(25,24,23) !important;
-        }
-      `}</style>
       {/* Top bar */}
-      <div
-        className={`fixed top-0 inset-x-0 z-[100] transition-[background-color] duration-200 ${scrolled ? "bg-white" : "bg-transparent nav-transparent"}`}
-        style={!scrolled ? { backgroundImage: "linear-gradient(rgba(25,24,23,0.35) 0%,rgba(25,24,23,0) 100%)" } : {}}
-      >
+      <div className="fixed top-0 inset-x-0 z-[100] bg-white">
         <div className="h-[5.3125rem] flex relative px-4 items-center lg:h-[7.25rem] lg:px-9">
           {/* Hamburger */}
           <button
-            className={`flex items-center gap-2 cursor-pointer relative z-10 group rounded-full px-2 py-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white hover:text-black"}`}
+            className="flex items-center gap-2 cursor-pointer relative z-10 group rounded-full px-2 py-2 hover:bg-slate-100 transition-colors duration-200"
             aria-label="Open menu"
             type="button"
             onClick={() => setNavOpen(true)}
           >
             <span className="flex flex-col gap-[5px]">
-              <span className={`w-5 h-[1.5px] block transition-colors duration-200 nav-line ${lineColor} ${!scrolled ? "group-hover:bg-[rgb(25,24,23)]" : ""}`} />
-              <span className={`w-5 h-[1.5px] block transition-colors duration-200 nav-line ${lineColor} ${!scrolled ? "group-hover:bg-[rgb(25,24,23)]" : ""}`} />
+              <span className="w-5 h-[1.5px] block bg-[rgb(25,24,23)]" />
+              <span className="w-5 h-[1.5px] block bg-[rgb(25,24,23)]" />
             </span>
-            <span className={`text-xs leading-5 tracking-[0.1px] transition-colors duration-200 nav-menu-text ${textColor}`}>Menu</span>
+            <span className="text-xs leading-5 tracking-[0.1px] text-[rgb(25,24,23)]">Menu</span>
           </button>
 
           {/* Logo centred */}
@@ -62,27 +40,27 @@ export default function Navbar() {
             <img
               src="/assets/cloned/svg/82d176b7faa2.svg"
               alt="Bang & Olufsen"
-              className="h-[0.625rem] w-auto lg:h-[1.0625rem] transition-[filter] duration-200"
-              style={{ filter: imgFilter }}
+              className="h-[0.625rem] w-auto lg:h-[1.0625rem]"
+              style={{ filter: "brightness(0)" }}
             />
             <img
               src="/assets/cloned/svg/a19aaf71a505.svg"
               alt="Est 1925"
-              className="h-2.5 w-auto mt-1 hidden lg:block transition-[filter,opacity] duration-200"
-              style={{ filter: imgFilter, opacity: scrolled ? 0 : 1 }}
+              className="h-2.5 w-auto mt-1 hidden lg:block"
+              style={{ filter: "brightness(0)" }}
             />
           </a>
 
           {/* Right icons */}
           <div className="ml-auto flex items-center gap-2">
-            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className={`w-8 h-8 hidden lg:flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white hover:text-black"}`}>
-              <img src="/assets/cloned/svg/cf54b34802e9.svg" alt="Store Locator" className={`w-6 h-6 transition duration-200 filter ${scrolled ? "brightness-0" : "group-hover:brightness-0"}`} />
+            <a href="https://stores.bang-olufsen.com/en/search?country=INT" className="w-8 h-8 hidden lg:flex items-center justify-center rounded-full p-2 hover:bg-slate-100 transition-colors duration-200">
+              <img src="/assets/cloned/svg/cf54b34802e9.svg" alt="Store Locator" className="w-6 h-6" style={{ filter: "brightness(0)" }} />
             </a>
-            <button className={`w-8 h-8 hidden lg:flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white hover:text-black"}`} aria-label="Account">
-              <img src="/assets/cloned/svg/a865def8fb17.svg" alt="Account" className={`w-6 h-6 transition duration-200 filter ${scrolled ? "brightness-0" : "group-hover:brightness-0"}`} />
+            <button className="w-8 h-8 hidden lg:flex items-center justify-center rounded-full p-2 hover:bg-slate-100 transition-colors duration-200" aria-label="Account">
+              <img src="/assets/cloned/svg/a865def8fb17.svg" alt="Account" className="w-6 h-6" style={{ filter: "brightness(0)" }} />
             </button>
-            <button className={`w-8 h-8 flex items-center justify-center group rounded-full p-2 transition-colors duration-200 ${scrolled ? "hover:bg-slate-100" : "hover:bg-white hover:text-black"}`} aria-label="Cart">
-              <img src="/assets/cloned/svg/9155dccf36cd.svg" alt="Cart" className={`w-8 h-8 transition duration-200 filter ${scrolled ? "brightness-0" : "group-hover:brightness-0"}`} />
+            <button className="w-8 h-8 flex items-center justify-center rounded-full p-2 hover:bg-slate-100 transition-colors duration-200" aria-label="Cart">
+              <img src="/assets/cloned/svg/9155dccf36cd.svg" alt="Cart" className="w-8 h-8" style={{ filter: "brightness(0)" }} />
             </button>
           </div>
         </div>
