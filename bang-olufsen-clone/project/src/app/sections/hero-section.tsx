@@ -14,21 +14,21 @@ export default function HeroSection() {
   }
 
   return (
-    <div className="w-full h-[36.1875rem] flex flex-col justify-center max-md:w-full max-md:h-auto md:max-lg:h-[47.45rem] 2xl:w-full 2xl:h-270 2xl:min-h-162.5 2xl:relative 2xl:overflow-hidden" data-cid="n45">
-      <div className="w-full h-170 flex relative z-1 -mt-[6.3125rem] flex-col justify-center overflow-hidden max-md:h-auto max-md:pb-0 max-md:px-0 max-md:z-[initial] max-md:mt-0 md:max-lg:h-[51.2rem] md:max-lg:-mt-15 2xl:h-270 2xl:min-h-162.5 2xl:block 2xl:bg-border 2xl:z-[initial] 2xl:mt-0 2xl:[flex-direction:initial] 2xl:[justify-content:initial] 2xl:[overflow-x:initial] 2xl:[overflow-y:initial]" data-cid="n46">
-        <div className="h-170 block relative bg-clr-0 max-md:h-auto max-md:bg-[initial] max-md:px-4 max-md:pt-4 max-md:pb-4 md:max-lg:h-[51.2rem] 2xl:h-auto 2xl:static 2xl:inset-auto 2xl:bg-[initial]" data-cid="n47">
+    <div className="w-full h-[36.1875rem] flex flex-col justify-center max-md:w-full max-md:h-auto md:max-lg:h-[47.45rem]" data-cid="n45">
+      <div className="w-full h-170 flex relative z-1 -mt-[6.3125rem] flex-col justify-center overflow-hidden max-md:h-auto max-md:pb-0 max-md:px-0 max-md:z-[initial] max-md:mt-0 md:max-lg:h-[51.2rem] md:max-lg:-mt-15" data-cid="n46">
+        <div className="h-170 block relative bg-clr-0 max-md:h-auto max-md:bg-[initial] max-md:px-4 max-md:pt-4 max-md:pb-4 md:max-lg:h-[51.2rem]" data-cid="n47">
 
-          {/* 2xl desktop figure */}
-          <figure className="hidden 2xl:w-480 2xl:h-270 2xl:block 2xl:absolute 2xl:top-0 2xl:left-0 2xl:[animation-name:background-animation] 2xl:[animation-duration:2s] 2xl:[animation-timing-function:cubic-bezier(0.33,_0,_0.67,_1)]" data-cid="n48">
-            <div className="hidden 2xl:w-480 2xl:h-full 2xl:block 2xl:absolute 2xl:top-0" data-cid="n49">
-              <span className="hidden 2xl:w-480 2xl:h-full 2xl:block 2xl:absolute 2xl:top-0 2xl:left-0 2xl:overflow-hidden" data-cid="n50">
-                <img className="hidden 2xl:w-full 2xl:h-full 2xl:min-h-full 2xl:block 2xl:absolute 2xl:top-0 2xl:left-0 2xl:min-w-full 2xl:max-w-full 2xl:max-h-full 2xl:overflow-clip 2xl:object-cover" data-cid="n51" alt="Two people standing next to each other while wearing Beo Grace" sizes="100vw" src="/assets/cloned/images/16312b982981.webp" srcSet="/assets/cloned/images/9c5d55fd80f7.webp 640w, /assets/cloned/images/a2afffae3f35.webp 750w, /assets/cloned/images/0a0a236116ea.webp 828w, /assets/cloned/images/041b38e27943.webp 1080w, /assets/cloned/images/531f12dcd7d6.webp 1200w, /assets/cloned/images/3c73ddfc107d.webp 1920w, /assets/cloned/images/44f8318596ce.webp 2048w, /assets/cloned/images/16312b982981.webp 3840w" />
+          {/* 2xl desktop figure — hidden at all sizes */}
+          <figure className="hidden" data-cid="n48">
+            <div className="hidden" data-cid="n49">
+              <span className="hidden" data-cid="n50">
+                <img className="hidden" data-cid="n51" alt="Two people standing next to each other while wearing Beo Grace" sizes="100vw" src="/assets/cloned/images/16312b982981.webp" srcSet="/assets/cloned/images/9c5d55fd80f7.webp 640w, /assets/cloned/images/a2afffae3f35.webp 750w, /assets/cloned/images/0a0a236116ea.webp 828w, /assets/cloned/images/041b38e27943.webp 1080w, /assets/cloned/images/531f12dcd7d6.webp 1200w, /assets/cloned/images/3c73ddfc107d.webp 1920w, /assets/cloned/images/44f8318596ce.webp 2048w, /assets/cloned/images/16312b982981.webp 3840w" />
               </span>
             </div>
           </figure>
 
-          {/* Mobile/tablet video block */}
-          <div className="block 2xl:hidden max-md:rounded-2xl overflow-hidden relative" style={{ aspectRatio: "9/16", maxHeight: "100%", width: "100%" }} data-cid="n56">
+          {/* Mobile/tablet video block — shown at all sizes */}
+          <div className="block max-md:rounded-2xl overflow-hidden relative" style={{ aspectRatio: "9/16", maxHeight: "100%", width: "100%" }} data-cid="n56">
             {/* Video */}
             <video
               ref={videoRef}
@@ -82,8 +82,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Desktop 2xl content */}
-          <div className="hidden 2xl:w-480 2xl:h-full 2xl:block 2xl:absolute 2xl:top-0 2xl:z-2" data-cid="n82">
+          {/* Desktop 2xl content — hidden */}
+          <div className="hidden" data-cid="n82">
             <div className="hidden 2xl:w-480 2xl:h-25 2xl:block 2xl:absolute" data-cid="n83" />
             <div className="hidden 2xl:w-480 2xl:h-full 2xl:block 2xl:absolute 2xl:top-0 2xl:-z-1" data-cid="n84">
               <div className="hidden 2xl:w-480 2xl:h-52 2xl:flex 2xl:absolute 2xl:top-54 2xl:mb-[2.9375rem] 2xl:pr-16 2xl:pl-6 2xl:flex-col 2xl:justify-end" data-cid="n85">
